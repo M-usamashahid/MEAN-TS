@@ -1,0 +1,16 @@
+@import "./variables";
+
+
+@import "~bootstrap/scss/bootstrap";
+@import '~ngx-toastr/toastr.css';
+@import '~quill/dist/quill.core.css';
+@import '~quill/dist/quill.snow.css';
+@import '~@ctrl/ngx-emoji-mart/picker';
+
+@import "../assets/fontawesome/css/all.min.css";
+
+@import "~primeng/resources/primeng.min.css";
+@import "~primeng/resources/themes/bootstrap4-light-blue/theme.css";
+@import "~primeicons/primeicons.css";
+
+@import "./override";

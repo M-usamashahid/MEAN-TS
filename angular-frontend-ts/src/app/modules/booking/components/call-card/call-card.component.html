@@ -1,0 +1,14 @@
+<div class="row call-card-wrapper">
+    <div class="col-md-6 col-sm-12 due-date py-2">
+        <div class="due-date-date py-1">{{ data.dueDate | date: 'mediumDate'}}</div>
+        <div class="due-date-time py-1">{{ data.dueDate | date: 'shortTime'}}</div>
+    </div>
+    <div class="col-md-3 col-sm-12 text-center py-2">
+        <a class="w-100 btn submit-btn" [href]="data.rescheduleURI" target="_blank">Reschedule</a>
+
+    </div>
+    <div class="col-md-3 col-sm-12 text-center py-2">
+        <a class="w-100 btn submit-btn" [href]="data.cancelURI" target="_blank">Cancel</a>
+    </div>
+
+</div>

@@ -1,0 +1,132 @@
+<div class="authentication-form">
+
+    <div class="auth-img-wrapper">
+        <i class="fa-solid fa-square-xmark dialog-close-mobile" (click)="closeDialog()"></i>
+        <img class="auth-img-destop" src="assets/auth-bg.png" alt="">
+        <img class="auth-img-mobile" src="assets/auth-bg-mobile.png" alt="">
+    </div>
+    <div class="auth-main-wrapper">
+        <i class="fa-solid fa-square-xmark dialog-close" (click)="closeDialog()"></i>
+
+        <div class="auth-eztoned-id-inner">
+
+            <div class="auth-eztoned-id-branding">
+                <img src="assets/logo/eztoned-id-logo.png" alt="">
+                <p *ngIf="checkState('login')">
+                    Login or create your EzToned ID to begin<br> your personalized EzToned journey.
+                </p>
+                <p *ngIf="checkState('signup')">
+                    Create your new EzToned ID
+                </p>
+            </div>
+
+            <div *ngIf="checkState('login')">
+
+                <div class="auth-eztoned-id-input-wrapper">
+
+                    <div class="auth-eztoned-id-inputs width-minus-80">
+                        <input type="email" class="form-control thankyou-email"
+                            [ngClass]="{'border-all': isPasswordSet === 'na'}" placeholder="Enter a email"
+                            [(ngModel)]="user.email" [ngModelOptions]="{standalone:true}">
+
+                        <input type="password" *ngIf="isPasswordSet !== 'na'" class="form-control thankyou-password"
+                            placeholder="{{ (isPasswordSet === 'yes') ? 'Enter' : 'Create'}} a password"
+                            [(ngModel)]="user.password" [ngModelOptions]="{standalone:true}">
+                    </div>
+                    <div class="auth-eztoned-id-inputs-btn">
+                        <div class="thank-you-login-btn" (click)="login()">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="auth-eztoned-id-error">
+                    <span *ngIf="error">{{error}}</span>
+                </div>
+
+                <div class="thanks-you-or-divider">
+                    <img src="assets/or-divider.png" alt="">
+                </div>
+
+                <div class="thanks-you-social-login-wrapper">
+
+                    <button type="button" class="w-100 btn-primary" (click)="socialLoginpopUp()">
+                        <img src="assets/icons/facebook.png" alt="">&nbsp;Log In With Facebook
+                    </button>
+
+                    <button type="button" class="w-100 btn-primary" (click)="socialLoginpopUp(true)">
+                        <img src="assets/icons/google.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;Log In With Google
+                    </button>
+
+                </div>
+
+                <div class="dont-have-eztoned-id">
+                    Don't have an EzToned ID? <a (click)="signUpClick()">Create one now</a>
+                </div>
+            </div>
+
+            <div *ngIf="checkState('signup')">
+
+                <div class="thanks-you-social-login-wrapper">
+
+                    <button type="button" class="btn-primary" (click)="socialLoginpopUp()">
+                        <img src="assets/icons/facebook.png" alt="">&nbsp;Sign Up
+                    </button>
+
+                    <button type="button" class="btn-primary social-google" (click)="socialLoginpopUp(true)">
+                        <img src="assets/icons/google.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;Sign Up
+                    </button>
+
+                </div>
+
+                <div class="thanks-you-or-divider">
+                    <img src="assets/or-divider.png" alt="">
+                </div>
+
+                <div class="auth-eztoned-id-input-wrapper">
+
+                    <div class="auth-eztoned-id-inputs width-100-p">
+
+                        <input type="text" class="form-control signup-input" placeholder="First Name..."
+                            [(ngModel)]="user.firstName" [ngModelOptions]="{standalone:true}">
+
+                        <input type="text" class="form-control signup-input" placeholder="Last Name..."
+                            [(ngModel)]="user.lastName" [ngModelOptions]="{standalone:true}">
+
+                        <input type="email" class="form-control signup-input" placeholder="Enter a email"
+                            [(ngModel)]="user.email" [ngModelOptions]="{standalone:true}">
+
+                        <input type="password" class="form-control signup-input" placeholder="Create a password"
+                            [(ngModel)]="user.password" [ngModelOptions]="{standalone:true}">
+
+                        <p-dropdown [options]="countries" [filter]="false" [autoDisplayFirst]="false"
+                            [(ngModel)]="user.country" optionLabel="name" (onChange)="onCountryChange($event.value)">
+                        </p-dropdown>
+
+                    </div>
+
+                </div>
+
+                <div class="auth-eztoned-id-error">
+                    <span *ngIf="error">{{error}}</span>
+                </div>
+
+
+                <div class="py-3">
+                    <button class="w-100 btn btn-primary add_btn" (click)="signUp()">
+                        SIGN UP
+                    </button>
+                </div>
+
+                <div class="dont-have-eztoned-id">
+                    Already have an EzToned ID? <a (click)="logInClick()">Log In now</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

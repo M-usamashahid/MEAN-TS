@@ -1,0 +1,98 @@
+<div class="app-dialog">
+    <div class="wrapper"></div>
+    <div class="row dialog-header mx-1" *ngIf="checkState('tv')">
+        <div class="col-md-4 col-sm-6 col-12 mx-auto">
+            <div class="header-text">
+                <span class="dia-heading d-none d-sm-block">Workout Anytime, Anywhere with EzToned TV</span>
+                <span class="dia-heading d-block d-sm-none">take me to the EZTONED Tv</span>
+                <div class="button">
+                    <i class="fal fa-times-circle dialog-close" (click)="closeDialog()"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-12 mx-auto">
+                    <!-- <div class="row">
+                    <div class="col-lg-6 ms-auto"> -->
+                    <div class="card appCard">
+                        <div class="card-body">
+                            <div class="image-tv">
+                                <img src="assets/dashboard/TelevisionSimpleColor.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <span>EZTONED Tv</span>
+                            </div>
+
+                        </div>
+                        <div class="card-button p-3">
+                            <button type="button" class="w-100 btn-primary add_btn" (click)="watchTv()">
+                                start sweating
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- </div> -->
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row dialog-header mx-1" *ngIf="checkState('coach')">
+        <div class="col-lg-4 col-md-12 col-12 mx-auto">
+            <div class="header-text">
+                <span class="dia-heading d-none d-sm-block">Access Training Plan & Log Workouts on EzToned Coaching
+                    App</span>
+                <span class="dia-heading-mobile d-block d-sm-none">download our app for your device</span>
+                <div class="button">
+                    <i class="fal fa-times-circle dialog-close" (click)="closeDialog()"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-lg-2 col-sm-6 col-12 ms-auto my-3 my-sm-0">
+                    <!-- <div class="row">
+                    <div class="col-lg-6 ms-auto"> -->
+                    <div class="card appCard">
+                        <div class="card-body">
+                            <div class="image">
+                                <img src="assets/dashboard/IosApp.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <span>iOS App</span>
+                            </div>
+                        </div>
+                        <div class="card-button p-3">
+                            <button type="button" class="w-100 btn-primary add_btn mt-0" (click)="getEverFit(true)">
+                                get app
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6 col-12 me-auto">
+                    <div class="card appCard">
+                        <div class="card-body">
+                            <div class="image">
+                                <img src="assets/dashboard/androidApp.png" alt="">
+                            </div>
+                            <div class="card-text">
+                                <span>Android App</span>
+                            </div>
+
+                        </div>
+                        <div class="card-button p-3">
+                            <button type="button" class="w-100 btn-primary add_btn mt-0 " (click)="getEverFit()">
+                                get app
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,12 @@
+@import "../variables";
+
+.p-overlaypanel {
+  background: #171a1e !important;
+  box-shadow: 0px 12px 42px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 4px !important;
+
+  &::after,
+  &::before {
+    content: none !important;
+  }
+}

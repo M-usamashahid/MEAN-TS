@@ -1,0 +1,41 @@
+@import "../variables";
+
+.text-transform-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-decoration-underline-hover {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.text-font-12px {
+  font-size: 12px;
+}
+
+.text-font-14px {
+  font-size: 14px;
+}
+
+.text-font-16px {
+  font-size: 16px;
+}

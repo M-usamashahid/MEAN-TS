@@ -1,0 +1,241 @@
+<app-screen-wrapper>
+    <div class="checkout-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 checkout-heading">
+                    checkout details
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+
+                    <div class="section-heading">
+                        Shipping information
+                    </div>
+
+                    <div class="order-customer-information">
+
+                        <div class="row input_field gx-4">
+
+                            <div class="mb-2 col-md-6 col-sm-12">
+                                <span class="field-label">First Name</span>
+                                <input type="text" class="form-control" [(ngModel)]="order.firstName"
+                                    [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="mb-2 col-md-6 col-sm-12">
+                                <span class="field-label">Last Name</span>
+                                <input type="text" class="form-control" [(ngModel)]="order.lastName"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+
+                        <div class="row input_field gx-2">
+                            <div class="mb-2 col-12">
+                                <span class="field-label">Phone Number</span>
+                                <input type="text" class="form-control" [(ngModel)]="order.phone"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                        </div>
+
+                        <div class="row input_field gx-2">
+                            <div class="mb-2 col-12">
+                                <span class="field-label">Address</span>
+                                <input type="text" class="form-control" [(ngModel)]="order.shippingAddress.address1"
+                                    [ngModelOptions]="{standalone:true}">
+                            </div>
+                        </div>
+
+                        <div class="row input_field gx-3">
+                            <div class="mb-2 col-md-6 col-sm-12">
+                                <span class="field-label">Country</span>
+                                <p-dropdown [options]="countries" [filter]="false" [autoDisplayFirst]="false"
+                                    [(ngModel)]="order.shippingAddress.country" optionLabel="name"
+                                    (onChange)="onChangeShipping($event.value, 'country')">
+                                </p-dropdown>
+                            </div>
+                            <div class="mb-2 col-md-6 col-sm-12">
+                                <span class="field-label">State</span>
+                                <p-dropdown [options]="state" *ngIf="state.length > 0" [filter]="false"
+                                    [autoDisplayFirst]="false" [(ngModel)]="order.shippingAddress.state"
+                                    optionLabel="name" (onChange)="onChangeShipping($event.value, 'state')">
+                                </p-dropdown>
+
+                                <input type="text" class="form-control" *ngIf="state.length === 0"
+                                    [(ngModel)]="order.shippingAddress.state" [ngModelOptions]="{standalone: true}">
+
+                            </div>
+                        </div>
+
+                        <div class="row input_field gx-3">
+                            <div class="mb-2 col-md-6 col-sm-12">
+                                <span class="field-label">City</span>
+                                <input type="text" class="form-control" [(ngModel)]="order.shippingAddress.city"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                            <div class="mb-2 col-md-6 col-sm-12">
+                                <span class="field-label">Postal code</span>
+                                <input type="text" class="form-control" [(ngModel)]="order.shippingAddress.zip"
+                                    [ngModelOptions]="{standalone:true}">
+                            </div>
+                        </div>
+
+                        <div class="row my-3">
+                            <div class="col-sm-10 billing-address-switch-text">
+                                Shipping address is same as the billing address
+                            </div>
+                            <div class="col-sm-2 text-align-right">
+                                <p-inputSwitch [(ngModel)]="order.shippingAddressSameAsBilling"></p-inputSwitch>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="order-customer-information" *ngIf="order.shippingAddressSameAsBilling === false">
+
+                        <div class="section-heading">
+                            Billing information
+                        </div>
+
+                        <div class="row input_field gx-2">
+                            <div class="mb-2 col-12">
+                                <span class="field-label">Address</span>
+                                <input type="text" class="form-control" [(ngModel)]="order.billingAddress.address1"
+                                    [ngModelOptions]="{standalone:true}">
+                            </div>
+                        </div>
+
+                        <div class="row input_field gx-2">
+                            <div class="mb-2 col-md-6 col-sm-12">
+                                <span class="field-label">Country</span>
+                                <p-dropdown [options]="countries" [filter]="false" [autoDisplayFirst]="false"
+                                    [(ngModel)]="order.billingAddress.country" optionLabel="name"
+                                    (onChange)="onChangeBilling($event.value, 'country')">
+                                </p-dropdown>
+                            </div>
+                            <div class="mb-2 col-md-6 col-sm-12">
+                                <span class="field-label">State</span>
+                                <p-dropdown [options]="state" *ngIf="state.length > 0" [filter]="false"
+                                    [autoDisplayFirst]="false" [(ngModel)]="order.billingAddress.state"
+                                    optionLabel="name" (onChange)="onChangeBilling($event.value, 'state')">
+                                </p-dropdown>
+
+                                <input type="text" class="form-control" *ngIf="state.length === 0"
+                                    [(ngModel)]="order.billingAddress.state" [ngModelOptions]="{standalone: true}">
+
+                            </div>
+                        </div>
+
+                        <div class="row input_field gx-2">
+                            <div class="mb-2 col-md-6 col-sm-12">
+                                <span class="field-label">City</span>
+                                <input type="text" class="form-control" [(ngModel)]="order.billingAddress.city"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                            <div class="mb-2 col-md-6 col-sm-12">
+                                <span class="field-label">Postal code</span>
+                                <input type="text" class="form-control" [(ngModel)]="order.billingAddress.zip"
+                                    [ngModelOptions]="{standalone:true}">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="section-heading">
+                        Add Payment Details
+                    </div>
+
+                    <div class="cards-wrapper" *ngIf="paymentMethods.length > 0">
+
+                        <div class="card-item-wrapper" *ngFor="let card of paymentMethods"
+                            (click)="selectPaymentMethod(card.id)">
+
+                            <app-payment-card [active]="order.stripePaymentMethodId === card.id" [card]="card"
+                                (onDeleteCard)="detachPaymentMethod($event)"></app-payment-card>
+
+                        </div>
+
+                    </div>
+
+                    <div class="no-cards-wrapper">
+
+                        <app-add-card (onSaveCard)="getPaymentMethods()"></app-add-card>
+
+                        <!-- <button class="w-100 btn gray-btn" (click)="addPaymentMethod()">
+                            <img src="assets/icons/card-icon.png" alt=""> add payment method
+                        </button> -->
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-sm-12 gx-0">
+                    <div class="row gx-0">
+                        <div class="col-md-10 col-sm-12 mx-auto gx-0 order-checkout-wrapper">
+                            <div class="row gx-0 order-heading-1">
+                                <div class="col gx-0">order summary</div>
+                            </div>
+
+                            <div class="row gx-0 order-heading-terms">
+                                <div class="col gx-0">
+                                    Minimum three monthly payments required to retain ownership of equipment. If plan is
+                                    canceled before three months, equipment will have to be returned.
+                                </div>
+                            </div>
+
+                            <div class="row gx-0 order-heading-padding-1">
+                                <div class="col-6 gx-0 order-heading-2">EzBar Subscription Includes:</div>
+                                <div class="col-6 gx-0 order-heading-3">
+                                    USD {{activePrice.unitAmount / 100 | number: '1.2-2'
+                                    }}/{{helperService.intervalCount(activePrice.recurring?.intervalCount)}}
+                                </div>
+                            </div>
+
+                            <div class="row gx-0 order-heading-padding-2 order-heading-bottom">
+                                <!-- <div class="col-12 gx-0 order-heading-5">-&nbsp;<img
+                                        src="assets/icons/ez-coaching.png">&nbsp;EzToned coaching</div> -->
+                                <div class="col-12 gx-0 order-heading-5">-&nbsp;<img
+                                        src="assets/icons/ez-tv.png">&nbsp;EzToned tv</div>
+                                <div class="col-12 gx-0 order-heading-5">-&nbsp;<img
+                                        src="assets/icons/ez-bar.png">&nbsp;EzToned Equipment (EzBar V1)</div>
+
+                                <div class="col-12 gx-0 order-heading-5 my-2">&nbsp;
+                                    No contracts, Cancel Anytime.<br>&nbsp;&nbsp;14-Day Money Back Guarantee
+                                </div>
+
+                            </div>
+
+                            <div class="row gx-0 py-4">
+                                <div class="col-8 gx-0 order-heading-2">
+                                    Total
+                                </div>
+                                <div class="col-4 gx-0 order-heading-4">
+                                    USD {{getTotal() | number: '1.2-2'}}
+                                </div>
+                            </div>
+
+                            <div class="row gx-0">
+                                <div class="col gx-0 order-heading-complete">
+                                    <button class="w-100 btn submit-btn" [disabled]="checkoutBtnDisabled"
+                                        (click)="completeCheckout()">
+                                        Subscribe
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-8 mx-auto aggrement-statment">
+                            By subscribing, I agree to EzToned's <a
+                                (click)="helperService.openURLInNewTab('https://ezbar.eztoned.com/terms.html')">Terms &
+                                Conditions</a> and <a
+                                (click)="helperService.openURLInNewTab('https://ezbar.eztoned.com/policy.html')">Privacy
+                                Policy</a>.
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</app-screen-wrapper>

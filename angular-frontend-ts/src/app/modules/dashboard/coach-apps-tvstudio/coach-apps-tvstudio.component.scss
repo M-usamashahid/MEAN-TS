@@ -1,0 +1,77 @@
+@import "../../../../scss/variables";
+
+.p-dialog {
+    max-height: 100% !important;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    position: absolute;
+    background: $gray-1100;
+}
+
+.dialog-header {
+    padding: 10% 0% 0px;
+    .header-text {
+        position: relative;
+        .button {
+            position: absolute;
+            top: 0px;
+            right: -10px;
+            .dialog-close {
+                font-size: 18px;
+                font-weight: 500;
+                color: #bfc3cf;
+            }
+        }
+    }
+    .dia-heading {
+        font-family: lexend-zetta;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 40px;
+        letter-spacing: -4px;
+        text-transform: capitalize;
+        color: #ffffff;
+    }
+    .dia-heading-mobile {
+        font-family: lexend-zetta;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: -4px;
+        text-transform: capitalize;
+        color: #ffffff;
+    }
+}
+
+.appCard {
+    background: #242527;
+    border-radius: 8px;
+    height: 320px;
+    .image-tv {
+        text-align: center;
+        padding: 10% 20% 7%;
+    }
+    .image {
+        text-align: center;
+        padding: 20% 20% 7%;
+    }
+    .card-text {
+        text-align: center;
+        span {
+            font-family: lexend-deca;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 28px;
+            color: #bfc3cf;
+        }
+    }
+}
+
+@media (max-width: 1920px) and (min-width: 1500px) {
+    .appCard {
+        height: 350px;
+    }
+}

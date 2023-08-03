@@ -1,0 +1,77 @@
+<app-screen-wrapper>
+    <section class="chat-wrapper">
+
+        <div class="chat-inner-wrapper">
+
+            <div class="chat-header-wrapper">
+                <div class="coach-details">
+                    <img src="../../../../assets/icons/coach-pic.png">
+                    &nbsp;Brad Wade<span class="coach-label"> (Coach)</span>
+                </div>
+                <div class="coach-details-mobile">
+                    <div class="coach-profile-wrapper">
+                        <img src="../../../../assets/icons/coach-pic.png">
+                    </div>
+                    <div class="coach-name-wrapper">
+                        Brad Wade
+                        <span class="coach-label">Coach</span>
+                    </div>
+                </div>
+
+                <div class="schedule-btn-wrapper">
+                    <!-- <button class="schedule-call-btn" *ngIf="!calls" (click)="scheduleCall()">
+                        <img src="../../../../assets/icons/phone-icon.png">
+                        schedule call
+                    </button>
+
+                    <button class="schedule-call-btn-mobile" *ngIf="!calls" (click)="scheduleCall()">
+                        <img src="../../../../assets/icons/phone-icon.png">
+                    </button>
+
+                    <button class="schedule-call-btn" *ngIf="calls"
+                        (click)="helperService.openURLInNewTab(calls.cancelURI)">
+                        <img src="../../../../assets/icons/call-cancel-icon.png">
+                        cancel call
+                    </button>
+
+                    <button class="schedule-call-btn-mobile" *ngIf="calls"
+                        (click)="helperService.openURLInNewTab(calls.cancelURI)">
+                        <img src="../../../../assets/icons/call-cancel-icon.png">
+                    </button> -->
+                </div>
+            </div>
+            <div class="chat-messages-wrapper">
+                <div *ngFor="let chat of chats">
+                    <app-message [message]="chat" [messageBythisUser]="chat.sender === client.id">
+                    </app-message>
+                </div>
+            </div>
+            <div class="chat-call-wrapper" *ngIf="calls">
+                Your call is scheduled for {{calls.dueDate | date:'mediumDate'}} at {{calls.dueDate | date:'shortTime'}}
+                - <a (click)="helperService.openURLInNewTab(calls.rescheduleURI)">Reschedule Call</a>
+            </div>
+            <div class="chat-input-wrapper">
+                <div class="attachement-wrapper">
+                    <i class="fal fa-paperclip padding-right" (click)="attachmentUpload()"></i>
+                    <input type="file" name="file" class="d-none" (change)="fileReader($event)" #fileUpload>
+
+                    <i class="fal fa-smile padding-right" (click)="isEmojiPickerVisible = !isEmojiPickerVisible;"></i>
+                    <emoji-mart class="emoji-mart" *ngIf="isEmojiPickerVisible" (emojiSelect)="addEmoji($event)"
+                        [style]="{ position: 'absolute', bottom: '40px' }"></emoji-mart>
+                </div>
+                <div class="message-text-wrapper">
+                    <input type="text" [(ngModel)]="message.text" [ngModelOptions]="{standalone:true}"
+                        placeholder="Type your message here...">
+                </div>
+                <div class="send-message-wrapper">
+                    <i class="fal fa-microphone padding-right" *ngIf="!isRecording" (click)="recordVoice()"></i>
+                    <i class="fal fa-stop padding-right" *ngIf="isRecording" (click)="stopRecording(true)"></i>
+                    <i class="fas fa-paper-plane padding-send" (click)="sendMsg()"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+</app-screen-wrapper>

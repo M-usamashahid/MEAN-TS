@@ -1,0 +1,283 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.chat-wrapper {
+  padding: 0px 5%;
+
+  .chat-inner-wrapper {
+    background: rgba(34, 37, 41, 0.25);
+    border: 1px solid #202122;
+    border-radius: 4px;
+
+    .chat-header-wrapper {
+      background: #171a1e;
+      border-radius: 8px 8px 0px 0px;
+      padding: 16px 24px;
+
+      display: flex;
+
+      .coach-details {
+        width: 75%;
+        font-family: "lexend-zetta";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 32px;
+
+        align-items: center;
+        letter-spacing: -4px;
+        text-transform: capitalize;
+        color: #f0f4f7;
+
+        span.coach-label {
+          color: #bfc3cf;
+          opacity: 0.75;
+        }
+      }
+
+      .coach-details-mobile {
+        display: none !important;
+
+        width: 80%;
+        font-family: "lexend-zetta";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+
+        .coach-profile-wrapper {
+          img {
+            height: 45px;
+          }
+        }
+
+        .coach-name-wrapper {
+          margin-left: 15px;
+        }
+
+        align-items: center;
+        letter-spacing: -4px;
+        text-transform: capitalize;
+        color: #ffffff;
+
+        span.coach-label {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+          color: #bfc3cf;
+          opacity: 0.75;
+        }
+      }
+
+      .schedule-btn-wrapper {
+        width: 25%;
+        text-align: right;
+
+        .schedule-call-btn {
+          margin-top: 5px;
+
+          padding: 13px 18px;
+          background: #303237;
+          border-radius: 8px;
+          border: 0;
+
+          font-family: "lexend-deca";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 24px;
+
+          text-transform: capitalize;
+
+          color: #bfc3cf;
+
+          float: right;
+
+          &:hover {
+            color: #bfc3cf;
+          }
+          &:focus {
+            color: #bfc3cf;
+          }
+
+          img {
+            margin-right: 5px;
+          }
+        }
+
+        .schedule-call-btn-mobile {
+          display: none;
+
+          margin-top: 5px;
+
+          padding: 12px;
+          background: #303237;
+          border-radius: 8px;
+          border: 0;
+
+          float: right;
+
+          &:hover {
+            color: #bfc3cf;
+          }
+          &:focus {
+            color: #bfc3cf;
+          }
+
+          img {
+            margin-right: 0px;
+            margin-top: -5px;
+          }
+        }
+      }
+    }
+
+    .chat-messages-wrapper {
+      min-height: 450px;
+      max-height: 450px;
+      overflow-y: scroll;
+    }
+
+    .chat-call-wrapper {
+      height: 42px;
+      padding: 10px;
+      background: #bfc3cf;
+      text-align: center;
+
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      text-transform: capitalize;
+      color: #202122;
+
+      a {
+        text-decoration: none;
+        color: #202122;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+
+    .chat-input-wrapper {
+      background: #171417;
+      border: 1px solid #707483;
+      border-radius: 4px;
+      padding: 16px 14px;
+      display: flex;
+
+      i {
+        font-size: 20px;
+        margin-top: 3px;
+        cursor: pointer;
+
+        &:hover {
+          color: $primary;
+        }
+
+        &.padding-right {
+          padding: 0 8px;
+        }
+
+        &.padding-send {
+          padding: 0 8px 0 15px;
+        }
+      }
+
+      .attachement-wrapper {
+        width: 80px;
+      }
+
+      .message-text-wrapper {
+        width: calc(100% - 160px);
+
+        input {
+          width: 100%;
+          background-color: transparent;
+          border: 0;
+          outline: 0;
+          color: #ffffff;
+
+          &::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: #707483;
+            opacity: 1; /* Firefox */
+          }
+
+          &:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: #707483;
+          }
+
+          &::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: #707483;
+          }
+        }
+      }
+
+      .send-message-wrapper {
+        width: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 350px) {
+  .chat-wrapper {
+    padding: 0px 0%;
+
+    .chat-inner-wrapper {
+      .chat-header-wrapper {
+        padding: 16px 16px;
+
+        .coach-details {
+          display: none;
+        }
+
+        .coach-details-mobile {
+          display: flex !important;
+        }
+
+        .schedule-btn-wrapper {
+          .schedule-call-btn {
+            display: none;
+          }
+
+          .schedule-call-btn-mobile {
+            display: block;
+          }
+        }
+      }
+
+      .chat-input-wrapper {
+        i {
+          font-size: 18px;
+          margin-top: 3px;
+          cursor: pointer;
+
+          &.padding-right {
+            padding: 0 5px;
+          }
+
+          &.padding-send {
+            padding: 0 5px 0 10px;
+          }
+        }
+
+        .attachement-wrapper {
+          width: 60px;
+        }
+
+        .message-text-wrapper {
+          width: calc(100% - 120px);
+        }
+
+        .send-message-wrapper {
+          width: 60px;
+        }
+      }
+    }
+  }
+}

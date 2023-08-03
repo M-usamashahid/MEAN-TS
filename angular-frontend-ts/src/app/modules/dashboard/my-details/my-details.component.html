@@ -1,0 +1,176 @@
+<app-screen-wrapper>
+    <div class="col-md-12 col-sm-12">
+        <div class="profile-sections-wrapper">
+
+            <div class="row gx-0 account-info-section">
+                <div class="col-12 gx-0 profile-section-heading">
+                    account information
+                </div>
+
+                <div class="col-md-6 col-sm-12 py-2">
+                    <div class="profile-label">
+                        First name
+                    </div>
+                    <div class="profile-user-info">
+                        {{data.firstName}}
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 py-2">
+                    <div class="profile-label">
+                        Last name
+                    </div>
+                    <div class="profile-user-info">
+                        {{data.lastName}}
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 py-2">
+                    <div class="profile-label">
+                        Email
+                    </div>
+                    <div class="profile-user-info">
+                        {{data.email}}
+                    </div>
+                </div>
+
+                <!-- <div class="col-sm-12 py-2">
+                <div class="profile-label">
+                    Billing Address
+                </div>
+                <div class="profile-user-info">
+                    4517 Washington Ave. Manchester, Kentucky 39495
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 py-2">
+                <div class="profile-label">
+                    Country
+                </div>
+                <div class="profile-user-info">
+                    Pakistan
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 py-2">
+                <div class="profile-label">
+                    State
+                </div>
+                <div class="profile-user-info">
+                    Sindh
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 py-2">
+                <div class="profile-label">
+                    City
+                </div>
+                <div class="profile-user-info">
+                    Karachi
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12 py-2">
+                <div class="profile-label">
+                    Postal Code
+                </div>
+                <div class="profile-user-info">
+                    0765621
+                </div>
+            </div> -->
+
+            </div>
+            <section>
+                <div class="row">
+                    <div class="col-12 py-3">
+                        <span class="profile-section-heading">
+                            Change Password
+                        </span>
+                    </div>
+                </div>
+                <div class="change_password_sec">
+                    <div class="row input_field">
+                        <div class="col-md-6">
+                            <div class="mb-3 col-12">
+                                <span class="field-label">Current Password</span>
+                                <input type="password" class="form-control" placeholder="Current Password"
+                                    [(ngModel)]="user.currentPassword" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="mb-3 col-12">
+                                <span class="field-label">New Password</span>
+
+                                <input type="password" class="form-control" placeholder="Change Password"
+                                    [(ngModel)]="user.changePassword" [ngModelOptions]="{standalone:true}">
+                            </div>
+                        </div>
+                        <div class="row pe-0 pe-md-2">
+                            <div class="mb-3 col-md-6 pe-0">
+                                <span class="field-label">Confirm Password</span>
+
+                                <input type="password" class="form-control" placeholder="Confirm Password"
+                                    [(ngModel)]="user.confirmPassword" [ngModelOptions]="{standalone:true}">
+                            </div>
+                            <div class="col-md-4 col-12 mx-auto align-self-end pe-0">
+                                <button type="button" (click)="savePassword()"
+                                    class="mb-3 w-100 btn btn-primary add_btn">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- <div class="payment-section">
+            <div class="profile-section-heading">
+                payment details
+            </div>
+
+            <div class="cards-wrapper" *ngIf="paymentMethods.length > 0">
+
+                <div class="card-item-wrapper" *ngFor="let card of paymentMethods">
+
+                    <app-payment-card [card]="card" (onDeleteCard)="detachPaymentMethod($event)">
+                    </app-payment-card>
+
+                </div>
+
+            </div>
+
+            <div class="no-cards-wrapper">
+                <button class="w-100 btn gray-btn" (click)="addPaymentMethod()">
+                    <img src="assets/icons/card-icon.png" alt=""> add payment method
+                </button>
+            </div>
+
+        </div>
+
+        <div class="subscription-section">
+            <div class="profile-section-heading">
+                subscription details
+            </div>
+
+            <div class="row gx-0">
+                <div class="subscription-heading col-sm-12" *ngIf="subscription.subscription.active === false">
+                    No Active Subscription
+                </div>
+
+                <div class="subscription-heading col-sm-6" *ngIf="subscription.subscription.active">
+                    EzToned Coaching
+                </div>
+
+                <div class="subscription-heading-2 col-sm-6 text-align-right" *ngIf="subscription.subscription.active">
+                    {{subscription.data.plan.amount /
+                    100 | currency}}/{{subscription.data.plan.interval}}
+
+                    <i class="fas fa-times" (click)="cancelSubscription()"></i>
+
+                    <div class="my-5">
+                        <button class="btn submit_btn" (click)="cancelSubscription()">
+                            <i class="fal fa-align-slash"></i> Cancel Subscription
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div> -->
+
+        </div>
+    </div>
+</app-screen-wrapper>

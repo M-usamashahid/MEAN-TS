@@ -1,0 +1,37 @@
+<div class="app-dialog confirm-dismiss-form">
+<div class="wrapper"></div>
+  <div class="row position-relative">
+    <div class="col-md-4 col-sm-12 mx-auto confirm-dismiss-align">
+
+      <div class="dialog-header">
+        <div class="dialog-title"> {{data?.title}}</div>
+
+        <i class="fal fa-times-circle dialog-close mr-2" (click)="closeDialog(false, 'cancel')"></i>
+      </div>
+
+      <div>
+
+        <div class="message">
+          {{data?.message}}
+        </div>
+
+        <div class="col-12 gx-0 text-right my-3">
+          <button *ngIf="data?.button?.cancel?.title" (click)="closeDialog(false, 'cancel')" class="btn submit-btn">
+            {{data?.button?.cancel?.title}}
+          </button>
+          <button *ngIf="data?.button?.discard?.title" (click)="closeDialog(false, 'discard')"
+            class="btn submit-btn mx-3">
+            {{data?.button?.discard?.title}}
+          </button>
+          <button *ngIf="data?.button?.success?.title" (click)="closeDialog(true, 'success')"
+            class="btn submit-btn mx-3">
+            {{data?.button?.success?.title}}
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>

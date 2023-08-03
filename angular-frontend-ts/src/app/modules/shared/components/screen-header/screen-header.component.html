@@ -1,0 +1,18 @@
+<div class="screen-header">
+    <div class="heading-title align-self-center">{{title}}</div>
+    <div class="heading-add">
+
+        <div class="input-group" *ngIf="enableSearch">
+            <input type="text" class="form-control my-1" [(ngModel)]="searchText" [ngModelOptions]="{standalone:
+                true}" placeholder="Search" aria-label="Search" aria-describedby="search-input">
+            <button class="btn btn-primary my-1" type="button" id="search-input" (click)="searchEventHandler()">
+                <i class="fal fa-search"></i>
+            </button>
+        </div>
+
+        <button type="button" *ngIf="addBtn" class="add_btn pointer mr-1" (click)="addEventHandler()">
+            <i class="fal fa-plus pe-1"></i>{{addBtn}}
+        </button>
+
+    </div>
+</div>

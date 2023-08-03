@@ -1,0 +1,153 @@
+@import "../../../../scss/variables";
+
+.p-dialog {
+  max-height: 100% !important;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  position: absolute;
+  background: $gray-1100;
+}
+
+.cancel-subscription-wrapper {
+  padding: 5% 0% 0px;
+
+  .appCard {
+    background: #242527;
+    border-radius: 8px;
+    padding: 20px 15px 0 15px;
+
+    .card-header {
+      font-family: "lexend-zetta";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32px;
+      letter-spacing: -4px;
+      color: $white;
+
+      .dialog-close {
+        top: -25px;
+        position: relative;
+        float: right;
+        color: #707483;
+        font-size: 28px;
+        cursor: pointer;
+      }
+    }
+
+    .cancel-subscription-text {
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 28px;
+      color: #bfc3cf;
+
+      .white {
+        color: $white;
+      }
+
+      .red {
+        color: $primary;
+      }
+    }
+
+    .under-90-days {
+      .progress-wrapper {
+        padding: 25px 0 15px 0;
+
+        .p-progressbar-value {
+          background: $primary;
+        }
+
+        span {
+          padding-top: 10px;
+          float: right;
+          font-family: "lexend-deca";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+          text-transform: capitalize;
+          color: #707483;
+        }
+      }
+    }
+
+    .cancel-subscription-common {
+      padding: 20px 0 0 0;
+
+      .cancel-subscription-common-h1 {
+        font-family: "lexend-deca";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 28px;
+        color: #f0f4f7;
+      }
+
+      .cancel-subscription-common-list {
+        font-family: "lexend-deca";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 32px;
+        text-transform: capitalize;
+        color: #bfc3cf;
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+
+      .btn-primary {
+        width: 100%;
+      }
+
+      .proceed-to-cancellation {
+        padding: 15px 0;
+        font-family: "lexend-zetta";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        align-items: center;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+        color: #ffffff;
+        cursor: pointer;
+        text-align: center;
+      }
+    }
+
+    .cancel-smily {
+      text-align: center;
+      i {
+        color: $primary;
+        font-size: 7.5rem;
+      }
+    }
+
+    .why-cancel-wrapper {
+      padding-top: 30px;
+      .why-cancel-heading {
+        font-family: "lexend-deca";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+        color: #bfc3cf;
+        padding-bottom: 15px;
+      }
+
+      .btn-primary {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1920px) and (min-width: 1500px) {
+}

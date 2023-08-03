@@ -1,0 +1,287 @@
+<app-screen-wrapper>
+    <div class="questionnaire-wrapper">
+
+        <div class="questionnaire-left">
+            <img src="assets/questionnaire/questionnaire-bg.png" alt="">
+        </div>
+        <div class="questionnaire-right">
+
+            <!-- <div class="questionnaire-steps-wrapper">
+                <div class="questionnaire-steps-inner">
+
+                    <div class="questionnaire-step" [ngClass]="{'active': activeQuestion >= 1}" (click)="activeStep(1)">
+                    </div>
+                    <div class="questionnaire-step" [ngClass]="{'active': activeQuestion >= 2}" (click)="activeStep(2)">
+                    </div>
+                    <div class="questionnaire-step" [ngClass]="{'active': activeQuestion >= 3}" (click)="activeStep(3)">
+                    </div>
+                    <div class="questionnaire-step" [ngClass]="{'active': activeQuestion >= 4}" (click)="activeStep(4)">
+                    </div>
+                    <div class="questionnaire-step" [ngClass]="{'active': activeQuestion >= 5}" (click)="activeStep(5)">
+                    </div>
+                    <div class="questionnaire-step" [ngClass]="{'active': activeQuestion >= 6}" (click)="activeStep(6)">
+                    </div>
+                    <div class="questionnaire-step" [ngClass]="{'active': activeQuestion >= 7}" (click)="activeStep(7)">
+                    </div>
+                    <div class="questionnaire-step" [ngClass]="{'active': activeQuestion >= 8}" (click)="activeStep(8)">
+                    </div>
+                    <div class="questionnaire-step" [ngClass]="{'active': activeQuestion >= 9}" (click)="activeStep(9)">
+                    </div>
+                    <div class="questionnaire-step" [ngClass]="{'active': activeQuestion >= 10}"
+                        (click)="activeStep(10)"></div>
+                </div>
+            </div> -->
+
+            <div class="question-slide-wrapper">
+
+                <!-- Question 1 -->
+                <div class="question-wrapper" [ngClass]="{'question-wrapper-show': activeQuestion === 1}">
+
+                    <div class="question-heading">
+                        What's your current key fitness goal? *
+                    </div>
+
+                    <div class="question-content">
+
+                        <app-questionnaire-option-card title="Gaining Muscle"
+                            [active]="questionnaire?.goal === 'Gaining Muscle'" (onSelect)="goalSelect($event)">
+                        </app-questionnaire-option-card>
+                        <app-questionnaire-option-card title="Losing Fat"
+                            [active]="questionnaire?.goal === 'Losing Fat'" (onSelect)="goalSelect($event)">
+                        </app-questionnaire-option-card>
+                        <app-questionnaire-option-card title="General Wellbeing"
+                            [active]="questionnaire?.goal === 'General Wellbeing'" (onSelect)="goalSelect($event)">
+                        </app-questionnaire-option-card>
+                        <app-questionnaire-option-card title="Other" [active]="enableOtherGoal"
+                            (onSelect)="goalSelect($event)">
+                        </app-questionnaire-option-card>
+
+                        <div class="input_field" *ngIf="enableOtherGoal">
+                            <input type="text" placeholder="Please enter a goal" class="form-control"
+                                [(ngModel)]="questionnaire.goal" [ngModelOptions]="{standalone:true}">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question-wrapper" [ngClass]="{'question-wrapper-show': activeQuestion === 2}">
+
+                    <div class="question-heading">
+                        What's your age? *
+                    </div>
+
+                    <div class="question-content">
+                        <div class="input_field">
+                            <input type="text" class="form-control" [(ngModel)]="questionnaire.age"
+                                [ngModelOptions]="{standalone:true}">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question-wrapper" [ngClass]="{'question-wrapper-show': activeQuestion === 3}">
+
+                    <div class="question-heading">
+                        What's your Gender? *
+                    </div>
+
+                    <div class="question-content">
+                        <app-questionnaire-option-card title="Male" [active]="questionnaire?.gender === 'Male'"
+                            (onSelect)="genderSelect($event)">
+                        </app-questionnaire-option-card>
+                        <app-questionnaire-option-card title="Female" [active]="questionnaire?.gender === 'Female'"
+                            (onSelect)="genderSelect($event)">
+                        </app-questionnaire-option-card>
+                        <app-questionnaire-option-card title="Non-Binary"
+                            [active]="questionnaire?.gender === 'Non-Binary'" (onSelect)="genderSelect($event)">
+                        </app-questionnaire-option-card>
+                    </div>
+
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question-wrapper" [ngClass]="{'question-wrapper-show': activeQuestion === 4}">
+
+                    <div class="question-heading">
+                        What's your height?
+                    </div>
+
+                    <div class="question-content">
+                        <div class="input_field">
+                            <input type="text" class="form-control" [(ngModel)]="questionnaire.height"
+                                [ngModelOptions]="{standalone:true}">
+
+                            <div class="hight-switch-wrapper">
+                                <div class="hight-switch-box" [ngClass]="{'active': questionnaire.heightUnit === 'cm'}"
+                                    (click)="heightSwtich('cm')">
+                                    Cm
+                                </div>
+                                <div class="hight-switch-box" [ngClass]="{'active': questionnaire.heightUnit === 'in'}"
+                                    (click)="heightSwtich('in')">
+                                    In
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question-wrapper" [ngClass]="{'question-wrapper-show': activeQuestion === 5}">
+
+                    <div class="question-heading">
+                        Cool, how about your weight?
+                    </div>
+
+                    <div class="question-content">
+                        <div class="input_field">
+                            <input type="text" class="form-control" [(ngModel)]="questionnaire.weight"
+                                [ngModelOptions]="{standalone:true}">
+
+                            <div class="weight-switch-wrapper">
+                                <div class="weight-switch-box" [ngClass]="{'active': questionnaire.weightUnit === 'kg'}"
+                                    (click)="weightSwtich('kg')">
+                                    kg
+                                </div>
+                                <div class="weight-switch-box"
+                                    [ngClass]="{'active': questionnaire.weightUnit === 'lbs'}"
+                                    (click)="weightSwtich('lbs')">
+                                    lbs
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Question 6 -->
+                <div class="question-wrapper" [ngClass]="{'question-wrapper-show': activeQuestion === 6}">
+
+                    <div class="question-heading">
+                        How would you rate your experience level with fitness?
+                    </div>
+
+                    <div class="question-content">
+                        <p-dropdown [options]="experienceLevel" [autoDisplayFirst]="false"
+                            [(ngModel)]="questionnaire.level" [ngModelOptions]="{standalone:true}">
+                        </p-dropdown>
+                    </div>
+
+                </div>
+
+                <!-- Question 7 -->
+                <div class="question-wrapper" [ngClass]="{'question-wrapper-show': activeQuestion === 7}">
+
+                    <div class="question-heading">
+                        How many times a week do you currently exercise?
+                    </div>
+
+                    <div class="question-content">
+                        <p-dropdown [options]="weeklyExercise" [autoDisplayFirst]="false"
+                            [(ngModel)]="questionnaire.weeklyExercise" [ngModelOptions]="{standalone:true}">
+                        </p-dropdown>
+                    </div>
+
+                </div>
+
+                <!-- Question 8 -->
+                <div class="question-wrapper" [ngClass]="{'question-wrapper-show': activeQuestion === 8}">
+
+                    <div class="question-heading">
+                        How would you describe your nutritional habits?
+                    </div>
+
+                    <div class="question-content">
+                        <p-dropdown [options]="habits" [autoDisplayFirst]="false" [(ngModel)]="questionnaire.habits"
+                            [ngModelOptions]="{standalone:true}">
+                        </p-dropdown>
+                    </div>
+
+                </div>
+
+                <!-- Question 9 -->
+                <div class="question-wrapper" [ngClass]="{'question-wrapper-show': activeQuestion === 9}">
+
+                    <div class="question-heading">
+                        What's the biggest obstacle holding you back from reaching your fitness goals?
+                    </div>
+
+                    <div class="question-sub-heading">
+                        Give us much detail as possible!
+                    </div>
+
+                    <div class="question-content">
+                        <div class="input_field">
+                            <textarea type="text" class="form-control" rows="7" [(ngModel)]="questionnaire.obstacle"
+                                [ngModelOptions]="{standalone:true}">
+                            </textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Question 10 -->
+                <div class="question-wrapper" [ngClass]="{'question-wrapper-show': activeQuestion === 10}">
+
+                    <div class="question-heading">
+                        What would you like to achieve from this program?
+                    </div>
+
+                    <div class="question-sub-heading">
+                        And where do you see yourself in 3-6 months time?
+                    </div>
+
+                    <div class="question-content">
+                        <div class="input_field">
+                            <textarea class="form-control" rows="7" [(ngModel)]="questionnaire.achieve"
+                                [ngModelOptions]="{standalone:true}">
+                        </textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Aggremnt Wrapper -->
+                <div class="question-wrapper" [ngClass]="{'question-wrapper-show': activeQuestion === 11}">
+                    <div class="question-heading">
+                        Subscription Agreement
+                    </div>
+
+                    <div class="studio-agreement-wrapper">
+                        <div class="studio-agreement-content">
+                            <app-studio-agreement [questionnaire]="questionnaire"></app-studio-agreement>
+                        </div>
+                        <div class="studio-agreement-check">
+                            <p-checkbox [(ngModel)]="agreement" [binary]="true"></p-checkbox> &nbsp; I read and accept
+                            the subscription agreement.
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="question-nav">
+
+                    <div class="question-nav-back" *ngIf="activeQuestion !== 11 && activeQuestion !== 1"
+                        (click)="back()">
+                        <i class="far fa-angle-left"></i>&nbsp;BACK
+                    </div>
+
+                    <div class="question-nav-next" *ngIf="activeQuestion !== 11" (click)="next()">
+                        NEXT&nbsp;<i class="far fa-angle-right"></i>
+                    </div>
+
+                    <button class="w-100 btn submit-btn" [disabled]="!agreement" *ngIf="activeQuestion === 11"
+                        (click)="submit()">
+                        confirm subscription
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</app-screen-wrapper>

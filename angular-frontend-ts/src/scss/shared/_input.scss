@@ -1,0 +1,62 @@
+@import "../variables";
+@import "./base";
+
+.form-label {
+  font-family: "lexend-zetta";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: $primary;
+}
+.input_field {
+  .field-label {
+    font-family: "lexend-zetta";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 35px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: $primary;
+  }
+
+  textarea,
+  input {
+    background: rgba(34, 37, 41, 0.25);
+    border: 1px solid #707483;
+    border-radius: 4px;
+    color: #f2f2f2;
+    padding: 15px;
+
+    &:focus,
+    &:active {
+      color: #f2f2f2;
+      background: rgba(34, 37, 41, 0.25);
+      box-shadow: none;
+      border: 1px solid #707483;
+    }
+
+    &:disabled {
+      // background: #707483;
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 350px) {
+  .input_field {
+    .field-label {
+      font-size: 10px;
+    }
+
+    textarea,
+    input {
+      padding: 10px;
+    }
+
+    &:disabled {
+      // background: #707483;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<div class="add-card-wrapper">
+
+    <div class="payment-card-wrapper" [hidden]="isLoading || cardAddInpregress">
+        <div class="p-3 border" id="card-info" #cardInfo></div>
+        <label class="mx-auto text-danger" style="font-size: small;" *ngIf="cardError">{{cardError}}</label>
+    </div>
+
+    <div class="save-card-btn-wrapper">
+        <button class="w-100 btn gray-btn" [disabled]="saveDisabled" (click)="paymentMethodSave()">
+            <img src="assets/icons/card-icon.png" alt=""> Save & Continue
+        </button>
+
+    </div>
+
+</div>

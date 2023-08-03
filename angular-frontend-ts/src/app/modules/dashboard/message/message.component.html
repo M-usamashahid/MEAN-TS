@@ -1,0 +1,35 @@
+<div class="message-wrapper">
+
+    <div class="message-align-wrapper" [ngClass]="{'client-msg-align': messageBythisUser}">
+        <div class="message-content"
+            [ngClass]="{'coach-msg': messageBythisUser === false, 'client-msg': messageBythisUser}">
+
+            <div *ngIf="message.text">
+                {{message.text}}
+            </div>
+            <img class="message-img" *ngIf="message.image" [src]="message.image" />
+            <div class="message-audio" *ngIf="message.audio">
+                <audio controls>
+                    <source [src]="message.audio">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div *ngIf="message.video" class="message-video">
+
+                <video controls>
+                    <source [src]="message.video">
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+            <div class="message-doc" *ngIf="message.document">
+                <i class="fas fa-file"></i> <a [href]="message.document" target="_blank">Click here to download</a>
+            </div>
+
+        </div>
+        <div class="message-time">
+            {{message.createdAt | date:'medium'}}
+        </div>
+    </div>
+
+</div>

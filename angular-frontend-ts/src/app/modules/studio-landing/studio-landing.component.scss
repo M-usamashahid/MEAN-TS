@@ -1,0 +1,1820 @@
+@import "../../../scss/variables";
+@import "../../../scss/shared/index";
+
+.heading {
+    span {
+        font-family: syncopate-bold;
+        line-height: 70px;
+        letter-spacing: -2px;
+        font-size: 50px;
+        line-height: 65px;
+        text-align: center;
+        color: #ffffff;
+    }
+}
+.sub-heading {
+    .trail {
+        font-family: lexend-deca;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+        color: #f0f4f7;
+        opacity: 0.85;
+    }
+}
+.short-heading {
+    font-family: lexend-zetta;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -4px;
+    text-transform: capitalize;
+    color: #f0f4f7;
+}
+.comment {
+    font-family: lexend-deca;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #bfc3cf;
+    opacity: 0.7;
+}
+#hero-sec {
+    .hero-img {
+        background-image: url("/assets/studiolanding/hero-background.png");
+        background-repeat: no-repeat;
+        height: 745px;
+        margin-top: -75px;
+        background-size: 100% 100%;
+        .heading {
+            padding: 228px 0px 10px;
+            span {
+                color: #ffffff;
+            }
+        }
+        .sub-heading {
+            .trail {
+                line-height: 32px;
+                text-align: center;
+                color: #f0f4f7;
+                opacity: 0.85;
+            }
+        }
+        .hero-button {
+            padding-top: 23px;
+            .contract {
+                font-family: lexend-deca;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 32px;
+                text-align: center;
+                text-transform: capitalize;
+                color: #ffffff;
+            }
+        }
+    }
+}
+#member {
+    background: linear-gradient(180deg, #e0dddd 0%, #ffffff 115.71%);
+    .heading {
+        padding: 90px 0px;
+        text-align: center;
+        span {
+            color: #202122;
+            text-transform: uppercase;
+        }
+    }
+    .member-img {
+        position: relative;
+        padding-bottom: 80px;
+        .member-1 {
+            position: absolute;
+            width: 336px;
+            height: 306px;
+            left: 90px;
+            top: 60px;
+            z-index: 2;
+            background: 
+            // linear-gradient(0.26deg, rgba(0, 0, 0, 0.6) 12.24%, rgba(0, 0, 0, 0) 99.81%),
+                // linear-gradient(
+                //     180deg,
+                //     rgba(155, 155, 155, 0.8) 0%,
+                //     rgba(200, 28, 0, 0.08) 0.01%,
+                //     rgba(67, 22, 15, 0.28) 56.08%,
+                //     rgba(30, 4, 0, 0.688) 100%
+                // ),
+                url("/assets/studiolanding/member-1.png");
+            // background-blend-mode: multiply, color-dodge, normal;
+            border-radius: 16px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .member-2 {
+            position: relative;
+            width: 468px;
+            height: 468px;
+            left: 300px;
+            top: 0px;
+            background: 
+            // linear-gradient(359.88deg, rgba(0, 0, 0, 0.8) 0.1%, rgba(0, 0, 0, 0) 99.9%),
+                url("/assets/studiolanding/member-2.png");
+            border-radius: 16px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .member-3 {
+            position: absolute;
+            width: 321px;
+            height: 249px;
+            right: 110px;
+            top: 170px;
+            background:
+            //  linear-gradient(359.25deg, rgba(0, 0, 0, 0.6) 10.25%, rgba(0, 0, 0, 0) 99.17%),
+                url("/assets/studiolanding/member-3.png");
+            border-radius: 16px;
+            background-position-x: center;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+    }
+}
+
+#eqiupment {
+    background: linear-gradient(165.39deg, #212121 -10.45%, #000000 102.06%);
+    padding: 90px 0px;
+    position: relative;
+
+    .header-wrapper {
+        position: relative;
+        .heading {
+            .back-heading {
+                font-family: syncopate-bold;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 127.75px;
+                line-height: 133px;
+                letter-spacing: -4px;
+                text-transform: uppercase;
+                color: #bfc3cf;
+                opacity: 0.2;
+                position: absolute;
+                z-index: 0;
+            }
+            span {
+                position: relative;
+                top: 53px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .sub-heading {
+        margin-top: 70px;
+        .trail {
+            text-align: left;
+        }
+    }
+    .button-box {
+        margin-top: 40px;
+    }
+    .slider-wrapper {
+        padding-top: 90px;
+    }
+    .video-sec {
+        #instructions {
+            position: relative;
+            padding: 0px 0px;
+            .video-border-top {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                background-color: $primary-900;
+                z-index: 0;
+                top: -17px;
+                left: -17px;
+            }
+            .video-border-bottom {
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                background-color: $primary-900;
+                z-index: 0;
+                bottom: -12px;
+                right: -17px;
+            }
+            .video-js {
+                position: relative;
+                // background-color: $primary-600;
+                z-index: 2;
+            }
+        }
+    }
+    .workout-heading {
+        padding-top: 25px;
+        span {
+            font-family: lexend-zetta;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 40px;
+            letter-spacing: -4px;
+            text-transform: capitalize;
+            color: #f0f4f7;
+        }
+    }
+    .workout-content {
+        font-family: lexend-deca;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: #bfc3cf;
+        opacity: 0.7;
+        align-self: stretch;
+        letter-spacing: normal;
+    }
+    .dp-wrap {
+        margin: 0 auto;
+        position: relative;
+        perspective: 1000px;
+        height: 100%;
+    }
+
+    .dp-slider {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+    }
+
+    .dp-slider div {
+        transform-style: preserve-3d;
+    }
+
+    .dp_item {
+        display: block;
+        position: absolute;
+        text-align: center;
+        // color: #fff;
+        border-radius: 10px;
+        transition: transform 1.2s;
+    }
+
+    #dp-slider .dp_item:first-child {
+        z-index: 10 !important;
+        transform: rotateY(0deg) translateX(0px) !important;
+    }
+
+    .dp_item[data-position="2"] {
+        z-index: 9;
+        transform: rotateY(0deg) translateX(25%) scale(0.9);
+    }
+
+    .dp_item[data-position="3"] {
+        z-index: 8;
+        transform: rotateY(0deg) translateX(45%) scale(0.8);
+    }
+
+    .dp_item[data-position="4"] {
+        z-index: 7;
+        transform: rotateY(0deg) translateX(60%) scale(0.7);
+    }
+
+    #dp-next,
+    #dp-prev {
+        position: absolute;
+        top: 50%;
+        right: 0%;
+        height: 33px;
+        width: 33px;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    #dp-prev {
+        left: 0px;
+        transform: rotate(180deg);
+    }
+
+    #dp-dots {
+        position: absolute;
+        bottom: 25px;
+        z-index: 12;
+        left: 38%;
+        cursor: default;
+    }
+
+    #dp-dots li {
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        background: #ffff;
+        border-radius: 50%;
+    }
+
+    #dp-dots li:hover {
+        cursor: pointer;
+        background: #d33732;
+        transition: background 0.3s;
+    }
+
+    #dp-dots li.active {
+        background: #d33732;
+    }
+
+    .dp_item {
+        width: 64%;
+    }
+
+    .dp_item {
+        align-items: center;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .dp-img img {
+        object-fit: cover;
+        object-position: right;
+    }
+
+    #dp-slider,
+    .dp-img img {
+        height: 360px;
+    }
+
+    #dp-slider .dp_item:hover:not(:first-child) {
+        cursor: pointer;
+    }
+
+    .site-btn {
+        color: #fff;
+        font-size: 18px;
+        font-family: "Circular Std Medium";
+        background: #d33732;
+        padding: 14px 43px;
+        display: inline-block;
+        border-radius: 2px;
+        position: relative;
+        top: -12px;
+        text-decoration: none;
+    }
+
+    .site-btn:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    h1 {
+        margin: 150px auto 30px auto;
+        text-align: center;
+    }
+    .tv {
+        padding-top: 140px;
+        .header-wrapper {
+            position: relative;
+            .heading {
+                text-align: center;
+                .back-heading {
+                    left: 31.5%;
+                }
+            }
+        }
+        .sub-heading {
+            margin-top: 30px;
+        }
+        .video-sec {
+            padding-top: 70px;
+        }
+        .shade {
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            background: #d33732;
+            filter: blur(450px);
+            right: 50px;
+            opacity: 0.6;
+            border-radius: 50%;
+        }
+    }
+    .header-classes {
+        padding-top: 80px;
+        p {
+            font-family: lexend-zetta;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 40px;
+            letter-spacing: -4px;
+            text-transform: capitalize;
+            color: #f0f4f7;
+            text-align: center;
+        }
+    }
+    .card-classes {
+        align-self: end;
+        .img-wrapper {
+            position: relative;
+            height: 100%;
+            span {
+                font-family: syncopate;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 32px;
+                letter-spacing: 2px;
+                text-transform: capitalize;
+                color: #ffffff;
+                position: absolute;
+                bottom: 32px;
+                left: 24px;
+            }
+            img {
+                position: absolute;
+                left: 24px;
+                bottom: 74px;
+            }
+        }
+    }
+    .classes-img-1 {
+        background: linear-gradient(
+                180deg,
+                rgba(191, 61, 40, 0) 0%,
+                rgba(53, 7, 0, 0.5) 72.14%,
+                rgba(30, 4, 0, 0.75) 100%
+            ),
+            url("/assets/studiolanding/classes-1.png");
+        border-radius: 16px;
+        height: 336px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .classes-img-2 {
+        background: linear-gradient(
+                180deg,
+                rgba(191, 61, 40, 0) 0%,
+                rgba(53, 7, 0, 0.5) 72.14%,
+                rgba(30, 4, 0, 0.75) 100%
+            ),
+            url("/assets/studiolanding/classes-2.png");
+        border-radius: 16px;
+        height: 365px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .classes-img-3 {
+        background: linear-gradient(
+                180deg,
+                rgba(191, 61, 40, 0) 0%,
+                rgba(53, 7, 0, 0.5) 72.14%,
+                rgba(30, 4, 0, 0.75) 100%
+            ),
+            url("/assets/studiolanding/classes-3.png");
+        border-radius: 16px;
+        height: 336px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .coach {
+        padding: 100px 0px;
+        .header-wrapper {
+            position: relative;
+            .heading {
+                text-align: center;
+                .back-heading {
+                    left: 25%;
+                }
+            }
+        }
+        .coach-gif-wrapper {
+            padding-top: 80px;
+            .coach-gif {
+                background: linear-gradient(292.98deg, rgba(84, 3, 0, 0.105) -16.09%, rgba(0, 0, 0, 0.7) 67.22%),
+                    url("/assets/studiolanding/coach.jpg");
+                background-repeat: no-repeat;
+                height: 760px;
+                background-size: cover;
+                .coach-img-text {
+                    padding: 52px 48px;
+                    position: relative;
+
+                    .coach-comment {
+                        font-family: lexend-deca;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 32px;
+                        color: #bfc3cf;
+                        opacity: 0.7;
+                    }
+                    .coach-image-next {
+                        width: 100px;
+                        height: 100px;
+                        position: absolute;
+                        right: 50px;
+                        bottom: 0px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .coach-gif-2 {
+                background: linear-gradient(292.98deg, rgba(84, 3, 0, 0.105) -16.09%, rgba(0, 0, 0, 0.7) 67.22%),
+                    url("/assets/studiolanding/coach-4.jpg");
+                background-repeat: no-repeat;
+                height: 760px;
+                background-size: cover;
+                .coach-img-text {
+                    padding: 52px 48px;
+                    position: relative;
+
+                    .short-heading {
+                        color: #f0f4f7;
+                    }
+                    .comment {
+                        color: #bfc3cf;
+                    }
+                    .coach-image-next {
+                        width: 100px;
+                        height: 100px;
+                        position: absolute;
+                        right: 50px;
+                        bottom: 0px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .trainer {
+        .shade {
+            position: absolute;
+            width: 650px;
+            height: 650px;
+            background: #d33732;
+            filter: blur(450px);
+            bottom: 50px;
+            right: 50px;
+            opacity: 0.6;
+            border-radius: 50%;
+        }
+        .trainer-col {
+            padding: 70px 0px;
+        }
+        .trainer-wrapper {
+            margin-top: 50px;
+            .sub-heading {
+                margin-top: 30px;
+            }
+        }
+        .trainer-name {
+            position: absolute;
+            bottom: 74px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            span {
+                font-family: lexend-deca;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 28px;
+                line-height: 32px;
+                letter-spacing: 2px;
+                text-transform: capitalize;
+                color: #ffffff;
+            }
+        }
+        .title {
+            span {
+                font-family: lexend-zetta;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 30px;
+                letter-spacing: -2px;
+                text-transform: uppercase;
+                color: #ffffff;
+            }
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(15px);
+            height: 50px;
+            width: 100%;
+            position: absolute;
+            bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .img-1 {
+            background:
+            //  linear-gradient(
+            //         180deg,
+            //         rgba(191, 61, 40, 0) 0%,
+            //         rgba(53, 7, 0, 0.5) 72.14%,
+            //         rgba(30, 4, 0, 0.75) 100%
+            //     ),
+                url("/assets/studiolanding/trainers-1.png");
+            background-blend-mode: multiply, normal;
+            background-repeat: no-repeat;
+            border-radius: 16px;
+            height: 360px;
+            width: 340px;
+            position: relative;
+            margin: 0px auto 40px;
+        }
+        .img-2 {
+            background:
+            //  linear-gradient(
+            //         180deg,
+            //         rgba(191, 61, 40, 0) 0%,
+            //         rgba(53, 7, 0, 0.5) 72.14%,
+            //         rgba(30, 4, 0, 0.75) 100%
+            //     ),
+                url("/assets/studiolanding/trainers-2.png");
+            background-blend-mode: multiply, normal;
+            border-radius: 16px;
+            background-repeat: no-repeat;
+            width: 340px;
+            height: 360px;
+            position: relative;
+            margin: 0px auto;
+        }
+        .img-3 {
+            background: 
+            // linear-gradient(
+            //         180deg,
+            //         rgba(191, 61, 40, 0) 0%,
+            //         rgba(53, 7, 0, 0.5) 72.14%,
+            //         rgba(30, 4, 0, 0.75) 100%
+            //     ),
+                url("/assets/studiolanding/trainers-3.png");
+            background-blend-mode: multiply, normal;
+            border-radius: 16px;
+            background-repeat: no-repeat;
+            width: 340px;
+            height: 360px;
+            position: relative;
+            margin: 0px auto 40px;
+        }
+        .img-4 {
+            background:
+            //  linear-gradient(
+            //         180deg,
+            //         rgba(191, 61, 40, 0) 0%,
+            //         rgba(53, 7, 0, 0.5) 72.14%,
+            //         rgba(30, 4, 0, 0.75) 100%
+            //     ),
+                url("/assets/studiolanding/trainers-4.png");
+            background-blend-mode: multiply, normal;
+            border-radius: 16px;
+            background-repeat: no-repeat;
+            width: 340px;
+            height: 360px;
+            position: relative;
+            margin: 0px auto;
+        }
+    }
+}
+
+#commingSoon {
+    padding: 80px 0px;
+
+    background: linear-gradient(3.37deg, #242424 -21.61%, #09090b 108.67%);
+    .heading {
+        padding: 0px 0px 30px;
+    }
+    .slider-handler {
+        padding-left: 10%;
+    }
+
+    .slider-1 {
+        background: linear-gradient(359.88deg, rgba(45, 45, 45, 0.7) 26.67%, rgba(136, 4, 0, 0.175) 205.82%),
+            url("/assets/studiolanding/comming-slider1.jpg");
+    }
+    .slider-2 {
+        background: linear-gradient(359.88deg, rgba(45, 45, 45, 0.7) 26.67%, rgba(136, 4, 0, 0.175) 205.82%),
+            url("/assets/studiolanding/comming-slider2.jpg");
+    }
+    .slider-3 {
+        background: linear-gradient(359.88deg, rgba(45, 45, 45, 0.7) 26.67%, rgba(136, 4, 0, 0.175) 205.82%),
+            url("/assets/studiolanding/comming-slider3.jpg");
+    }
+    .slider-4 {
+        background: linear-gradient(359.88deg, rgba(45, 45, 45, 0.7) 26.67%, rgba(136, 4, 0, 0.175) 205.82%),
+            url("/assets/studiolanding/comming-slider4.jpg");
+    }
+    .slider-5 {
+        background: linear-gradient(359.88deg, rgba(45, 45, 45, 0.7) 26.67%, rgba(136, 4, 0, 0.175) 205.82%),
+            url("/assets/studiolanding/comming-slider5.jpg");
+    }
+    .slider-6 {
+        background: linear-gradient(359.88deg, rgba(45, 45, 45, 0.7) 26.67%, rgba(136, 4, 0, 0.175) 205.82%),
+            url("/assets/studiolanding/comming-slider6.jpg");
+    }
+    .slider-7 {
+        background: linear-gradient(359.88deg, rgba(45, 45, 45, 0.7) 26.67%, rgba(136, 4, 0, 0.175) 205.82%),
+            url("/assets/studiolanding/comming-slider7.jpg");
+    }
+    .img-container {
+        height: 460px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-radius: 8px;
+        width: 360px;
+        background-blend-mode: multiply, normal;
+        border-radius: 8px;
+        padding: 20px;
+    }
+    .catagory {
+        font-family: lexend-zetta;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 42px;
+        letter-spacing: -4px;
+        text-transform: uppercase;
+        color: #ffffff;
+        position: absolute;
+        bottom: 64px;
+    }
+}
+
+#collapseable {
+    background: linear-gradient(3.37deg, #f9f9f9 -21.61%, #fdfdfd 108.67%);
+    padding: 80px 0px;
+    .heading {
+        text-align: center;
+        span {
+            color: #202122;
+
+            text-transform: uppercase;
+        }
+    }
+    .sub-heading {
+        .trail {
+            color: #333333;
+            text-align: left;
+        }
+    }
+    .comment {
+        color: #333333;
+    }
+    .content-list {
+        li {
+            color: #858995;
+        }
+    }
+}
+#worldwide {
+    padding: 80px 0px;
+    background: #ffffff;
+    .heading {
+        padding: 60px;
+        text-align: center;
+        span {
+            color: #202122;
+        }
+    }
+    .slider-handler {
+        padding-left: 10%;
+    }
+    .world-card {
+        width: 255px;
+        height: 260px;
+        background: #ffffff;
+        border: 2px solid rgba(0, 0, 0, 0.06);
+        box-shadow: 0px 16px 24px rgba(100, 100, 100, 0.08);
+        border-radius: 8px;
+        padding: 24px;
+        .trail {
+            margin-top: 15px;
+            color: #000000;
+            text-align: left;
+            margin-bottom: 0px;
+            font-size: 18px;
+        }
+        .card-subName {
+            font-family: lexend-deca;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 22px;
+            color: #000000;
+            position: absolute;
+            bottom: 20px;
+            margin-bottom: 0px;
+            width: 100%;
+        }
+        .star-box {
+            width: 20px;
+            background: #219653;
+            height: 20px;
+            display: inline;
+            img {
+            }
+        }
+        .timeline {
+            font-family: lexend-deca;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 26px;
+            color: #000000;
+        }
+        .message {
+            font-family: lexend-deca;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            color: #000000;
+            margin-bottom: 0px;
+        }
+    }
+}
+#packages {
+    background: linear-gradient(
+            358.42deg,
+            rgba(0, 0, 0, 0.8) -17.96%,
+            rgba(29, 24, 24, 0.68) 63.75%,
+            rgba(57, 2, 0, 0.8) 144.34%
+        ),
+        url("/assets/studiolanding/classes-2.png");
+    padding: 80px 0px;
+    background-blend-mode: darken, normal;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .heading {
+        text-align: center;
+        span {
+            text-transform: uppercase;
+        }
+    }
+    .card-row {
+        padding: 60px 0px;
+    }
+    .card-black {
+        background: #171a1e;
+    }
+
+    .pkg-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px;
+        width: 316px;
+        height: 410px;
+        box-shadow: 0px 2px 12px rgba(20, 20, 43, 0.08);
+        border-radius: 12px;
+        padding: 30px;
+        position: relative;
+        .card-heading {
+            font-family: lexend-zetta;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            color: #f0f4f7;
+        }
+        .badge {
+            padding: 8px 14px;
+            width: 120px;
+            height: 33px;
+            top: -15px;
+            background: #ffffff;
+            border-radius: 50px;
+            position: absolute;
+            z-index: 2;
+
+            span {
+                font-family: syncopate-bold;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 17px;
+                color: #d33732;
+            }
+        }
+        .standard {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            span {
+                font-family: lexend-deca;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 32px;
+                text-transform: capitalize;
+                color: #ffffff;
+            }
+        }
+        .rate {
+            p {
+                font-family: syncopate-bold;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 33px;
+                text-align: center;
+                color: #ffffff;
+                // text-transform: uppercase;
+                span {
+                    font-size: 45px;
+                    position: relative;
+                    top: 7px;
+                }
+            }
+        }
+        .build {
+            span {
+                font-family: lexend-deca;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+                text-align: center;
+                text-transform: capitalize;
+                color: #ffffff;
+                opacity: 0.85;
+            }
+        }
+    }
+
+    .card-red {
+        background: #d33732;
+        button {
+            color: #d33732;
+        }
+    }
+}
+footer {
+    padding: 64px 0px 20px;
+    background: linear-gradient(162.3deg, #101010 -9.89%, #09090b 78.58%);
+    position: relative;
+    .footer-img-logo {
+        width: 80%;
+        text-align: center;
+    }
+    .wrapper-gray {
+        position: absolute;
+        width: 534.5px;
+        height: 525px;
+        left: -24px;
+        top: -227px;
+        background: #2c2928;
+        filter: blur(500px);
+    }
+    .footer-list {
+        list-style: none;
+        padding-left: 0px;
+        float: right;
+        .heading {
+            font-family: lexend-deca;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: $white;
+            padding-bottom: 10px;
+        }
+        .list-item {
+            font-family: lexend-deca;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 33px;
+            text-transform: capitalize;
+            color: #ffffff;
+            margin-top: 0px;
+        }
+        .socials-icons {
+            display: inline;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #f0302a;
+            text-align: center;
+            align-self: center;
+            padding: 13px;
+            i {
+                color: $white;
+                text-align: center;
+                align-self: center;
+            }
+        }
+    }
+    .shade {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: #d33732;
+        filter: blur(110px);
+        bottom: 0px;
+        right: 2px;
+        opacity: 0.6;
+    }
+    .border-line {
+        height: 1px;
+        width: 100%;
+        background-color: $gray-700;
+        margin: 40px 0px;
+    }
+    .copy-right {
+        font-family: lexend;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 32px;
+        color: rgba(255, 255, 255, 0.502972);
+    }
+    .termsPolicy {
+        font-family: lexend;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 32px;
+        color: rgba(255, 255, 255, 0.502972);
+    }
+}
+@media (min-width: 1400px) {
+    #member {
+        .member-img {
+            .member-2 {
+                width: 560px;
+                height: 560px;
+            }
+            .member-3 {
+                right: 210px;
+                top: 210px;
+            }
+        }
+    }
+}
+@media (max-width: 1200px) and (min-width: 992px) {
+    #member {
+        .member-img {
+            .member-1 {
+                left: 15px;
+            }
+            .member-2 {
+                left: 225px;
+            }
+            .member-3 {
+                right: 0px;
+            }
+        }
+    }
+    #eqiupment {
+        .coach {
+            .coach-gif-wrapper {
+                .coach-gif {
+                    .coach-img-text {
+                        .coach-image-next {
+                            bottom: 50px;
+                        }
+                    }
+                }
+                .coach-gif-2 {
+                    .coach-img-text {
+                        .coach-image-next {
+                            bottom: 50px;
+                        }
+                    }
+                }
+            }
+        }
+        .dp-img {
+            img {
+                width: 300px;
+            }
+        }
+        .trainer {
+            .img-1 {
+                width: 100%;
+            }
+            .img-2 {
+                width: 100%;
+            }
+            .img-3 {
+                width: 100%;
+            }
+            .img-4 {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) and (min-width: 767px) {
+    .heading {
+        span {
+            font-size: 42px;
+        }
+    }
+    .sub-heading {
+        .trail {
+            font-size: 18px;
+        }
+    }
+    #hero-sec {
+        .hero-img {
+            height: 645px;
+            .heading {
+                padding: 150px 0px 10px;
+            }
+        }
+    }
+    #member {
+        .heading {
+            padding: 45px 0px;
+        }
+        .member-img {
+            .member-1 {
+                left: 0px;
+                width: 246px;
+                height: 216px;
+                top: 60px;
+            }
+            .member-2 {
+                left: 150px;
+                width: 378px;
+                height: 378px;
+            }
+            .member-3 {
+                width: 250px;
+                height: 200px;
+                right: 0px;
+                top: 150px;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    #eqiupment {
+        padding: 45px 0px;
+        .button-box {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .tv {
+            padding-top: 80px;
+        }
+        .coach {
+            .coach-gif-wrapper {
+                .coach-gif {
+                    height: 600px;
+                    .coach-img-text {
+                        .coach-image-next {
+                            bottom: -40px;
+                        }
+                    }
+                }
+                .coach-gif-2 {
+                    height: 600px;
+                    .coach-img-text {
+                        .coach-image-next {
+                            bottom: -40px;
+                        }
+                    }
+                }
+            }
+        }
+        .trainer {
+            .img-1 {
+                width: 100%;
+            }
+            .img-2 {
+                width: 100%;
+            }
+            .img-3 {
+                width: 100%;
+            }
+            .img-4 {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 767px) and (min-width: 575px) {
+    .heading {
+        span {
+            font-size: 36px;
+        }
+    }
+    .sub-heading {
+        .trail {
+            font-size: 16px;
+        }
+    }
+    #hero-sec {
+        .hero-img {
+            height: 533px;
+            .heading {
+                padding: 130px 0px 10px;
+            }
+        }
+    }
+    #member {
+        .heading {
+            padding: 45px 0px;
+        }
+        .member-img {
+            .member-1 {
+                left: 70px;
+                width: 206px;
+                height: 180px;
+                top: -55px;
+            }
+            .member-2 {
+                left: 100px;
+                width: 300px;
+                height: 378px;
+            }
+            .member-3 {
+                width: 210px;
+                height: 200px;
+                right: 20px;
+                top: 240px;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    #eqiupment {
+        padding: 45px 0px;
+        .button-box {
+            margin-top: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        .back-heading {
+            font-size: 100px;
+        }
+        .tv {
+            padding-top: 80px;
+        }
+        .slider-wrapper {
+            padding-top: 45px;
+        }
+        .coach {
+            .coach-gif-wrapper {
+                .coach-gif {
+                    height: 600px;
+                    .coach-img-text {
+                        .coach-image-next {
+                            bottom: -40px;
+                        }
+                    }
+                }
+                .coach-gif-2 {
+                    height: 600px;
+                    .coach-img-text {
+                        .coach-image-next {
+                            bottom: -40px;
+                        }
+                    }
+                }
+            }
+        }
+        .dp-img {
+            img {
+                width: 270px;
+            }
+        }
+        .trainer {
+            .img-1 {
+                width: 100%;
+                height: 260px;
+                background-size: contain;
+                margin: 0px auto 15px;
+            }
+            .img-2 {
+                width: 100%;
+                height: 260px;
+                background-size: contain;
+            }
+            .img-3 {
+                width: 100%;
+                height: 260px;
+                background-size: contain;
+                margin: 0px auto 15px;
+            }
+            .img-4 {
+                width: 100%;
+                height: 260px;
+                background-size: contain;
+            }
+        }
+        .classes-img-2 {
+            height: 336px;
+        }
+    }
+    #worldwide {
+        padding: 30px;
+        .heading {
+            padding: 0px;
+        }
+    }
+    #commingSoon {
+        padding: 40px 0px;
+        .img-container {
+            height: 360px;
+            width: 300px;
+        }
+        .catagory {
+            font-size: 22px;
+        }
+    }
+    #packages {
+        padding: 40px 0px;
+        .heading {
+            text-align: left;
+        }
+        .pkg-card-responsive {
+            margin: 20px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 32px;
+            width: 100%;
+            height: 200px;
+            box-shadow: 0px 2px 12px rgba(20, 20, 43, 0.08);
+            border-radius: 12px;
+            padding: 30px;
+            position: relative;
+            .card-heading {
+                font-family: lexend-zetta;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 30px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                letter-spacing: -2px;
+                text-transform: uppercase;
+                color: #f0f4f7;
+            }
+            .badge {
+                padding: 8px 14px;
+                width: 120px;
+                height: 33px;
+                top: -15px;
+                background: #ffffff;
+                border-radius: 50px;
+                position: absolute;
+                z-index: 2;
+
+                span {
+                    font-family: syncopate-bold;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 17px;
+                    color: #d33732;
+                }
+            }
+            .standard {
+                padding: 12px 24px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                text-align: center;
+                span {
+                    font-family: lexend-deca;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 32px;
+                    text-transform: capitalize;
+                    color: #ffffff;
+                }
+            }
+            .rate {
+                p {
+                    font-family: syncopate-bold;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 33px;
+                    text-align: center;
+                    color: #ffffff;
+                    // text-transform: uppercase;
+                    span {
+                        font-size: 32px;
+                        position: relative;
+                        top: 7px;
+                    }
+                }
+            }
+            .build {
+                span {
+                    font-family: lexend-deca;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 24px;
+                    text-align: left;
+                    text-transform: capitalize;
+                    color: #ffffff;
+                    opacity: 0.85;
+                }
+            }
+        }
+    }
+    footer {
+        padding: 30px 0px 20px;
+
+        .footer-img-logo {
+            margin: 20px;
+            width: 40%;
+        }
+        .footer-list {
+            text-align: center;
+            float: unset;
+            .social-box {
+                justify-content: center;
+            }
+        }
+        .border-line {
+            margin: 20px 0px;
+        }
+    }
+    .copy-right-box {
+        text-align: center;
+    }
+    .terms-box {
+        text-align: center;
+    }
+    .policy-box {
+        text-align: center;
+    }
+}
+@media (max-width: 575px) and (min-width: 350px) {
+    .heading {
+        text-align: left;
+        span {
+            font-size: 36px;
+            line-height: 42px;
+        }
+    }
+    .sub-heading {
+        .trail {
+            font-size: 14px;
+        }
+    }
+    #hero-sec {
+        .hero-img {
+            height: 530px;
+            margin-top: -75px;
+            background-size: cover;
+            background-position: 82%;
+            .heading {
+                padding: 185px 0px 30px;
+            }
+        }
+    }
+    #member {
+        .heading {
+            padding: 95px 0px;
+            text-align: left;
+        }
+        .member-img {
+            .member-1 {
+                left: 21px;
+                width: 206px;
+                height: 180px;
+                top: -55px;
+            }
+            .member-2 {
+                left: 34px;
+                width: 306px;
+                height: 390px;
+            }
+            .member-3 {
+                width: 210px;
+                height: 200px;
+                right: 21px;
+                top: 240px;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    #eqiupment {
+        padding: 45px 0px;
+        .button-box {
+            margin-top: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+            width: 100%;
+        }
+        .header-wrapper {
+            .heading {
+                .back-heading {
+                    font-size: 100px;
+                }
+            }
+        }
+        .video-sec {
+            #instructions {
+                .video-border-top {
+                    width: 136px;
+                    height: 136px;
+                }
+                .video-border-bottom {
+                    width: 136px;
+                    height: 136px;
+                    right: -12px;
+                }
+            }
+        }
+        .tv {
+            padding-top: 80px;
+            .header-wrapper{
+                .heading{
+                    text-align: left;
+                    .back-heading{
+                        left: 0;
+                    }
+                }
+            }
+        }
+        .workout-heading {
+            span {
+                font-size: 20px;
+            }
+        }
+        .slider-wrapper {
+            padding-top: 45px;
+        }
+        .short-heading{
+            font-size: 20px;
+        }
+        .coach {
+            padding: 80px 0px 30px;
+            .header-wrapper{
+                .heading{
+                    text-align: left;
+                    .back-heading{
+                        left: 0;
+                    }
+                }
+            }
+            .coach-gif-wrapper {
+                .coach-gif {
+                    height: 600px;
+                    .coach-img-text {
+                        .coach-image-next {
+                            bottom: -40px;
+                        }
+                    }
+                }
+                .coach-gif-2 {
+                    height: 600px;
+                    .coach-img-text {
+                        .coach-image-next {
+                            bottom: -40px;
+                        }
+                    }
+                }
+            }
+        }
+        .dp-img {
+            img {
+                width: 270px;
+            }
+        }
+        .header-classes{
+            padding-top: 20px;
+        }
+        .trainer {
+            .img-1 {
+                width: 100%;
+                height: 164px;
+                background-size: cover;
+                margin: 0px auto 15px;
+            }
+            .img-2 {
+                width: 100%;
+                height: 164px;
+                background-size: cover;
+            }
+            .img-3 {
+                
+                    width: 100%;
+                    height: 164px;
+                    background-size: cover;
+                    margin: 0px auto 15px;
+                
+            }
+            .img-4 {
+                
+                    width: 100%;
+                    height: 164px;
+                    background-size: cover;
+                    margin: 0px auto 15px;
+            }
+            .trainer-name{
+                bottom: 32px;
+                span{
+                    font-size: 14px;
+                }
+            }
+            .title{
+                bottom: 11px;
+                height: 25px;
+                span{
+                    font-size: 12px
+                }
+            }
+        .trainer-col{
+            padding: 40px 0px;
+        }
+        }
+        .classes-img-2 {
+            height: 336px;
+        }
+    }
+    #worldwide {
+        padding: 50px 0px;
+        .heading {
+            padding: 0px;
+            text-align: left;
+        }
+    }
+    #collapseable{
+        padding: 60px 0px;
+        .heading{
+            text-align: left;
+        }
+    }
+    #commingSoon {
+        padding: 40px 0px;
+        .img-container {
+            height: 360px;
+            width: 300px;
+        }
+        .catagory {
+            font-size: 22px;
+        }
+    }
+    #packages {
+        padding: 40px 0px;
+        .heading {
+            text-align: left;
+        }
+        .pkg-card-responsive {
+            margin: 20px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 155px;
+            box-shadow: 0px 2px 12px rgba(20, 20, 43, 0.08);
+            border-radius: 12px;
+            padding: 15px;
+            position: relative;
+            .card-heading {
+                font-family: lexend-zetta;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 30px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                letter-spacing: -2px;
+                text-transform: uppercase;
+                color: #f0f4f7;
+            }
+            .badge {
+                padding: 8px 14px;
+                width: 120px;
+                height: 33px;
+                top: -15px;
+                background: #ffffff;
+                border-radius: 50px;
+                position: absolute;
+                z-index: 2;
+
+                span {
+                    font-family: syncopate-bold;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 17px;
+                    color: #d33732;
+                }
+            }
+            .standard {
+                padding: 8px 16px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+                text-align: center;
+                span {
+                    font-family: lexend-deca;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 32px;
+                    text-transform: capitalize;
+                    color: #ffffff;
+                }
+            }
+            .rate {
+                p {
+                    font-family: syncopate-bold;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 33px;
+                    text-align: center;
+                    color: #ffffff;
+                    // text-transform: uppercase;
+                    span {
+                        font-size: 24px;
+                        position: relative;
+                        top: 0px;
+                    }
+                }
+            }
+            .build {
+                span {
+                    font-family: lexend-deca;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 24px;
+                    text-align: left;
+                    text-transform: capitalize;
+                    color: #ffffff;
+                    opacity: 0.85;
+                }
+            }
+        }
+    }
+    footer {
+        padding: 20px 20px 20px;
+        text-align: left;
+        .footer-img-logo {
+            width: 70%;
+            padding: 50px 0px;
+        }
+        .wrapper-gray {
+            width: 350px;
+        }
+        .footer-list {
+            list-style: none;
+            padding-left: 30px;
+            .heading {
+                font-size: 14px;
+                padding-bottom: 7px;
+            }
+            .list-item {
+                font-size: 12px;
+                margin-top: 0px;
+            }
+            .socials-icons {
+                width: 40px;
+                height: 40px;
+                padding: 9px 13px;
+            }
+        }
+        .socials{
+            .heading{
+                text-align: center;
+            }
+        }
+        .border-line {
+            margin: 20px 0px;
+        }
+        .copy-right {
+            font-size: 12px;
+        }
+    }
+    .copy-right-box {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .terms-box {
+        text-align: center;
+    }
+    .policy-box {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}

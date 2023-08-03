@@ -1,0 +1,326 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+#tv-live {
+  padding: 0px 5%;
+
+  .tv-live-card {
+    background-color: #202122;
+    padding: 10px 10px;
+    border-radius: 4px;
+
+    .my-class-badges {
+      .my-classes-appointment,
+      .my-coins {
+        cursor: pointer;
+        display: inline;
+        float: right;
+        background: #181818;
+        border: 1px solid #2e2e2e;
+        border-radius: 10px;
+        padding: 11px 15px;
+
+        .my-classes-badge-text {
+          display: inline;
+          font-family: "lexend-deca";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          position: relative;
+          top: 2px;
+          text-transform: capitalize;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .no-classes-wrapper {
+      margin-top: 20px;
+      background: #181818;
+      border: 1px solid #2e2e2e;
+      border-radius: 10px;
+      min-height: 300px;
+      text-align: center;
+
+      .no-classes-h1 {
+        margin-top: 100px;
+        font-family: "syncopate";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 32px;
+        color: $white;
+      }
+
+      .no-classes-h2 {
+        font-family: "lexend-deca";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        color: #707483;
+      }
+
+      .no-classes-down-icon {
+        margin-top: 20px;
+      }
+    }
+
+    .classes-item-wrapper {
+      padding: 20px 0;
+      .classes-item {
+        margin: 5px;
+        background: #181818;
+        border: 1px solid #2e2e2e;
+        border-radius: 10px;
+        padding: 16px 17px;
+        min-height: 196px;
+
+        .classes-item-img {
+          img {
+            width: 41px;
+          }
+          .classes-item-title {
+            font-family: "syncopate";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 15px;
+            color: #ffffff;
+            padding: 2px 0 0 3px;
+          }
+          .classes-item-time {
+            font-family: "lexend-deca";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 32px;
+            color: #d33732;
+            padding-left: 3px;
+          }
+        }
+
+        .classes-item-labels {
+          padding-left: 10px;
+          .slot-duration,
+          .classes-item-labels-icons {
+            padding: 10px 0 0 0;
+            font-family: "lexend-deca";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 14px;
+            color: #707483;
+
+            img {
+              padding-right: 7px;
+              width: 25px;
+
+              &.ezbar {
+                width: 30px;
+              }
+            }
+          }
+        }
+
+        .class-item-join-class {
+          padding: 15px 0 0 0;
+
+          .btn-primary {
+            padding: 11px 15px !important;
+            font-weight: 700 !important;
+            font-size: 11px !important;
+            line-height: 14px !important;
+          }
+
+          .gray-btn {
+            padding: 10px 15px !important;
+            background-color: transparent !important;
+            border: 1px solid #2e2e2e !important;
+            border-radius: 4px !important;
+          }
+        }
+      }
+    }
+  }
+
+  .card-title {
+    .card-head {
+      padding-top: 10px;
+      font-family: lexend-zetta;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32px;
+      align-items: center;
+      letter-spacing: -4px;
+      text-transform: capitalize;
+      color: #f0f4f7;
+    }
+  }
+
+  .tv-live-booking {
+    margin-top: 40px;
+
+    .tv-live-booking-badge-wrapper {
+      background: #181818;
+      border: 1px solid #2e2e2e;
+      border-radius: 10px;
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 10px 25px;
+      margin: 20px 0;
+
+      .tv-live-booking-badge-icon {
+        padding: 5px 0;
+
+        .my-classes-badge-text {
+          display: inline;
+          font-family: "lexend-deca";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          position: relative;
+          top: 2px;
+          text-transform: capitalize;
+          color: #ffffff;
+        }
+      }
+
+      .tv-live-booking-badge-text {
+        padding: 10px 0 0 0;
+        font-family: "lexend-deca";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 18px;
+        text-transform: capitalize;
+        color: #ffffff;
+      }
+
+      span.seprator {
+        margin: 0 15px;
+        border: 1px solid #2e2e2e;
+      }
+    }
+  }
+
+  .eztoned-class-wrapper {
+    background: #181818;
+    border: 1px solid #2e2e2e;
+    border-radius: 16px;
+
+    .eztoned-class-banner {
+      img {
+        width: 100%;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+      }
+    }
+
+    .eztoned-class-details {
+      padding: 23px 18px;
+      min-height: 225px;
+      .eztoned-class-details-title {
+        font-family: "syncopate";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 14px;
+        color: #ffffff;
+      }
+
+      .eztoned-class-details-icons {
+        display: flex;
+        padding: 15px 0;
+        .eztoned-class-details-icon {
+          font-family: "lexend-deca";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 10px;
+          line-height: 14px;
+          color: #707483;
+          padding-right: 5px;
+        }
+      }
+
+      .eztoned-class-details-text {
+        font-family: "lexend-deca";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #ffffff;
+        padding: 15px 0 0 0;
+      }
+    }
+
+    .eztoned-class-book {
+      padding: 0 23px 15px 23px;
+    }
+  }
+}
+
+@media (max-width: 992px) and (min-width: 767px) {
+  #tv-live {
+  }
+}
+
+@media (max-width: 767px) and (min-width: 575px) {
+}
+
+@media (max-width: 575px) and (min-width: 350px) {
+  #tv-live {
+    .my-class-badges {
+      .my-classes-appointment,
+      .my-coins {
+        float: left !important;
+      }
+    }
+
+    .no-classes-wrapper {
+      margin-top: 15px !important;
+      padding: 10px;
+
+      .no-classes-h1 {
+        margin-top: 50px !important;
+        font-weight: 700 !important;
+        font-size: 14px !important;
+      }
+
+      .no-classes-h2 {
+        font-size: 12px !important;
+      }
+    }
+
+    .tv-live-booking {
+      .card-head {
+        font-size: 16px !important;
+      }
+
+      .tv-live-booking-badge-wrapper {
+        display: block !important;
+        text-align: center !important;
+
+        span.seprator {
+          display: none !important;
+        }
+      }
+    }
+
+    .eztoned-class-wrapper {
+      margin-bottom: 20px;
+      .eztoned-class-details {
+        .eztoned-class-details-icons {
+          display: block !important;
+          .eztoned-class-details-icon {
+            font-size: 13px !important;
+            padding-right: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+}

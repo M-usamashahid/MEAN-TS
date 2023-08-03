@@ -1,0 +1,39 @@
+@import "../variables";
+@import "./base";
+
+.p-paginator {
+  background-color: transparent;
+
+  .p-link {
+    background-color: $gray-1000;
+    color: $white;
+
+    &.p-highlight {
+      background: $primary-600 !important;
+      border-color: $white !important;
+    }
+  }
+  .p-dropdown {
+    height: 2rem !important;
+    .p-dropdown-label {
+      padding: 2px 4px;
+      text-align: center;
+    }
+  }
+}
+.p-dropdown-panel {
+  .p-dropdown-items {
+    .p-dropdown-item.p-highlight {
+      background: $primary-600;
+      &.active,
+      &:active,
+      &:hover {
+        background: $primary-600;
+      }
+    }
+    .p-dropdown-item {
+      padding: 4px 20px;
+      // text-align: center;
+    }
+  }
+}

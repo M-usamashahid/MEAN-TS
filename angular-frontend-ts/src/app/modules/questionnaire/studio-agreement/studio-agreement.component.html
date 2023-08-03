@@ -1,0 +1,298 @@
+<div class="studio-aggrement-wrapper">
+    <div class="studio-aggrement-h1">
+        Key Points:
+    </div>
+
+    <ul class="key-points agremnt-content">
+        <li>
+            In order to retain ownership of EzToned Equipment, you will have to complete three monthly payments (or 150
+            USD). If your ezbar subscription plan is canceled before 3 months, the equipment will have to be returned to
+            EzToned (return shipping costs incurred by you).
+        </li>
+        <li>
+            We recommend you to consult your GP or Physician before making any changes to your lifestyle, diet, or
+            exercise habits. You are solely responsible for the way information from EzToned TV is perceived and
+            utilized and so, you do so at your own risk.
+        </li>
+        <li>
+            We don’t tie you into any contracts. You can cancel your plan any time. No refunds are offered after the
+            first 14 days cooling period has passed.
+        </li>
+        <li>
+            In case you need any help, please feel free to reach out to our support team at
+            <span>support@eztoned.com</span>.
+        </li>
+    </ul>
+
+    <div class="studio-aggrement-h1">
+        Subscription Agreement
+    </div>
+
+    <div class="agremnt-content">
+        This Subscription Agreement (hereinafter referred to as the "Agreement") is made and shall be effective as on
+        {{data.today | date}} (hereinafter referred to as the "Effective Date"),
+    </div>
+
+    <div class="agremnt-content my-3">
+        By and between
+    </div>
+
+    <div class="agremnt-content my-2">
+        <span>EzToned Limited</span> (hereinafter referred to as the "Digital Gym") and,
+    </div>
+
+    <div class="agremnt-content my-2">
+        <span>{{data.name}} </span>(hereinafter referred to as the "Member").
+    </div>
+
+    <div class="agremnt-content my-2">
+        The Digital Gym and the Member are collectively referred to as the "Parties" and individually as "Party".
+    </div>
+
+    <div class="agremnt-content my-2">
+        The Digital Gym offers fitness equipment, fitness classes and personal training through the internet, and the
+        Member wishes to participate in these activities and to enjoy all other amenities offered unless noted
+        otherwise.
+    </div>
+
+    <div class="studio-aggrement-h1">
+        Member Details
+    </div>
+
+    <ol class="key-points agremnt-content">
+        <li>Member Name: {{data.name}}</li>
+        <!-- <li>Gender: {{questionnaire.gender}}</li> -->
+        <li>Address: {{data.shippingAddress?.address1}}</li>
+        <li>Phone: {{data.phone}}</li>
+        <li>Email: {{data.email}}</li>
+    </ol>
+
+    <div class="studio-aggrement-h2">
+        Health Attestation
+    </div>
+
+    <div class="agremnt-content my-2">
+        The Member attests that they are fully able to participate in an exercise routine of their choice without undue
+        risk. Thus, by providing the aforementioned details, the Member hereby shows their desire to become a member of
+        the Digital Gym, pursuant to the terms and conditions of this Agreement.
+    </div>
+
+    <div class="studio-aggrement-h1">
+        Terms and Conditions
+    </div>
+
+    <div class="agremnt-content my-1">
+        The following terms and conditions shall define and govern the relevant aspects of this Agreement:
+    </div>
+
+    <div class="studio-aggrement-h2">
+        1. Member Access
+    </div>
+    <div class="agremnt-content my-1">
+        This Agreement entitles the Member to access the Digital Gym's facilities (hereinafter referred to as
+        "Facilities") as long as the dues are paid in advance to the Digital Gym.
+    </div>
+
+    <div class="agremnt-content my-2">
+        The Membership facilities provided by the Digital Gym are as follows:
+    </div>
+
+    <ul class="key-points agremnt-content">
+        <li>Fitness equipment (sent to the member’s address)</li>
+        <li>One-on-One Coaching (delivered digitally) </li>
+        <li>Workout Classes (available digitally through streaming media)</li>
+    </ul>
+
+    <div class="studio-aggrement-h2">
+        2. Membership Fees
+    </div>
+
+    <div class="agremnt-content my-1">
+        The Member has opted for the EzBar membership and has to pay an amount of USD {{data.total.amount |
+        number: '1.2-2'}} (hereinafter referred to as "Fee") to avail the facilities of the Digital Gym.
+    </div>
+
+    <div class="agremnt-content my-2">
+        The fee may be paid via the following methods: Credit/Debit Card or Direct Debit.
+    </div>
+
+    <table class="table table-border my-4">
+        <tr>
+            <th>Plan</th>
+            <th>Charge</th>
+        </tr>
+        <tr *ngFor="let item of data.products.price">
+            <td>
+                <div *ngIf="item.recurring.intervalCount === 1">Monthly Membership</div>
+                <div *ngIf="item.recurring.intervalCount === 3">Quarterly Membership (3 Months)</div>
+                <div *ngIf="item.recurring.intervalCount === 12">Yearly Membership (12 Months)</div>
+            </td>
+            <td>USD {{item.unitAmount / 100 |number: '1.2-2'}}</td>
+        </tr>
+    </table>
+
+    <div class="studio-aggrement-h3">
+        NOTE:
+    </div>
+
+    <ol class="key-points agremnt-content">
+        <li>
+            Monthly memberships are paid in advance monthly, on the calendar date the membership has started, for the
+            following month.
+        </li>
+        <li>
+            Quarterly and Yearly memberships has to be paid in 1 lump sum due immediately on the day of subscription.
+        </li>
+        <li>
+            There are no cancellation or late fees. Member can cancel their membership at any time.
+        </li>
+    </ol>
+
+    <div class="studio-aggrement-h2">
+        3. Term
+    </div>
+
+    <div class="agremnt-content my-2">
+        The Membership shall commence on the date of {{data.today | date}} (hereinafter referred to as the "Commencement
+        Date") and shall continue till the Member pay the fee on time or until it is terminated by either Party.
+    </div>
+
+    <div class="studio-aggrement-h2">
+        4. Right to Cancellation
+    </div>
+
+    <div class="agremnt-content my-1">
+        Member can cancel their plan anytime. There are no cancellation fees.
+    </div>
+
+    <div class="agremnt-content my-2">
+        To cancel their membership for a full refund, the Member has to inform the Digital Gym in writing within 14 days
+        after signing this Agreement. If the Agreement is canceled within 14 days, the Digital Gym shall return to the
+        Member all amounts paid in full. After 14 days (cooling off period) has passed, no refunds can be issued.
+    </div>
+
+    <div class="agremnt-content my-1">
+        In order to get a refund, the member has to first return the fitness equipment provided by the Digital Gym if
+        the plan is canceled before 3 monthly payments (or 150 USD total) is taken from the member. The member can opt
+        to keep the equipment by
+    </div>
+
+    <div class="studio-aggrement-h2">
+        5. Access & Termination
+    </div>
+
+    <div class="agremnt-content my-2">
+        The Member agrees to not share their membership details with any other parties (friends, family, relatives or
+        others). Digital Gym access is strictly limited to the member only.
+    </div>
+
+    <div class="agremnt-content my-2">
+        The Member may terminate this Agreement upon 14 prior written notice to the Digital Gym. Upon the termination of
+        this agreement, the Member shall immediately return to the Digital Gym any fitness equipment or material issued
+        to the Member. The Digital Gym will then revoke access to all features provided with the plan.
+    </div>
+
+    <div class="agremnt-content my-2">
+        This Agreement may also be immediately terminated in the event there is a breach of the terms of this Agreement
+        by either party. This Agreement shall also terminate upon the death of the Member, or because of significant
+        physical or medical disability for a period in excess of 3 months.
+    </div>
+
+    <div class="studio-aggrement-h2">
+        6. Assumption of Risk and Potential Liability
+    </div>
+
+    <div class="agremnt-content my-2">
+        The Member acknowledges and agrees that there are risks involved with any fitness and physical activity, the use
+        of exercise equipment, and participation in an exercise program, and such risks may include the risk of serious
+        bodily injury or death.
+    </div>
+
+    <div class="agremnt-content my-2">
+        By signing this agreement, the Member knowingly and voluntarily assumes all risks of liability, loss, illness,
+        death, or injury caused or arising out of any use of the Facilities or the participation in any activities by
+        the Member.
+    </div>
+
+    <div class="studio-aggrement-h2">
+        7. Damages
+    </div>
+
+    <div class="agremnt-content my-2">
+        The Member shall pay for any damages it incurs to the equipment, features or goodwill of the Digital Gym, which
+        results from the poor or dishonest conduct of the Member.
+    </div>
+
+    <div class="studio-aggrement-h2">
+        8. Rules and Responsibilities
+    </div>
+
+    <ul class="key-points agremnt-content">
+        <li> The Member shall abide by all the safety guidelines and regulations as set forth by the Digital Gym while
+            using the equipment or services available within the plan. </li>
+        <li> The Member agrees that the Member shall abide by the Digital Gym's conduct code at all times using the
+            equipment or services.</li>
+        <li> Photography and/or videography or any sort of reproduction of the Digital Gym’s offerings are not allowed
+            to be published without permission.</li>
+        <li> Members are expected to follow the guidance and programs issued by their coaches. </li>
+        <li> Members must respect each other and their coaches in all circumstances. </li>
+        <li> Persons under the age of 15 are not permitted to access Digital Gym without parental guidance or unless
+            otherwise agreed upon.</li>
+    </ul>
+
+    <div class="studio-aggrement-h2">
+        9. Arbitration
+    </div>
+
+    <div class="agremnt-content my-2">
+        In the event of any dispute arising in and out of this Agreement between the Parties, it shall be resolved by
+        Arbitration. There shall be 2 Arbitrators which shall be appointed by the Digital Gym and The member (one each).
+        The channel of Arbitration will be a digital communication tool like Zoom or Google Meet. The Arbitrators'
+        decision shall be final and will be binding on both the Parties.
+    </div>
+
+    <div class="studio-aggrement-h2">
+        10. Miscellaneous
+    </div>
+
+    <ul class="key-points agremnt-content">
+        <li>
+            <b>Indemnification:</b> The Member must indemnify the Digital Gym harmless of any and all claims, loss,
+            injury, or
+            damages without limitation, as the membership shall be serving as a liability release for the Member.
+        </li>
+        <li>
+            <b>Binding:</b> This Agreement shall be considered binding upon the Member and the Digital Gym. Any and all
+            legal
+            proceedings in lieu of the Agreement shall be resolved by the jurisdiction laws of the state of Cardiff,
+            United Kingdom.
+        </li>
+        <li>
+            <b>Notices:</b> Any and all notices, apart from cancellation notice, can be made to the Parties through an
+            email
+            sent to support@eztoned.com. Any additional address shall be notified to the Parties in writing and in
+            person.
+        </li>
+        <li>
+            <b>Governing Law:</b> This Agreement hereto shall be governed and interpreted in accordance with the laws
+            of
+            Cardiff, United Kingdom.
+        </li>
+        <li>
+            <b>Entirety:</b> This Agreement and other annexures, therefore, constitute the entire agreement between the
+            Parties
+            with respect to the matter of subject hereof and thus, supersedes all prior agreements, purchases,
+            understandings, and negotiations, written or phonated, between the Parties.
+        </li>
+    </ul>
+
+    <div class="studio-aggrement-h1">
+        Acceptance and Signature
+    </div>
+
+    <div class="agremnt-content my-2">
+        This Agreement is agreed to by the Digital Gym and the undersigned Member who have agreed to this Agreement
+        below.
+    </div>
+
+</div>

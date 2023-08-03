@@ -1,0 +1,129 @@
+@import "../../../../../scss/variables";
+
+.card-wrapper {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+
+  &.active {
+    border: 2px solid $primary;
+  }
+
+  .card-icon {
+    width: 10%;
+    .card-img {
+      width: 35px;
+      margin-top: 6px;
+    }
+  }
+
+  .card-number-wrapper {
+    width: 30%;
+    .card-number {
+      padding-top: 10px;
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 32px;
+      text-transform: capitalize;
+      color: #bfc3cf;
+    }
+  }
+
+  .card-exp-wrapper {
+    width: 30%;
+    .card-exp {
+      padding-top: 10px;
+      font-weight: 600;
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 32px;
+      text-transform: capitalize;
+      color: #707483;
+    }
+  }
+
+  .card-action {
+    width: 30%;
+    .fa-times {
+      font-size: 15px;
+      margin-top: 15px;
+      color: #707483;
+      cursor: pointer;
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .fa-check-circle {
+      font-size: 15px;
+      margin-top: 15px;
+      color: $primary;
+    }
+  }
+}
+
+@media (max-width: 992px) and (min-width: 767px) {
+  .card-wrapper {
+    .card-icon {
+      width: 15%;
+    }
+
+    .card-number-wrapper {
+      width: 50%;
+    }
+
+    .card-exp-wrapper {
+      width: 25%;
+    }
+    .card-action {
+      width: 10%;
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 575px) {
+  .card-wrapper {
+    .card-icon {
+      width: 10%;
+    }
+
+    .card-number-wrapper {
+      width: 40%;
+    }
+
+    .card-exp-wrapper {
+      width: 40%;
+    }
+    .card-action {
+      width: 10%;
+    }
+  }
+}
+
+@media (max-width: 575px) and (min-width: 350px) {
+  .card-wrapper {
+    .card-icon {
+      width: 15%;
+    }
+
+    .card-number-wrapper {
+      width: 55%;
+    }
+
+    .card-exp-wrapper {
+      width: 30%;
+    }
+    .card-action {
+      width: 10%;
+    }
+  }
+}

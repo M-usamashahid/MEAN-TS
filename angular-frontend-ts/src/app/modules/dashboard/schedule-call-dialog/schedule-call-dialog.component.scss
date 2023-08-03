@@ -1,0 +1,18 @@
+@import "../../../../scss/variables";
+
+.p-dialog {
+  max-height: 100% !important;
+  max-width: 100% !important;
+}
+
+.schedule-call-wrapper {
+  padding: 5% 0% 0px;
+  .dialog-close {
+    top: 5%;
+    position: relative;
+    float: right;
+    color: #ffffff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+}

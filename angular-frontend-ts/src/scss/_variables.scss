@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "gilroy";
+  src: url("../assets/fonts/Gilroy-Bold.woff");
+  src: url("../assets/fonts/Gilroy-Heavy.woff");
+  src: url("../assets/fonts/Gilroy-Light.woff");
+  src: url("../assets/fonts/Gilroy-Medium.woff");
+  src: url("../assets/fonts/Gilroy-Regular.woff");
+}
+@font-face {
+  font-family: "lexend";
+  src: url("../assets/fonts/Lexend-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "lexend-deca";
+  src: url("../assets/fonts/LexendDeca-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "lexend-zetta";
+  src: url("../assets/fonts/LexendZetta-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: "syncopate";
+  src: url("../assets/fonts/Syncopate-Regular.ttf");
+  // src: url("../assets/fonts/Syncopate-Bold.ttf");
+}
+@font-face {
+  font-family: "syncopate-bold";
+  // src: url("../assets/fonts/Syncopate-Regular.ttf");
+  src: url("../assets/fonts/Syncopate-Bold.ttf");
+}
+
+$white: #ffffff !default;
+$primary: #d33732 !default;
+
+$black: #1f1f1f !default;
+$nav-background: #202122;
+$side-nav-background: #242527;
+
+$gray-50: #f9f9f9 !default;
+$gray-100: #f2f2f2 !default;
+$gray-200: #e9e9e9 !default;
+$gray-300: #d9d9d9 !default;
+$gray-400: #b6b6b6 !default;
+$gray-500: #969696 !default;
+$gray-600: #6d6d6d !default;
+$gray-700: #5a5a5a !default;
+$gray-800: #3b3b3b !default;
+$gray-900: #1b1b1b !default;
+$gray-1000: #141414 !default;
+$gray-1100: #000000 !default;
+
+$primary-50: #ffebee !default;
+$primary-100: #ffcdd1 !default;
+$primary-200: #f79997 !default;
+$primary-300: #ef716e !default;
+$primary-400: #fa4e48 !default;
+$primary-500: #fe3c29 !default;
+$primary-600: #f0302a !default;
+$primary-700: #de2424 !default;
+$primary-800: #d11b1d !default;
+$primary-900: #c3020d !default;
+
+$warning-50: #fffaeb !default;
+$warning-100: #fef0c7 !default;
+$warning-200: #fedf89 !default;
+$warning-300: #fec84b !default;
+$warning-400: #fdb022 !default;
+$warning-500: #f79009 !default;
+$warning-600: #dc6803 !default;
+$warning-700: #b54708 !default;
+$warning-800: #93370d !default;
+$warning-900: #7a2e0e !default;
+
+$success-50: #ecfdf3 !default;
+$success-100: #d1fadf !default;
+$success-200: #a6f4c5 !default;
+$success-300: #6ce9a6 !default;
+$success-400: #32d583 !default;
+$success-500: #12b76a !default;
+$success-600: #039855 !default;
+$success-700: #027a48 !default;
+$success-800: #05603a !default;
+$success-900: #054f31 !default;

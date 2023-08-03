@@ -1,0 +1,297 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.questionnaire-wrapper {
+  height: 100vh;
+  display: flex;
+
+  .questionnaire-left {
+    width: 25%;
+    img {
+      height: 100%;
+    }
+  }
+
+  .questionnaire-right {
+    width: 75%;
+
+    .questionnaire-steps-wrapper {
+      .questionnaire-steps-inner {
+        position: relative;
+        top: -40px;
+        left: 10%;
+
+        max-width: 400px;
+        display: flex;
+        justify-content: space-around;
+        .questionnaire-step {
+          width: 20px;
+          height: 6px;
+          border-radius: 2px;
+          background: #707483;
+          cursor: pointer;
+
+          &.active {
+            background: $primary;
+          }
+        }
+      }
+    }
+
+    .question-slide-wrapper {
+      max-width: 540px;
+      margin: 50px auto 0 auto;
+
+      .question-wrapper {
+        display: none;
+
+        &.question-wrapper-show {
+          transition: all 0.5s ease;
+          display: block;
+        }
+
+        .question-heading {
+          font-family: syncopate;
+          font-style: normal;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 28px;
+          color: $white;
+        }
+
+        .question-sub-heading {
+          font-family: "lexend-zetta";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          color: #707483;
+          text-transform: uppercase;
+          padding: 20px 0 0 0;
+        }
+
+        .question-content {
+          margin-top: 30px;
+
+          .weight-switch-wrapper,
+          .hight-switch-wrapper {
+            display: flex;
+            background: #2c303a;
+            border-radius: 4px;
+            padding: 6px 6px;
+            float: right;
+            margin-top: -48px;
+            margin-right: 15px;
+            color: $white;
+
+            .weight-switch-box,
+            .hight-switch-box {
+              background: #2c303a;
+              height: 28px;
+              font-family: "lexend-deca";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 15px;
+              text-align: center;
+              text-transform: capitalize;
+              padding: 3px 6px 0 6px;
+
+              &.active {
+                background: $primary;
+                border-radius: 4px;
+              }
+            }
+          }
+        }
+
+        .studio-agreement-wrapper {
+          background: rgba(34, 37, 41, 0.25);
+          border: 1px solid #707483;
+          border-radius: 4px;
+          padding: 25px 0 0 0;
+
+          margin: 30px 0 30px 0;
+
+          .studio-agreement-content {
+            // font-family: "lexend-deca";
+            // font-style: normal;
+            // font-weight: 500;
+            // font-size: 16px;
+            // line-height: 32px;
+            // text-transform: capitalize;
+            // color: #ffffff;
+            max-height: 250px;
+            overflow-y: scroll;
+            padding: 0 15px;
+          }
+
+          .studio-agreement-check {
+            font-family: "lexend-deca";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 32px;
+            color: #bfc3cf;
+            padding: 15px 10px;
+
+            .p-checkbox {
+              position: relative;
+              top: -5px;
+
+              &.p-checkbox-checked {
+                .p-highlight {
+                  border-color: $primary;
+                  background: $primary;
+                }
+              }
+
+              .p-checkbox-box {
+                border-radius: 10px;
+
+                &.p-focus {
+                  border-color: transparent !important;
+                  box-shadow: 0 !important;
+                  outline: 0 !important;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .question-nav {
+        z-index: 1000;
+        position: relative;
+
+        .question-nav-back,
+        .question-nav-next {
+          display: inline-block;
+          font-family: "lexend-zetta";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          letter-spacing: -2px;
+          text-transform: uppercase;
+          padding: 20px 10px;
+          cursor: pointer;
+          color: #707483;
+        }
+
+        .question-nav-next {
+          color: #d33732;
+        }
+
+        // padding: 20px 0;
+        text-align: center;
+        i {
+          font-size: 20px;
+
+          position: relative;
+          top: 2px;
+
+          &.disable {
+            color: #707483;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 992px) {
+  .questionnaire-wrapper {
+    .questionnaire-left {
+      display: none;
+    }
+
+    .questionnaire-right {
+      width: 100%;
+
+      .questionnaire-steps-wrapper {
+        .questionnaire-steps-inner {
+          padding-bottom: 20px;
+          position: relative;
+          top: 30px;
+          left: 32%;
+          max-width: 400px;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) and (min-width: 767px) {
+  .questionnaire-wrapper {
+    .questionnaire-left {
+      display: none;
+    }
+
+    .questionnaire-right {
+      width: 100%;
+
+      .questionnaire-steps-wrapper {
+        .questionnaire-steps-inner {
+          padding-bottom: 20px;
+          position: relative;
+          top: 30px;
+          left: 24%;
+          max-width: 400px;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 575px) {
+  .questionnaire-wrapper {
+    .questionnaire-left {
+      display: none;
+    }
+
+    .questionnaire-right {
+      width: 100%;
+
+      .questionnaire-steps-wrapper {
+        .questionnaire-steps-inner {
+          padding-bottom: 20px;
+          position: relative;
+          top: 30px;
+          left: 17%;
+          max-width: 400px;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) and (min-width: 350px) {
+  .questionnaire-wrapper {
+    .questionnaire-left {
+      display: none;
+    }
+
+    .questionnaire-right {
+      width: 100%;
+      padding: 0 20px;
+
+      .questionnaire-steps-wrapper {
+        .questionnaire-steps-inner {
+          padding-bottom: 20px;
+          position: relative;
+          top: 30px;
+          left: 0%;
+          max-width: 400px;
+          display: flex;
+
+          .questionnaire-step {
+            width: 18px;
+            height: 6px;
+          }
+        }
+      }
+    }
+  }
+}

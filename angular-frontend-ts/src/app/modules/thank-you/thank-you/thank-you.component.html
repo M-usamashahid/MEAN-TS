@@ -1,0 +1,77 @@
+<app-screen-wrapper>
+    <div class="thank-you-wrapper">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 checkout-heading loading-wrapper">
+                    Thank you for your order!
+                </div>
+                <div class="col-sm-12 order-heading" (click)="helperService.copyToClipboard(orderId)">
+                    Your order ID: {{orderId}}
+                </div>
+
+                <div class="col-md-5 col-sm-12 mx-auto thankyou-login-wrapper">
+
+                    <div class="thankyou-login-inner">
+                        <div class="eztoned-id">
+                            <img src="assets/logo/eztoned-id-logo.png" alt="">
+                        </div>
+
+                        <div class="thankyou-login-heading">
+                            {{ (user.isPasswordSet) ? 'ENTER' : 'CREATE'}} A PASSWORD TO ACCESS YOUR EZTONED ID
+                        </div>
+
+                        <div class="thankyou-login-subheading-1">
+                            EzToned ID lets you access all EzToned equipment and services in one place.
+                        </div>
+                        <div class="thankyou-login-subheading-2">
+                            We've started creating an EzToned ID for you with the email {{user.email}}. Create a
+                            password to complete your registration.
+                        </div>
+
+                        <div class="thanks-login-inputs">
+                            <input type="email" class="form-control thankyou-email" placeholder="Enter a email"
+                                [(ngModel)]="user.email" [ngModelOptions]="{standalone:true}">
+
+                            <div class="thank-you-login-btn" (click)="continue()">
+                                <i class="fa-regular fa-angle-right"></i>
+                            </div>
+
+                            <input type="password" class="form-control thankyou-password"
+                                placeholder="{{ (user.isPasswordSet) ? 'Enter' : 'Create'}} a password"
+                                [(ngModel)]="user.password" [ngModelOptions]="{standalone:true}">
+                        </div>
+
+                        <div class="thanks-you-or-divider">
+                            <img src="assets/or-divider.png" alt="">
+                        </div>
+
+                        <div class="thanks-you-social-login-wrapper">
+
+                            <button type="button" class="w-100 btn-primary" (click)="socialLoginpopUp(false)">
+                                <img src="assets/icons/facebook.png" alt="">&nbsp;{{ (user.isPasswordSet) ? 'Login' : 'Sign
+                                Up'}} With Facebook
+                            </button>
+
+                            <button type="button" class="w-100 btn-primary" (click)="socialLoginpopUp(true)">
+                                <img src="assets/icons/google.png" alt="">&nbsp;&nbsp;&nbsp;&nbsp;{{ (user.isPasswordSet) ? 'Login' :
+                                'Sign Up'}} With Google
+                            </button>
+
+                        </div>
+
+                        <!-- <div class="py-4">
+                            <button type="submit" class="w-100 btn-primary add_btn" (click)="continue()">
+                                Continue
+                            </button>
+                        </div> -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</app-screen-wrapper>

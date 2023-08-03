@@ -1,0 +1,176 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.checkout-wrapper {
+  height: calc(100vh - 90.72px);
+  padding: 40px 20px 40px 20px;
+
+  .checkout-heading {
+    font-family: "syncopate";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  .section-heading {
+    font-family: "lexend-zetta";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    text-transform: capitalize;
+    color: $white;
+    padding: 30px 0 10px 0;
+  }
+
+  .order-checkout-wrapper {
+    background-color: rgba(34, 34, 34, 0.6);
+    border-radius: 16px;
+    max-width: 465px;
+    padding: 30px 24px;
+
+    margin-top: 38px;
+
+    .order-heading-1 {
+      font-family: "lexend-zetta";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: -4px;
+      text-transform: capitalize;
+      color: $white;
+    }
+
+    .order-heading-terms {
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      color: #bfc3cf;
+      padding: 20px 0;
+      border-bottom: 1px solid #707483;
+
+      a {
+        color: $white;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .order-heading-2 {
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      color: #bfc3cf;
+    }
+
+    .order-heading-3 {
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      color: $white;
+      text-align: right;
+    }
+
+    .order-heading-4 {
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      color: $primary;
+      text-align: right;
+    }
+
+    .order-heading-5 {
+      font-family: "lexend-deca";
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: capitalize;
+      color: #707483;
+      padding: 3px 0;
+      img {
+        width: 15px;
+      }
+    }
+
+    .order-heading-padding-1 {
+      padding: 20px 0 10px 0;
+    }
+
+    .order-heading-padding-2 {
+      padding: 0 0 20px 0;
+    }
+
+    .order-heading-bottom {
+      border-bottom: 1px solid #707483;
+    }
+  }
+
+  .aggrement-statment {
+    font-family: "lexend-deca";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #707483;
+
+    margin-top: 26px;
+    padding-bottom: 50px;
+
+    a {
+      text-decoration: none;
+      color: #bfc3cf;
+    }
+  }
+
+  .billing-address-switch-text {
+    font-family: "lexend-deca";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: $white;
+  }
+}
+
+.no-cards-wrapper {
+  border-top: 1px solid #707483;
+  padding: 20px 0;
+
+  .gray-btn {
+    img {
+      width: 25px;
+      margin-right: 5px;
+    }
+  }
+}
+
+@media (max-width: 992px) and (min-width: 767px) {
+  .checkout-wrapper {
+    .order-checkout-wrapper {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 575px) {
+  .checkout-wrapper {
+    .order-checkout-wrapper {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 575px) and (min-width: 350px) {
+  .checkout-wrapper {
+    .order-checkout-wrapper {
+      max-width: 100%;
+    }
+  }
+}

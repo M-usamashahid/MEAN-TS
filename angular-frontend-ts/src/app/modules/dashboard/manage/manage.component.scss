@@ -1,0 +1,222 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+#management {
+  padding: 0px 5%;
+  .active {
+    font-family: syncopate;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .title {
+    font-family: syncopate;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #707483;
+  }
+
+  .card-sec-management {
+    .management-card {
+      background-color: #171a1e;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 8px;
+
+      .card-title {
+        .card-head {
+          font-family: lexend-zetta;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 32px;
+          align-items: center;
+          letter-spacing: -4px;
+          text-transform: capitalize;
+          color: #f0f4f7;
+        }
+      }
+      .image {
+        width: 80px;
+        height: 80px;
+        background: #202122;
+        border-radius: 8px;
+        text-align: center;
+        padding: 8px;
+      }
+      .ezbar {
+        font-family: lexend-deca;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #bfc3cf;
+        margin-bottom: 10px;
+      }
+      .ezbar-id {
+        font-family: lexend-deca;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+        color: #707483;
+        margin-bottom: 0px;
+      }
+
+      .track {
+        font-family: lexend-deca;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #f0302a;
+        cursor: pointer;
+      }
+
+      .ez-status {
+        font-family: lexend-deca;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        text-transform: capitalize;
+        color: #f0f4f7;
+      }
+    }
+  }
+
+  .card-subs {
+    .card-subs-sec {
+      background-color: #171a1e;
+      padding: 10px;
+      margin-top: 20px;
+      border-radius: 8px;
+      .card-title {
+        .card-head {
+          font-family: lexend-zetta;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 32px;
+          align-items: center;
+          letter-spacing: -4px;
+          text-transform: capitalize;
+          color: #f0f4f7;
+        }
+      }
+      .card-items {
+        font-family: lexend-deca;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        color: #bfc3cf;
+      }
+      .card-package {
+        font-family: lexend-deca;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: #f0f4f7;
+      }
+
+      .cancel-img {
+        padding: 0px 20px;
+      }
+
+      .cancel-subs {
+        background: #303237;
+        border-radius: 4px;
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px;
+        cursor: pointer;
+        .button-text {
+          font-family: lexend-deca;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 32px;
+          text-transform: capitalize;
+          color: #bfc3cf;
+        }
+      }
+      .seprature {
+        margin: 30px 0px;
+        width: 100%;
+        height: 2px;
+        background: #707483;
+        opacity: 0.4;
+        border-radius: 2px;
+      }
+      .card-number {
+        font-family: lexend-deca;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        text-transform: capitalize;
+        color: #bfc3cf;
+      }
+      .card-date {
+        font-family: lexend-deca;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        text-transform: capitalize;
+        color: #707483;
+        padding: 0px 10px;
+      }
+
+      .cancellation-requested-msg {
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        font-family: "lexend-deca";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        color: #707483;
+        span {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 350px) {
+  #management {
+    padding: 0px 0%;
+    .card-subs {
+      .card-subs-sec {
+        .card-number {
+          font-size: 14px;
+        }
+        .card-date {
+          font-size: 14px;
+        }
+        .cancel-subs {
+          padding: 8px;
+          .cancel-img {
+            img {
+              width: 8%;
+            }
+          }
+          .button-text {
+            font-size: 12px;
+          }
+        }
+        .card-items {
+          font-size: 16px;
+        }
+        .card-package {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

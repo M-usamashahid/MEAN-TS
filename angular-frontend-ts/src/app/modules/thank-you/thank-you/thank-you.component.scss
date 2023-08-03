@@ -1,0 +1,200 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.thank-you-wrapper {
+  .loading-wrapper {
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  .checkout-heading {
+    font-family: "syncopate";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 28px;
+    color: $white;
+    text-transform: uppercase;
+    align-items: center;
+    text-align: center;
+  }
+
+  .order-heading {
+    font-family: "lexend-deca";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+    color: $white;
+
+    padding: 40px 0 10px 0;
+  }
+
+  .thankyou-login-wrapper {
+    border: 1px solid #707483;
+    border-radius: 10px;
+
+    margin: 50px 0;
+
+    .thankyou-login-inner {
+      padding: 50px 60px;
+
+      .eztoned-id {
+        text-align: center;
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .thankyou-login-heading {
+        padding: 20px 0;
+        font-family: "lexend-deca";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: $white;
+      }
+
+      .thankyou-login-subheading-1,
+      .thankyou-login-subheading-2 {
+        font-family: "lexend-deca";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 17px;
+        align-items: center;
+        letter-spacing: -1px;
+        color: #707483;
+      }
+
+      .thankyou-login-subheading-2 {
+        padding: 20px 0 10px 0;
+      }
+
+      .thanks-login-inputs {
+        margin-top: 20px;
+        position: relative;
+
+        input {
+          font-family: "lexend-deca";
+          color: #707483;
+          background-color: transparent;
+          padding: 15px 10px;
+          font-size: 16px;
+
+          box-shadow: 0 0 0 0rem rgb(211 55 50 / 25%);
+
+          &:focus {
+            color: $white;
+            background-color: #454545;
+            outline: 0;
+            box-shadow: 0 0 0 0rem rgb(211 55 50 / 25%);
+            border-color: $white;
+          }
+        }
+
+        .thankyou-email {
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          border-bottom: 0;
+        }
+
+        .thankyou-password {
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+
+        .thank-you-login-btn {
+          border: 2px solid #707483;
+          border-radius: 100%;
+          width: 34px;
+          height: 34px;
+          position: absolute;
+          right: 25px;
+          top: 65px;
+          cursor: pointer;
+          i.fa-angle-right {
+            color: #707483;
+            font-size: 22px;
+            position: relative;
+            left: 10px;
+            top: 4px;
+          }
+        }
+      }
+
+      .thanks-you-or-divider {
+        padding: 35px 0 40px 0;
+        img {
+          width: 100%;
+        }
+      }
+
+      .thanks-you-social-login-wrapper {
+        .btn-primary {
+          background-color: #f0f4f7;
+          border-color: #f0f4f7;
+          border-radius: 10px;
+
+          font-family: "lexend-deca";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          align-items: center;
+          letter-spacing: -1px;
+          text-transform: none;
+
+          color: $black;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) and (min-width: 767px) {
+  .thank-you-wrapper {
+  }
+}
+
+@media (max-width: 767px) and (min-width: 575px) {
+  .thank-you-wrapper {
+    .checkout-heading {
+      line-height: 48px;
+    }
+
+    .thankyou-login-wrapper {
+      margin: 30px 15px;
+
+      .thankyou-login-inner {
+        padding: 30px 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) and (min-width: 350px) {
+  .thank-you-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+    .checkout-heading {
+      line-height: 48px;
+    }
+
+    .thankyou-login-wrapper {
+      margin: 30px 0;
+
+      .thankyou-login-inner {
+        padding: 30px 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+#access {
+  padding: 0px 5%;
+  .studio-card {
+    padding: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .card-tv {
+    background-color: $side-nav-background;
+    &:hover,
+    &:active {
+      background-color: $primary-600;
+    }
+  }
+  .card-coach {
+    background-color: $side-nav-background;
+    &:hover,
+    &:active {
+      background-color: $primary-600;
+    }
+  }
+  .image {
+    text-align: center;
+    .card-image {
+      width: 100px;
+    }
+    p {
+      margin-top: 30px;
+      margin-bottom: 0px;
+      img {
+        margin-bottom: 8px;
+      }
+      .card-text {
+        font-family: lexend-zetta;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -4px;
+        text-transform: capitalize;
+        color: $white;
+      }
+    }
+  }
+}

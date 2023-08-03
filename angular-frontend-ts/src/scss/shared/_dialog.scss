@@ -1,0 +1,58 @@
+@import "../variables";
+
+.p-dialog {
+  border: 0;
+  max-height: 100vh !important;
+  height: 100% !important;
+  // opacity: 0.9;
+  // background: $gray-1100;
+
+  .p-dialog-content {
+    border-radius: 0;
+    padding: 0 !important;
+    // overflow-y: initial !important;
+    background-color: transparent !important;
+  }
+}
+
+.auth-dialog {
+  .p-dialog-content {
+    background-color: #000 !important;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+  position: absolute;
+  background: $gray-1100;
+}
+
+.confirm-dismiss-diloag,
+.payment-method-dialog {
+  width: 100%;
+}
+
+.app-dialog {
+  // padding: 1rem;
+
+  .dialog-header {
+    .dialog-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .dialog-close {
+      cursor: pointer;
+      float: right;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .p-dialog {
+    height: 100% !important;
+    max-height: 100% !important;
+  }
+}

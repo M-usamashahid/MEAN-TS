@@ -1,0 +1,171 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.proceed-to-pay-wrapper {
+  height: calc(100vh - 90.72px);
+  padding: 40px 20px 40px 20px;
+
+  .proceed-to-pay-heading {
+    margin-top: 30px;
+    text-align: center;
+    font-family: "syncopate";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  .section-heading {
+    font-family: "lexend-zetta";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    text-transform: capitalize;
+    color: $white;
+    padding: 30px 0 10px 0;
+  }
+
+  .avalible-payment-method-wrapper {
+    display: flex;
+
+    .avalible-payment-method {
+      border-radius: 3px;
+      padding: 0 15px;
+      border: 2px solid #202122;
+      margin-right: 15px;
+      cursor: pointer;
+
+      font-size: 2rem;
+      color: $white;
+
+      img {
+        max-width: 80px;
+        position: relative;
+        top: -4px;
+      }
+
+      &.active {
+        border: 2px solid $primary;
+        background-color: $primary;
+      }
+
+      &:hover {
+        background-color: $primary;
+      }
+    }
+  }
+
+  .card-element-wrapper {
+    min-height: 60px;
+  }
+
+  #card-element-div {
+    opacity: 0;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
+  .pay-now-btn {
+    width: 100%;
+  }
+
+  .StripeElement {
+    border: 1px solid #eee;
+  }
+
+  .order-checkout-wrapper {
+    background-color: rgba(34, 34, 34, 0.6);
+    border-radius: 16px;
+    max-width: 465px;
+    padding: 30px 24px;
+
+    margin-top: 38px;
+
+    .order-heading-1 {
+      font-family: "lexend-zetta";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+      letter-spacing: -4px;
+      text-transform: capitalize;
+      color: $white;
+    }
+
+    .order-heading-terms {
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      color: #bfc3cf;
+      padding: 20px 0;
+      border-bottom: 1px solid #707483;
+
+      a {
+        color: $white;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .order-heading-2 {
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      color: #bfc3cf;
+    }
+
+    .order-heading-3 {
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      color: $white;
+      text-align: right;
+
+      &.font-15 {
+        font-size: 15px !important;
+      }
+    }
+
+    .order-heading-4 {
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      color: $primary;
+      text-align: right;
+    }
+
+    .order-heading-5 {
+      font-family: "lexend-deca";
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-transform: capitalize;
+      color: #707483;
+      padding: 3px 0;
+      img {
+        width: 15px;
+      }
+    }
+
+    .order-heading-padding-1 {
+      padding: 20px 0 10px 0;
+    }
+
+    .order-heading-padding-2 {
+      padding: 0 0 20px 0;
+    }
+
+    .order-heading-bottom {
+      border-bottom: 1px solid #707483;
+    }
+  }
+}

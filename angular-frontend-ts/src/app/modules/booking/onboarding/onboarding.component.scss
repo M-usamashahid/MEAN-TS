@@ -1,0 +1,11 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.book-call-heading {
+  font-family: "syncopate";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  color: $white;
+  text-transform: uppercase;
+}

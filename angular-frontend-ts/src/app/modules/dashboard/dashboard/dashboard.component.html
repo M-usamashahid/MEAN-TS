@@ -1,0 +1,44 @@
+<section class="container dashboard-wrapper">
+
+    <div class="row">
+        <div class="col-sm-12 dashboard-heading">
+            Welcome {{data.firstName}} {{data.lastName}}!
+        </div>
+    </div>
+
+    <div class="row gx-0">
+
+        <div class="col-md-3 col-sm-12">
+
+            <a class="dashboard-section-btn" routerLinkActive="active" [routerLink]="['/dashboard/manage']">
+                manage product & subscription
+            </a>
+
+            <a class="dashboard-section-btn" *ngIf="eztonedLive" routerLinkActive="active"
+                [routerLink]="['/dashboard/eztoned-tv-live']">
+                EzToned Live
+            </a>
+
+            <a class="dashboard-section-btn" *ngIf="eztonedLive" routerLinkActive="active"
+                [routerLink]="['/dashboard/chat']">
+                chat with the coach
+            </a>
+
+            <a class="dashboard-section-btn" *ngIf="yourAccess" routerLinkActive="active"
+                [routerLink]="['/dashboard/your-access']">
+                My Access
+            </a>
+
+            <a class="dashboard-section-btn" routerLinkActive="active" [routerLink]="['/dashboard/my-details']">
+                my details
+            </a>
+
+        </div>
+
+        <div class="col-md-9 col-sm-12">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+
+</section>

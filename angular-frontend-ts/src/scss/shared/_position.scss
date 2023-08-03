@@ -1,0 +1,40 @@
+@import "../variables";
+
+.mt-5p {
+  margin-top: 5%;
+}
+
+.mt-10p {
+  margin-top: 10%;
+}
+
+.mt-15p {
+  margin-top: 15%;
+}
+
+.mt-30p {
+  margin-top: 30%;
+}
+
+.mt-5px {
+  margin-top: 5px;
+}
+
+.mt-10px {
+  margin-top: 10px;
+}
+
+.mt-20px {
+  margin-top: 20px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-start-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}

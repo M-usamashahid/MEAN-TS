@@ -1,0 +1,132 @@
+<app-screen-wrapper>
+    <div class="proceed-to-pay-wrapper">
+        <div class="container">
+            <div class="row gx-0">
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="section-heading">
+                        Payment Methods
+                    </div>
+
+                    <div class="avalible-payment-method-wrapper">
+
+                        <div class="avalible-payment-method"
+                            [ngClass]="{'active': paymentmethod === selectedPaymentMethod}"
+                            (click)="selectPaymentMethod(paymentmethod)"
+                            *ngFor="let paymentmethod of order.allowedPaymentMethods">
+                            <i *ngIf="paymentmethod === 'card'" class="fa-solid fa-credit-card"></i>
+
+                            <img *ngIf="paymentmethod === 'afterpay_clearpay'" src="assets/icons/afterpay-logo-w.png"
+                                alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-9 my-4 card-element-wrapper">
+                        <div class="p-3" [ngClass]="{'visible': 'card' === selectedPaymentMethod}" id="card-element-div"
+                            #cardDivElement></div>
+                    </div>
+
+                    <div class="row gx-0">
+                        <div class="col-sm-9 my-4" *ngIf="showFinalBtn">
+                            <button type="button" class="btn gray-btn pay-now-btn" [disabled]="finalBtnDiasblend"
+                                (click)="payNow()">Pay Now</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+
+                    <div class="col-md-10 col-sm-12 mx-auto gx-0 order-checkout-wrapper">
+                        <div class="row gx-0 order-heading-1">
+                            <div class="col gx-0">order summary</div>
+                        </div>
+
+                        <div class="row gx-0 order-heading-terms">
+                            <!-- Product Order Summary -->
+                            <div class="col gx-0" *ngIf="item.type === 'product'">
+                                Minimum three monthly payments required to retain ownership of equipment. If plan is
+                                canceled before three months, equipment will have to be returned.
+                            </div>
+                            <!-- Subscription Order Summary -->
+                            <div class="col gx-0" *ngIf="item.type === 'subscription'">
+                                Minimum three monthly payments required to retain ownership of equipment. If plan is
+                                canceled before three months, equipment will have to be returned.
+                            </div>
+                            <!-- Subscription Live Summary -->
+                            <div class="col gx-0" *ngIf="item.type === 'subscription-live' && item.weeklyClasses === 1">
+                                You are subscribing to a 7-day free trial of EzToned Live. Your selected package
+                                includes access to 1 live class per week. You will be charged once your trial ends. You
+                                can upgrade or cancel your subscription at any time.
+                            </div>
+                            <div class="col gx-0" *ngIf="item.type === 'subscription-live' && item.weeklyClasses === 3">
+                                You are subscribing to EzToned Live. Your selected package includes access to 3
+                                live classes per week. You can upgrade or cancel your subscription at any time.
+                            </div>
+                            <div class="col gx-0" *ngIf="item.type === 'subscription-live' && item.weeklyClasses === 5">
+                                You are subscribing to EzToned Live. Your selected package includes access to 5
+                                live classes per week. You can modify or cancel your subscription any time.
+                            </div>
+                            <div class="col gx-0" *ngIf="item.type === 'subscription-live' && item.weeklyClasses === 7">
+                                You are subscribing to EzToned Live. Your selected package includes access to 7
+                                live classes per week. You can modify or cancel your subscription any time.
+                            </div>
+                        </div>
+
+                        <div class="row gx-0 order-heading-padding-1">
+                            <div class="col-6 gx-0 order-heading-2">Order Includes:</div>
+                            <div class="col-6 gx-0 order-heading-3"
+                                [ngClass]="{'font-15': item.type === 'subscription-live' && item.weeklyClasses === 3}">
+                                <span *ngIf="item.type === 'subscription-live' && item.weeklyClasses === 3">
+                                    7-Day Free Trial <br>
+                                </span>
+                                <span class="text-transform-uppercase">
+                                    {{order.total?.currency}} {{item.unitAmount / 100 | number: '1.2-2'}}</span>
+                                <span class="text-capitalize"
+                                    *ngIf="item.type === 'subscription' || item.type === 'subscription-live'">/{{item.billingType}}</span>
+                                <span *ngIf="item.type === 'subscription-live' && item.weeklyClasses === 3">
+                                    After trial ends.
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row gx-0 order-heading-padding-2 order-heading-bottom">
+                            <div class="col-12 gx-0 order-heading-5"
+                                *ngIf="item.type === 'product' || item.type === 'subscription'">-&nbsp;<img
+                                    src="assets/icons/ez-bar.png">&nbsp;EzToned Equipment (EzBar V1)</div>
+
+                            <div class="col-12 gx-0 order-heading-5" *ngIf="item.type === 'subscription-live'">
+                                -&nbsp;<img src="assets/icons/tv-live-icon.png">&nbsp;EzToned Live</div>
+
+                            <div class="col-12 gx-0 order-heading-5"
+                                *ngIf="item.type === 'subscription' || item.type === 'subscription-live'">
+                                -&nbsp;<img src="assets/icons/ez-tv.png">&nbsp;EzToned tv</div>
+                            <div class="col-12 gx-0 order-heading-5 my-2"
+                                *ngIf="item.type === 'subscription' || item.type === 'subscription-live'">
+                                &nbsp;
+                                No contracts, Cancel Anytime.<br>&nbsp;&nbsp;14-Day Money Back Guarantee
+                            </div>
+                        </div>
+
+                        <div class="row gx-0 py-4">
+                            <div class="col-4 gx-0 order-heading-2">
+                                Total
+                            </div>
+                            <div class="col-8 gx-0 order-heading-4 text-transform-uppercase">
+                                {{order.total?.currency}} {{order.total?.amount | number: '1.2-2'}}
+                                <span *ngIf="item.type === 'subscription-live' && item.weeklyClasses === 3">
+                                    (7-Day Free Trial)
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</app-screen-wrapper>

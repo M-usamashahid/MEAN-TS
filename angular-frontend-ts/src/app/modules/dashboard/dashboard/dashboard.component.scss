@@ -1,0 +1,52 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.dashboard-wrapper {
+  padding: 40px 40px;
+
+  .dashboard-heading {
+    font-family: "syncopate";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: $white;
+    padding-bottom: 30px;
+  }
+
+  .dashboard-section-btn {
+    background: $side-nav-background;
+    display: block;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 18px 20px;
+
+    font-family: "lexend-deca";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    cursor: pointer;
+
+    color: #f2f2f2;
+
+    &:hover,
+    &.active {
+      background: $primary;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .dashboard-wrapper {
+    padding: 40px 20px;
+
+    .dashboard-sections-wrapper {
+      margin-left: 0;
+    }
+  }
+}

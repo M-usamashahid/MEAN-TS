@@ -1,0 +1,17 @@
+@import "../variables";
+@import "./base";
+
+.p-calendar {
+  width: 100%;
+  border-radius: 10px;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+  &:active {
+    box-shadow: none !important;
+  }
+  &:hover {
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg background-color">
+    <div class="container">
+
+        <div class="side_logo_wrapper" (click)="goTo('/dashboard/manage')">
+            <app-side-menu-logo></app-side-menu-logo>
+        </div>
+
+        <!-- <div class="collapse navbar-collapse" id="navbarsEztoned">
+
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 main-nav-bar" *ngIf="isHome">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Equipment</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Coaching</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">FAQ</a>
+                </li>
+            </ul>
+        </div> -->
+        <div class="d-flex">
+            <div class="button">
+                <!-- <button type="button" *ngIf="!isLoggedIn" class="btn-primary add_btn mt-0 mx-1" (click)="userAuth()">
+                    Login
+                </button> -->
+                <button type="button" *ngIf="!isLoggedIn" class="sign-in mt-0 mx-1 d-none d-lg-inline"
+                    (click)="userAuth(false)">
+                    Sign In
+                </button>
+                <button type="button" *ngIf="!isLoggedIn" class="btn-primary add_btn mt-0 mx-1"
+                    (click)="userAuth(true)">
+                    Sign Up 
+                </button>
+                <!-- <button class="navbar-toggler" *ngIf="!isLoggedIn" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsEztoned" aria-controls="navbarsEztoned" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button> -->
+
+                <!-- <p-splitButton label="{{client?.firstName}} {{client?.lastName}}" *ngIf="isLoggedIn" [model]="items"
+                    styleClass="p-button-text p-button-danger mr-2">
+                </p-splitButton> -->
+
+                <div class="user-menu" *ngIf="isLoggedIn" (click)="usermenu.toggle($event)">
+                    <div class="user-name">
+                        {{client?.firstName}} {{client?.lastName}}
+                        <i class="far fa-ellipsis-v"></i>
+                    </div>
+                </div>
+
+                <p-overlayPanel #usermenu>
+                    <ng-template pTemplate>
+                        <div class="user-overlay-menu">
+                            <div class="user-overlay-menu-name">
+                                {{client?.firstName}} {{client?.lastName}}
+                            </div>
+                            <!-- <div class="user-overlay-menu-account" (click)="goTo('/profile');usermenu.hide()">
+                                account details
+                            </div> -->
+                            <div class="user-overlay-menu-account bottom-space"
+                                (click)="goTo('/dashboard/manage');usermenu.hide()">
+                                Manage
+                            </div>
+                            <div class="user-overlay-menu-signout" (click)="logOut();usermenu.hide()">
+                                Sign out
+                            </div>
+                        </div>
+                    </ng-template>
+                </p-overlayPanel>
+
+            </div>
+        </div>
+
+    </div>
+</nav>

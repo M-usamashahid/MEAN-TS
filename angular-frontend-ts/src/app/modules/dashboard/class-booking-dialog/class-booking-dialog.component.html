@@ -1,0 +1,182 @@
+<div class="app-dialog">
+    <div class="wrapper"></div>
+
+    <div class="row class-booking-dialog-wrapper">
+
+        <div class="col-md-6 col-sm-6 col-12 mx-auto">
+
+            <div class="card appCard">
+                <div class="card-header">
+                    {{title}}
+                    <i class="fa-solid fa-x dialog-close" (click)="closeDialog()"></i>
+                </div>
+                <div class="card-body">
+
+                    <div class="class-dates-wrapper">
+
+                        <!-- MON -->
+                        <div class="class-date-item" [ngClass]="{'active': selectedDay === 'monday'}"
+                            *ngIf="schedule.monday" (click)="selectDate('monday', getDate(1))">
+                            <div class="class-date-item-day">
+                                MON
+                            </div>
+                            <div class="class-date-item-date">
+                                {{getDate(1).date}}
+                            </div>
+                            <div class="class-date-item-day">
+                                {{getDate(1).month}}
+                            </div>
+                        </div>
+
+                        <!-- TUE -->
+                        <div class="class-date-item" [ngClass]="{'active': selectedDay === 'tuesday'}"
+                            *ngIf="schedule.tuesday" (click)="selectDate('tuesday', getDate(2))">
+                            <div class="class-date-item-day">
+                                TUE
+                            </div>
+                            <div class="class-date-item-date">
+                                {{getDate(2).date}}
+                            </div>
+                            <div class="class-date-item-day">
+                                {{getDate(2).month}}
+                            </div>
+                        </div>
+
+                        <!-- WED -->
+                        <div class="class-date-item" [ngClass]="{'active': selectedDay === 'wednesday'}"
+                            *ngIf="schedule.wednesday" (click)="selectDate('wednesday', getDate(3))">
+                            <div class="class-date-item-day">
+                                WED
+                            </div>
+                            <div class="class-date-item-date">
+                                {{getDate(3).date}}
+                            </div>
+                            <div class="class-date-item-day">
+                                {{getDate(3).month}}
+                            </div>
+                        </div>
+
+                        <!-- THU -->
+                        <div class="class-date-item" [ngClass]="{'active': selectedDay === 'thursday'}"
+                            *ngIf="schedule.thursday" (click)="selectDate('thursday', getDate(4))">
+                            <div class="class-date-item-day">
+                                THU
+                            </div>
+                            <div class="class-date-item-date">
+                                {{getDate(4).date}}
+                            </div>
+                            <div class="class-date-item-day">
+                                {{getDate(4).month}}
+                            </div>
+                        </div>
+
+                        <!-- FRI -->
+                        <div class="class-date-item" [ngClass]="{'active': selectedDay === 'friday'}"
+                            *ngIf="schedule.friday" (click)="selectDate('friday', getDate(5))">
+                            <div class="class-date-item-day">
+                                FRI
+                            </div>
+                            <div class="class-date-item-date">
+                                {{getDate(5).date}}
+                            </div>
+                            <div class="class-date-item-day">
+                                {{getDate(5).month}}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="class-slots-wrapper" *ngIf="selectedSlot === null">
+
+                        <div class="class-slot-item row gx-0" [ngClass]="{'active': slot._id === selectedSlot?._id}"
+                            *ngFor="let slot of slots" (click)="selectSlot(slot)">
+
+                            <div class="col-md-4 col-sm-6 slot-time">
+                                {{converTime(slot)}}
+                            </div>
+                            <div class="col-md-4 col-sm-6 slot-duration">
+                                <img src="assets/icons/live-class-icon-2.png" alt=""> 60 Minutes
+                            </div>
+                            <div class="col-md-4 col-sm-12 slot-book-class">
+                                <button type="button" class="btn btn-primary add_btn">
+                                    BOOK CLASS
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="class-slots-confirmation-wrapper" *ngIf="selectedSlot && slotBooked === false">
+
+                        <div class="class-slots-confirmation-header">
+                            <img src="assets/icons/class-confirmation-icon.png" alt=""> {{converTime(selectedSlot)}}
+                        </div>
+
+                        <div class="class-slots-confirmation-body">
+
+                            <div class="class-slots-confirmation-h1">
+                                You have selected
+                            </div>
+                            <div class="class-slots-confirmation-h1 text-capitalize">
+                                {{converTime(selectedSlot)}}, {{conformationDateFormat(selectedDate)}}
+                            </div>
+
+                            <div class="class-slots-confirmation-h2">
+                                The class coach has specified equipment<br> requirements for this class. Please ensure
+                                you
+                                have<br> one of the following pieces of equipment available<br> in order to participate
+                                in this
+                                class.
+                            </div>
+
+                            <div class="class-slots-confirmation-icons">
+                                <img src="assets/icons/live-class-icon-3.png" alt=""> EzBar / Resistance Bands /
+                                Bodyweight
+                            </div>
+
+                            <div class="class-slots-confirmation-booking">
+                                <button type="button" (click)="bookAClass()" class="btn btn-primary add_btn mx-2">
+                                    CONFIRM BOOKING
+                                </button>
+
+                                <button type="button" (click)="reSelectBooking()" class="btn gray-btn">
+                                    <img src="assets/icons/closs-x-icon.png" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="class-slots-confirmation-wrapper" *ngIf="slotBooked">
+
+                        <div class="class-slots-confirmation-header">
+                            <img src="assets/icons/class-confirmation-icon.png" alt=""> {{converTime(selectedSlot)}}
+                        </div>
+
+                        <div class="class-slots-confirmation-body">
+
+                            <div class="class-slots-confirmation-h1 padding-60px">
+                                Thank you, Your booking is confirmed
+                            </div>
+
+                            <div class="class-slots-confirmation-booking">
+                                <button type="button" (click)="closeAfterBooking()"
+                                    class="btn btn-primary btn-primary-close-booking add_btn mx-2">
+                                    CLOSE
+                                </button>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

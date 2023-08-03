@@ -1,0 +1,890 @@
+<app-screen-wrapper>
+    <section id="hero-sec">
+        <div class="hero-img">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="heading text-center">
+                            <span>A complete fitness experience tailored for you</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-12 mx-auto d-none d-md-block">
+                        <div class="sub-heading">
+                            <p class="trail">EzToned Studio helps you achieve any fitness goal with access to
+                                market-leading equipment, 300+ motivating workouts and your own dedicated personal
+                                trainer.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-4 mx-auto text-center hero-button">
+                        <button type="button" class="btn-primary add_btn mt-0 mx-1" (click)="scrollStudio()">
+                            Join Studio</button>
+                        <p class="contract">
+                            No contracts, Cancel anytime.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="member">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading">
+                        <span>Everything you need for fitness in one membership
+                        </span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="member-img">
+                        <div class="member-1"></div>
+                        <div class="member-2"></div>
+                        <div class="member-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="eqiupment">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-12">
+                    <div class="header-wrapper">
+                        <div class="heading">
+                            <p class="back-heading">01</p>
+                            <span>EzToned Equipment</span>
+                        </div>
+                    </div>
+
+                    <div class="sub-heading">
+                        <p class="trail">
+                            Meet EzBar, a workout system that gets you sweating anywhere, anytime
+                        </p>
+                    </div>
+                    <div class="button-box ">
+                        <button type="button" class="btn-primary add_btn mt-0 mx-1" (click)="scrollStudio()">
+                            join studio
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 video-sec">
+                    <div id="instructions">
+                        <div class="video-border-top">
+                        </div>
+                        <video id="my_video_1" class="video-js vjs-default-skin" width="100%" height="100%" controls
+                            preload="metadata" poster='assets/landingImg/background.png'
+                            data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+                            <source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4' />
+                            <source src="https://vjs.zencdn.net/v/oceans.webm" type='video/webm' />
+                        </video>
+                        <div class="video-border-bottom">
+                        </div>
+                        <button (click)="playPause()" class="d-none">Play/Pause</button>
+                        <!-- <button (click)="makeBig()">Big</button>
+                                    <button (click)="makeSmall()">Small</button>
+                                    <button (click)="makeNormal()">Normal</button>
+                                    <button (click)="restart();">Restart</button> -->
+                        <!-- <button (click)="skip(-10)">Rewind</button> -->
+                        <!-- <button (click)="skip(10)">Fastforward</button> -->
+
+                    </div>
+                </div>
+            </div>
+            <div class="row slider-wrapper">
+
+                <div class="col-lg-5">
+                    <div class="workout-heading">
+                        <span>One workout system, Unlimited training possibilities</span>
+                        <p class="workout-content">
+                            EzBar is a complete gym that lets you perform over 100+ exercises for every muscle group in
+                            your body. Whether you’re looking to build muscle, lose weight, enhance mobility or just
+                            stay fit, EzBar is the equipment that helps you get there!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div id="slider">
+                        <div class="dp-wrap">
+                            <div id="dp-slider">
+
+                                <div class="dp_item" data-class="1" data-position="1">
+                                    <div class="dp-img">
+                                        <img class="img-fluid" src="/assets/studiolanding/equipment-1.png"
+                                            alt="investing">
+                                    </div>
+                                </div>
+
+                                <div class="dp_item" data-class="2" data-position="2">
+                                    <div class="dp-img">
+                                        <img class="img-fluid" src="/assets/studiolanding/equipment-2.png"
+                                            alt="investing">
+                                    </div>
+                                </div>
+
+                                <div class="dp_item" data-class="3" data-position="3">
+                                    <div class="dp-img">
+                                        <img class="img-fluid" src="/assets/studiolanding/equipment-3.png"
+                                            alt="investing">
+                                    </div>
+                                </div>
+
+                                <div class="dp_item" data-class="4" data-position="4">
+                                    <div class="dp-img">
+                                        <img class="img-fluid" src="/assets/studiolanding/equipment-4.png"
+                                            alt="investing">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <span id="dp-next">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.401 51.401">
+                                    <defs>
+                                        <style>
+                                            <!-- .cls-1 {
+                                            fill: none;
+                                            stroke: #fa8c8c;
+                                            stroke-miterlimit: 10;
+                                            stroke-width: 7px;
+                                            }
+                                            -->
+                                        </style>
+                                    </defs>
+                                    <path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1"
+                                        d="M32.246,0V33.178L0,31.953" transform="translate(0.094 25.276) rotate(-45)" />
+                                </svg>
+                            </span>
+
+                            <span id="dp-prev">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.401 51.401">
+                                    <defs>
+                                        <!-- <style>
+                                            .cls-1 {
+                                                fill: none;
+                                                stroke: #fa8c8c;
+                                                stroke-miterlimit: 10;
+                                                stroke-width: 7px;
+                                            }
+                                        </style> -->
+                                    </defs>
+                                    <path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1"
+                                        d="M32.246,0V33.178L0,31.953" transform="translate(0.094 25.276) rotate(-45)" />
+                                </svg>
+                            </span>
+
+
+
+                            <ul id="dp-dots">
+                                <li data-class="1" class="active"></li>
+                                <li data-class="2"></li>
+                                <li data-class="3"></li>
+                                <li data-class="4"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row tv">
+                <div class=" mx-auto col-12">
+                    <div class="header-wrapper">
+                        <div class="heading">
+                            <p class="back-heading">02</p>
+                            <span>EzToned TV</span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="shade"></div>
+
+                <div class="col-lg-10 col-12 mx-auto video-sec">
+                    <div id="instructions">
+                        <!-- <div class="video-border-top">
+                        </div> -->
+                        <video id="my_video_1" class="video-js vjs-default-skin" width="100%" height="100%" controls
+                            preload="metadata" poster='assets/landingImg/background.png'
+                            data-setup='{ "aspectRatio":"640:267", "playbackRates": [1, 1.5, 2] }'>
+                            <source src="https://vjs.zencdn.net/v/oceans.mp4" type='video/mp4' />
+                            <source src="https://vjs.zencdn.net/v/oceans.webm" type='video/webm' />
+                        </video>
+                        <!-- <div class="video-border-bottom">
+                        </div> -->
+                        <button (click)="playPause()" class="d-none">Play/Pause</button>
+                        <!-- <button (click)="makeBig()">Big</button>
+                                    <button (click)="makeSmall()">Small</button>
+                                    <button (click)="makeNormal()">Normal</button>
+                                    <button (click)="restart();">Restart</button> -->
+                        <!-- <button (click)="skip(-10)">Rewind</button> -->
+                        <!-- <button (click)="skip(10)">Fastforward</button> -->
+                    </div>
+                </div>
+                <div class="col-md-7 col-12 ms-auto">
+                    <div class="sub-heading">
+                        <p class="trail">
+                            Watch and perform 300+ workouts across strength training, cardio, mobility and more led by
+                            inspiring trainers.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12 me-auto d-flex justify-content-center">
+                    <div class="button-box ">
+                        <button type="button" class="w-100 btn-primary add_btn mt-0 mx-1" (click)="scrollStudio()">
+                            join studio
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-classes">
+                        <p class="">Browse EzToned Classes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-none d-lg-flex">
+                <div class="col-lg-4 card-classes">
+                    <div class="classes-img-1">
+                        <div class="img-wrapper">
+                            <img src="/assets/studiolanding/eztoned-gray.png" alt="">
+                            <span>BOLT</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 card-classes">
+                    <div class="classes-img-2">
+                        <div class="img-wrapper">
+                            <img src="/assets/studiolanding/eztoned-gray.png" alt="">
+                            <span>guided</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 card-classes">
+                    <div class="classes-img-3">
+                        <div class="img-wrapper">
+                            <img src="/assets/studiolanding/eztoned-gray.png" alt="">
+                            <span>essential</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-lg-none d-flex">
+                <div class="col-12 card-classes">
+                    <p-carousel [value]="classes" [numVisible]="1" [numScroll]="1"
+                        [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" [circular]="true"
+                        styleClass="items-carousel" [showNavigators]="false" orientation="horizontal">
+                        <ng-template let-classes pTemplate="item">
+                            <div class="{{classes.imgClass}} mx-2">
+                                <div class="img-wrapper">
+                                    <img src="/assets/studiolanding/eztoned-gray.png" alt="">
+                                    <span>{{classes.classImgText}}</span>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+                </div>
+            </div>
+            <div class="row coach">
+                <div class="col-12">
+                    <div class="header-wrapper">
+                        <div class="heading">
+                            <p class="back-heading">03</p>
+                            <span>EzToned Coach</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-none d-md-block">
+                    <div class="coach-gif-wrapper">
+                        <div class="coach-gif" *ngIf="!coach_Image_next">
+                            <div class="row coach-img-text">
+                                <div class="col-lg-5">
+                                    <span class="short-heading">
+                                        One-on-One training for any fitness goal
+                                    </span>
+                                    <div class="sub-heading">
+                                        <p class="trail">
+                                            Achieve life-long fitness goals with One-on-One training from certified
+                                            coaches.
+                                            Your EzToned Coach will build you a custom plan, check-in daily, provide
+                                            real-time
+                                            guidance, help you breakthrough barriers, celebrate your successes and make
+                                            this
+                                            journey fun. Trust the process and with an EzToned coach by your side,
+                                            results are
+                                            inevitable
+                                        </p>
+                                    </div>
+                                    <div class="coach-comment">
+                                        <p>*Results are guaranteed only if you put in the work, follow your
+                                            personalized plan and coach’s recommendations*
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="coach-image-next  ms-auto" (click)="coachImage()">
+                                        <img src="/assets/studiolanding/coach-4.jpg" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="coach-gif-2" *ngIf="coach_Image_next">
+                            <div class="row coach-img-text">
+                                <div class="col-lg-5">
+                                    <span class="short-heading">
+                                        One-on-One training for any fitness goal
+                                    </span>
+                                    <div class="sub-heading">
+                                        <p class="trail">
+                                            Achieve life-long fitness goals with One-on-One training from certified
+                                            coaches.
+                                            Your EzToned Coach will build you a custom plan, check-in daily, provide
+                                            real-time
+                                            guidance, help you breakthrough barriers, celebrate your successes and make
+                                            this
+                                            journey fun. Trust the process and with an EzToned coach by your side,
+                                            results are
+                                            inevitable
+                                        </p>
+                                    </div>
+                                    <div class="comment">
+                                        <p>*Results are guaranteed only if you put in the work, follow your
+                                            personalized plan and coach’s recommendations*
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <div class="col-12">
+                                    <div class="coach-image-next  ms-auto" (click)="coachImage()">
+                                        <img src="/assets/studiolanding/coach.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-block d-md-none pt-5 mt-5">
+                    <div class=" coach-img-text">
+                        <span class="short-heading ">
+                            One-on-One training for any fitness goal
+                        </span>
+                        <div class="sub-heading mt-3">
+                            <p class="trail">
+                                Achieve life-long fitness goals with One-on-One training from certified
+                                coaches.
+                                Your EzToned Coach will build you a custom plan, check-in daily, provide
+                                real-time
+                                guidance, help you breakthrough barriers, celebrate your successes and make
+                                this
+                                journey fun. Trust the process and with an EzToned coach by your side,
+                                results are
+                                inevitable
+                            </p>
+                        </div>
+                        <div class="comment">
+                            <p>*Results are guaranteed only if you put in the work, follow your
+                                personalized plan and coach’s recommendations*
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <img class="w-100" src="/assets/studiolanding/coach-4.jpg" alt="" *ngIf="coach_Image_next">
+                            <img class="w-100" src="/assets/studiolanding/coach.jpg" alt="" *ngIf="!coach_Image_next">
+                        </div>
+                        <div class="row mx-3 mt-3">
+                            <div class="col-3" *ngIf="!coach_Image_next">
+                                <div class="coach-image-next " (click)="coachImage()">
+                                    <img class="w-100" src="/assets/studiolanding/coach-4.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="col-3" *ngIf="coach_Image_next">
+                                <div class="coach-image-next " (click)="coachImage()">
+                                    <img class="w-100" src="/assets/studiolanding/coach.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="row trainer">
+                <div class="col-lg-4">
+                    <div class="trainer-wrapper">
+                        <span class="short-heading">
+                            Meet your trainers
+                        </span>
+                        <div class="sub-heading">
+                            <p class="trail">“Unlock your full potential with certified coaches.”
+                            </p>
+                        </div>
+                        <div class="comment">
+                            <p>No matter what your level or goal, your coach will create a customized plan, track your
+                                progress, celebrate your success and help you push through obstacles!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6">
+                    <div class="img-1">
+                        <div class="trainer-name">
+                            <span>Brad Wade</span>
+                        </div>
+                        <div class="title">
+                            <span>available</span>
+                        </div>
+                    </div>
+                    <div class="img-2">
+                        <div class="trainer-name">
+                            <span>Eeric king</span>
+                        </div>
+                        <div class="title">
+                            <span>booked </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-6 trainer-col">
+                    <div class="img-3">
+                        <div class="trainer-name">
+                            <span>Trevior Owens</span>
+                        </div>
+                        <div class="title">
+                            <span>booked</span>
+                        </div>
+                    </div>
+                    <div class="img-4">
+                        <div class="trainer-name">
+                            <span>katie persons</span>
+                        </div>
+                        <div class="title">
+                            <span>booked</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="shade"></div>
+
+            </div>
+        </div>
+    </section>
+    <section id="commingSoon">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8 mx-auto">
+                    <div class="heading text-center">
+                        <span>Coming Soon To EzToned Studio
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-11">
+                    <p-carousel [value]="picture" [numVisible]="4" [numScroll]="1"
+                        [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" [circular]="true"
+                        styleClass="items-carousel" [showNavigators]="false" orientation="horizontal">
+                        <ng-template let-picture pTemplate="item">
+                            <div class="img-section">
+                                <div class="{{picture.class}} img-container mx-2">
+                                    <span class="catagory">{{picture.category}}</span>
+                                </div>
+                            </div>
+                        </ng-template>
+                    </p-carousel>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="collapseable">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8 mx-auto">
+                    <div class="heading ">
+                        <span> Frequently Asked Questions
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p-panel header="How fast is the shipping?" [toggleable]="true" [collapsed]="true">
+
+                        <div class="sub-heading">
+                            <p class="trail">Losing Fat</p>
+                        </div>
+                        <p class="comment">The EzBar comes with everything you need to complete a full-body workout from
+                            the comfort of your own home.
+                        </p>
+                        <span class="comment">EzBar V1 Includes:</span>
+                        <ul class="content-list">
+                            <li class="comment">EzToned EzBar</li>
+                            <li class="comment">5x EzToned HIIT-X Bands (200LBS Combined Resistance)</li>
+                            <li class="comment">2x Ultra Strong EzGrip Handles</li>
+                            <li class="comment">2x Leg Straps</li>
+                            <li class="comment">1x Door Anchor</li>
+                            <li class="comment">30-Day EzToned TV Subscription</li>
+                            <li class="comment">Lifetime Warranty</li>
+                        </ul>
+                    </p-panel>
+                    <p-panel header="How long is the warranty?" [toggleable]="true" [collapsed]="true">
+
+                        <div class="sub-heading">
+                            <p class="trail">Losing Fat</p>
+                        </div>
+                        <p class="comment">The EzBar comes with everything you need to complete a full-body workout from
+                            the comfort of your own home.
+                        </p>
+                        <span class="comment">EzBar V1 Includes:</span>
+                        <ul>
+                            <li>EzToned EzBar</li>
+                            <li>5x EzToned HIIT-X Bands (200LBS Combined Resistance)</li>
+                            <li>2x Ultra Strong EzGrip Handles</li>
+                            <li>2x Leg Straps</li>
+                            <li>1x Door Anchor</li>
+                            <li>30-Day EzToned TV Subscription</li>
+                            <li>Lifetime Warranty</li>
+                        </ul>
+                    </p-panel>
+                    <p-panel header="What's your refund policy?" [toggleable]="true" [collapsed]="true">
+
+                        <div class="sub-heading">
+                            <p class="trail">Losing Fat</p>
+                        </div>
+                        <p class="comment">The EzBar comes with everything you need to complete a full-body workout from
+                            the comfort of your own home.
+                        </p>
+                        <span class="comment">EzBar V1 Includes:</span>
+                        <ul>
+                            <li>EzToned EzBar</li>
+                            <li>5x EzToned HIIT-X Bands (200LBS Combined Resistance)</li>
+                            <li>2x Ultra Strong EzGrip Handles</li>
+                            <li>2x Leg Straps</li>
+                            <li>1x Door Anchor</li>
+                            <li>30-Day EzToned TV Subscription</li>
+                            <li>Lifetime Warranty</li>
+                        </ul>
+                    </p-panel>
+                    <p-panel header="How much weight do I get with the EzBar?" [toggleable]="true" [collapsed]="true">
+
+                        <div class="sub-heading">
+                            <p class="trail">Losing Fat</p>
+                        </div>
+                        <p class="comment">The EzBar comes with everything you need to complete a full-body workout from
+                            the comfort of your own home.
+                        </p>
+                        <span class="comment">EzBar V1 Includes:</span>
+                        <ul>
+                            <li>EzToned EzBar</li>
+                            <li>5x EzToned HIIT-X Bands (200LBS Combined Resistance)</li>
+                            <li>2x Ultra Strong EzGrip Handles</li>
+                            <li>2x Leg Straps</li>
+                            <li>1x Door Anchor</li>
+                            <li>30-Day EzToned TV Subscription</li>
+                            <li>Lifetime Warranty</li>
+                        </ul>
+                    </p-panel>
+                    <p-panel header="How much weight can the EzBar handle?" [toggleable]="true" [collapsed]="true">
+
+                        <div class="sub-heading">
+                            <p class="trail">Losing Fat</p>
+                        </div>
+                        <p class="comment">The EzBar comes with everything you need to complete a full-body workout from
+                            the comfort of your own home.
+                        </p>
+                        <span class="comment">EzBar V1 Includes:</span>
+                        <ul>
+                            <li>EzToned EzBar</li>
+                            <li>5x EzToned HIIT-X Bands (200LBS Combined Resistance)</li>
+                            <li>2x Ultra Strong EzGrip Handles</li>
+                            <li>2x Leg Straps</li>
+                            <li>1x Door Anchor</li>
+                            <li>30-Day EzToned TV Subscription</li>
+                            <li>Lifetime Warranty</li>
+                        </ul>
+                    </p-panel>
+                    <p-panel header="I need more help!" [toggleable]="true" [collapsed]="true">
+
+                        <div class="sub-heading">
+                            <p class="trail">Losing Fat</p>
+                        </div>
+                        <p class="comment">The EzBar comes with everything you need to complete a full-body workout from
+                            the comfort of your own home.
+                        </p>
+                        <span class="comment">EzBar V1 Includes:</span>
+                        <ul>
+                            <li>EzToned EzBar</li>
+                            <li>5x EzToned HIIT-X Bands (200LBS Combined Resistance)</li>
+                            <li>2x Ultra Strong EzGrip Handles</li>
+                            <li>2x Leg Straps</li>
+                            <li>1x Door Anchor</li>
+                            <li>30-Day EzToned TV Subscription</li>
+                            <li>Lifetime Warranty</li>
+                        </ul>
+                    </p-panel>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="worldwide">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-8 mx-auto">
+                    <div class="heading">
+                        <span>Loved by 50,000+ Worldwide
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid slider-handler">
+            <div class="row">
+                <p-carousel [value]="worldCards" [numVisible]="4" [numScroll]="1"
+                    [responsiveOptions]="responsiveOptions" [autoplayInterval]="3000" [circular]="true"
+                    styleClass="items-carousel" [showNavigators]="false" orientation="horizontal">
+                    <ng-template let-worldCards pTemplate="item">
+                        <div class="world-card">
+                            <div class="img-container sub-heading">
+                                <img src="/assets/studiolanding/Vector.png" alt="">
+                                <p class="trail">{{worldCards.name}}</p>
+                                <div class="star-box">
+                                    <img src="/assets/studiolanding/Shape.png" alt="">
+                                </div>
+                                <div class="star-box">
+                                    <img src="/assets/studiolanding/Shape.png" alt="">
+                                </div>
+                                <div class="star-box">
+                                    <img src="/assets/studiolanding/Shape.png" alt="">
+                                </div>
+                                <div class="star-box">
+                                    <img src="/assets/studiolanding/Shape.png" alt="">
+                                </div>
+                                <div class="star-box">
+                                    <img src="/assets/studiolanding/Shape.png" alt="">
+                                </div>
+                                <span class="timeline ms-3">2 days ago</span>
+                                <p class="message">I love this product because the support is great. Please ...</p>
+                                <p class="card-subName">{{worldCards.subName}}</p>
+                            </div>
+                        </div>
+                    </ng-template>
+                </p-carousel>
+            </div>
+        </div>
+    </section>
+    <section id="packages">
+        <div class="container scroll-packages">
+            <div class="row">
+                <div class="col-12 mx-auto">
+                    <div class="heading">
+                        <span>Take fitness to the next level. <br> Join Studio Today
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row card-row">
+                <div class="col-lg-4 d-md-block d-none">
+                    <div class="pkg-card card-black mx-auto">
+                        <span class="card-heading">Monthly</span>
+                        <div class="standard"><span>Standard</span> </div>
+                        <div class="rate">
+                            <p>USD <span>59</span> /mo</p>
+                        </div>
+                        <div class="build"><span>Billed every month</span></div>
+                        <div class="button-box w-100">
+                            <button type="button" class="btn-primary w-100 add_btn mt-0 mx-1" (click)="joinStudio()">
+                                join studio
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-block d-md-none">
+                    <div class="pkg-card-responsive card-black mx-auto" (click)="joinStudio()">
+                        <div class="row">
+                            <div class="col-6">
+                                <span class="card-heading">Monthly</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="rate">
+                                    <p>USD <span>59</span> /mo</p>
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <div class="build"><span>Billed every month</span></div>
+                            </div>
+                            <div class="col-5">
+                                <div class="standard"><span>Standard</span> </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-md-block d-none">
+                    <div class="pkg-card card-red mx-auto">
+                        <div class="badge"> <span>10% OFF</span> </div>
+
+                        <span class="card-heading">Quarterly</span>
+                        <div class="standard"><span>most Popular</span> </div>
+                        <div class="rate">
+                            <p>USD <span>53</span> /mo</p>
+                        </div>
+                        <div class="build text-center"><span>Billed 159 USD today, then again every 3 months.</span>
+                        </div>
+                        <div class="button-box w-100">
+                            <button type="button" class="btn-primary bg-white w-100 add_btn mt-0 mx-1"
+                                (click)="joinStudio(1)">
+                                join studio
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-block d-md-none">
+                    <div class="pkg-card-responsive card-red mx-auto" (click)="joinStudio(1)">
+                        <div class="badge"> <span>10% OFF</span> </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <span class="card-heading">Quarterly</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="rate">
+                                    <p>USD <span>53</span> /mo</p>
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <div class="build"><span>Billed 159 USD today, then again every 3
+                                        months.</span>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="standard text-center"><span>most Popular</span> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4  d-md-block d-none">
+                    <div class="pkg-card card-black mx-auto">
+                        <div class="badge"> <span>25% OFF</span> </div>
+
+                        <span class="card-heading">yearly</span>
+                        <div class="standard"><span>best value</span> </div>
+                        <div class="rate">
+                            <p>USD <span>44</span> /mo</p>
+                        </div>
+                        <div class="build text-center"><span>Billed 528 USD now, then again every 12 months</span>
+                        </div>
+                        <div class="button-box w-100">
+                            <button type="button" class="btn-primary add_btn w-100 mt-0 mx-1" (click)="joinStudio(2)">
+                                join studio
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 d-block d-md-none">
+                    <div class="pkg-card-responsive card-black mx-auto" (click)="joinStudio(2)">
+                        <div class="badge"> <span>25% OFF</span> </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <span class="card-heading">yearly</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="rate">
+                                    <p>USD <span>44</span> /mo</p>
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <div class="build"><span>Billed 528 USD now, then again every 12 months</span>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="standard"><span>best value</span> </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="sub-heading">
+                        <p class="trail text-center">
+                            Minimum three monthly payments required to retain ownership of equipment within your
+                            plan.
+                            If plan is canceled before three months, equipment will have to be returned as per
+                            returns
+                            policy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="wrapper-gray"></div>
+            <div class="row">
+                <div class="col-md-3 col-12 text-center align-self-center">
+                    <img class="footer-img-logo" src="assets/logo/logo_EZ.png" alt="" srcset="">
+                </div>
+                <div class="col-md-2 col-6">
+                    <ul class="footer-list">
+                        <li class="heading">explore
+                        </li>
+                        <li class="list-item"> Coaching
+
+                        </li>
+                        <li class="list-item"> equipment
+
+                        </li>
+                        <li class="list-item"> extoned tv
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                    <ul class="footer-list">
+                        <li class="heading">help</li>
+                        <li class="list-item">about us</li>
+                        <li class="list-item">FAQ</li>
+                        <li class="list-item">Contact Us</li>
+                        <li class="list-item">shipping policy</li>
+                        <li class="list-item">refund policy</li>
+                    </ul>
+                </div>
+                <div class="col-md-2 col-6">
+                    <ul class="footer-list">
+                        <li class="heading">
+                            legal
+                        </li>
+                        <li class="list-item">terms & Condition </li>
+                        <li class="list-item">privacy policy</li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mx-auto">
+                    <ul class="footer-list socials">
+                        <li class="heading">
+                            Socials
+                        </li>
+                        <div class="d-flex pt-3 social-box">
+                            <div class="socials-icons me-2">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="socials-icons me-2">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <div class="socials-icons">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                        </div>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="border-line"></div>
+            <div class="row my-md-4">
+                <div class="col-md-8 col-12 copy-right-box">
+                    <span class="copy-right">Copyright © 2020 EzToned All Rights Reserved.</span>
+                </div>
+                <div class="col-md-2 col-6 terms-box"><span class="termsPolicy">Terms of Use</span> </div>
+                <div class="col-md-2 col-6 policy-box"><span class="termsPolicy">Privacy Policy</span> </div>
+            </div>
+        </div>
+        <div class="shade"></div>
+    </footer>
+</app-screen-wrapper>

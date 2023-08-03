@@ -1,0 +1,54 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.classes-booking-motivator-wrapper {
+  .classes-booking-motivator-h1 {
+    text-align: center;
+    font-family: "syncopate";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+    color: $white;
+
+    img {
+      padding-right: 5px;
+    }
+
+    &.padding-15 {
+      padding: 15px 0 5px 0;
+    }
+    &.padding-45 {
+      padding: 45px 0 5px 0;
+    }
+  }
+
+  .classes-booking-motivator-h2 {
+    text-align: center;
+    font-family: "lexend-deca";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 13px;
+    color: #707483;
+  }
+
+  .classes-booking-upgrade {
+    text-align: center;
+    padding-top: 20px;
+    .btn-primary {
+      padding: 11px 25px !important;
+      font-weight: 700 !important;
+      font-size: 11px !important;
+      line-height: 14px !important;
+    }
+  }
+}
+
+
+@media (max-width: 767px) and (min-width: 575px) {
+}
+
+@media (max-width: 575px) and (min-width: 350px) {
+ 
+}

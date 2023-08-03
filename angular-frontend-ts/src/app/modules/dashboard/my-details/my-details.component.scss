@@ -1,0 +1,113 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.profile-sections-wrapper {
+  margin-left: 40px;
+  background: #171a1e;
+  border-radius: 16px;
+  height: 100%;
+  padding: 15px 25px;
+
+  .profile-section-heading {
+    font-family: "lexend-zetta";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: -4px;
+    text-transform: capitalize;
+    color: #f0f4f7;
+    padding: 20px 0 10px 0;
+  }
+
+  .profile-label {
+    font-family: "lexend-zetta";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: #d33732;
+  }
+
+  .profile-user-info {
+    font-family: "lexend-deca";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: #bfc3cf;
+    padding: 10px 0;
+  }
+
+  .account-info-section {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(112, 116, 131, 0.4);
+  }
+
+  .payment-section {
+    border-bottom: 1px solid rgba(112, 116, 131, 0.4);
+    padding-bottom: 15px;
+
+    .no-cards-wrapper {
+      padding: 20px 0;
+
+      .gray-btn {
+        img {
+          width: 25px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  .subscription-section {
+    .subscription-heading {
+      padding-top: 25px;
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      color: #bfc3cf;
+    }
+
+    .subscription-heading-2 {
+      padding-top: 25px;
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      color: #f0f4f7;
+
+      .fa-times {
+        font-size: 15px;
+        padding-left: 10px;
+        color: #707483;
+        cursor: pointer;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 350px) {
+  .profile-sections-wrapper {
+    margin-left: 0px;
+    .profile-section-heading {
+      font-size: 16px;
+    }
+  
+    .profile-label {
+      font-size: 10px;
+    }
+  
+    .profile-user-info {
+      font-size: 16px;
+    }
+  }
+}

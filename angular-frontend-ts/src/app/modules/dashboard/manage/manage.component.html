@@ -1,0 +1,207 @@
+<app-screen-wrapper>
+    <section id="management">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 dialog-title pointer" *ngIf="productTabVisible">
+                            <span class=" {{tab.management ? 'active' : 'title'}}" (click)="switchTab({
+                            management: true,
+                            subscription: false
+                          })">manage
+                                product</span>
+                        </div>
+                        <div class="col-12 col-sm-6 dialog-title pointer" *ngIf="subscriptionTabVisible">
+                            <span class=" {{tab.subscription ? 'active' : 'title'}}" (click)="switchTab({
+                                management: false,
+                                subscription: true
+                              })">
+                                manage subscription</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 card-sec-management" *ngIf="tab.management">
+                    <div class="card management-card">
+                        <div class="card-body">
+                            <div class="card-title my-3 pb-3">
+                                <span class="card-head">track your order</span>
+                            </div>
+                            <div *ngIf="orders.allOrders.length">
+
+                                <div *ngFor="let order of orders.allOrders">
+                                    <div class="row py-2" *ngFor="let item of order.items">
+
+                                        <div class="col-12 col-md-8">
+                                            <div class="d-inline-block pe-3">
+                                                <div class="image">
+                                                    <img src="assets/dashboard/ez-bar.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="d-none d-md-inline-block align-middle">
+                                                <p class="ezbar">EzBar V1</p>
+                                                <p class="ezbar-id">{{item.shopifyOrderId}}&nbsp;<span class="track"
+                                                        (click)="trackOrder(order)">track order</span></p>
+                                            </div>
+                                            <div class="d-inline-block d-md-none align-middle">
+                                                <p class="ezbar">EzBar V1</p>
+                                                <!-- <p class="ez-status">order shipped</p> -->
+                                            </div>
+
+                                        </div>
+                                        <div class="col-4 text-end d-none d-md-flex">
+                                            <!-- <p class="ez-status">order shipped</p> -->
+                                        </div>
+                                        <div class="col-6 d-block d-md-none mt-3">
+                                            <span class="ezbar-id">{{item.shopifyOrderId}}</span>
+                                        </div>
+                                        <div class="col-6 text-end d-block d-md-none text-end mt-3"
+                                            (click)="trackOrder(order)">
+                                            <span class="track">track order</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 card-subs" *ngIf="tab.subscription">
+                    <div class="card card-subs-sec">
+                        <div class="card-body">
+                            <div class="card-title my-3 pb-3">
+                                <span class="card-head">Manage Subscription</span>
+                            </div>
+
+                            <div *ngIf="orders.subscriptions.length">
+
+                                <div *ngFor="let order of orders.subscriptions">
+                                    <div *ngFor="let item of order.items">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <span class="card-items">{{item.title}}</span>
+                                            </div>
+                                            <div class="col-6 text-end">
+                                                <span class="card-package">
+                                                    USD {{item.unitAmount / 100 |
+                                                    number:'1.2-2'}}/
+                                                    <span class="text-capitalize">{{item.billingType}}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 cancellation-requested-msg"
+                                                *ngIf="item.status === 'cancel-requested'">
+                                                Cancellation requested on {{item.cancelRequestedAt | date:'mediumDate'}}
+                                                at
+                                                {{item.cancelRequestedAt | date:'shortTime'}}. Please reach
+                                                out to
+                                                <span>support@eztoned.com</span> for more information
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="cancel-subs" (click)="cancelSubscription(item, order)">
+                                                    <span class="cancel-img"><img src="assets/dashboard/cancel.png"
+                                                            alt=""></span><span class="button-text">
+                                                        {{ (item.status === 'cancel-requested') ? 'Cancellation
+                                                        Requested' :
+                                                        'cancel subscription'}}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div *ngIf="orders.liveSubscriptions.length">
+
+                                <div *ngFor="let order of orders.liveSubscriptions">
+                                    <div *ngFor="let item of order.items">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <span class="card-items">{{item.title}}</span>
+                                            </div>
+                                            <div class="col-6 text-end">
+                                                <span class="card-package">
+                                                    USD {{item.unitAmount / 100 |
+                                                    number:'1.2-2'}}/
+                                                    <span class="text-capitalize">{{item.billingType}}</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12 cancellation-requested-msg"
+                                                *ngIf="item.status === 'cancel-requested'">
+                                                Cancellation requested on {{item.cancelRequestedAt | date:'mediumDate'}}
+                                                at
+                                                {{item.cancelRequestedAt | date:'shortTime'}}. Please reach
+                                                out to
+                                                <span>support@eztoned.com</span> for more information
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="cancel-subs" (click)="cancelSubscription(item, order)">
+                                                    <span class="cancel-img"><img src="assets/dashboard/cancel.png"
+                                                            alt=""></span><span class="button-text">
+                                                        {{ (item.status === 'cancel-requested') ? 'Cancellation
+                                                        Requested' :
+                                                        'cancel subscription'}}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row"
+                                *ngIf="orders.subscriptions.length === 0 && orders.liveSubscriptions.length === 0">
+                                <div class="col-12">
+                                    No Active Subscription
+                                </div>
+
+                            </div>
+
+                            <!-- <div class="seprature"> </div> 
+                           <div class="card-title my-3 pb-3">
+                                <span class="card-head">payment method</span>
+                            </div>
+
+                            <div class="row" *ngIf="paymentMethods.length > 0">
+
+                                <app-payment-card *ngFor="let card of paymentMethods" [card]="card"
+                                    (onDeleteCard)="detachPaymentMethod($event)">
+                                </app-payment-card>
+
+                                <div class="col-10">
+                                <span class="card-img pe-2"><img src="assets/dashboard/mastercard.png" alt=""></span>
+                                <span class="card-number d-inline-block">4556 **** **** 3332</span>
+                                <span class="card-date d-block d-md-inline-block">07/24</span>
+                            </div>
+                            <div class="col-2 text-end">
+                                <span class="card-img"><img src="assets/dashboard/x-cancel.png" alt=""></span>
+                            </div>
+                            </div> 
+                             <div class="row">
+                                <div class="col-12">
+                                    <div class="cancel-subs" (click)="addPaymentMethod()">
+                                        <span class="cancel-img"><img src="assets/dashboard/payment.png"
+                                                alt=""></span><span class="button-text">add payment method</span>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</app-screen-wrapper>

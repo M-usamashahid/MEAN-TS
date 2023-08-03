@@ -1,0 +1,58 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.studio-aggrement-wrapper {
+  .studio-aggrement-h1 {
+    font-family: syncopate;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    color: $white;
+    padding: 0 0 15px 0;
+  }
+
+  .studio-aggrement-h2 {
+    font-family: syncopate;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 17px;
+    color: $white;
+    padding: 15px 0 10px 0;
+  }
+
+  .studio-aggrement-h3 {
+    font-family: syncopate;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    color: $white;
+    padding: 15px 0 10px 0;
+  }
+
+  .key-points {
+    padding-left: 17px;
+    text-align: justify;
+  }
+
+  .agremnt-content {
+    font-family: "lexend-deca";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+  }
+
+  .table{
+    color: $white;
+    text-align: center;
+    font-family: "lexend-deca";
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  span {
+    color: $primary;
+  }
+}

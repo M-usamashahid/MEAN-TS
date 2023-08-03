@@ -1,0 +1,18 @@
+@import "../../../../../scss/variables";
+@import "../../../../../scss/shared/index";
+
+.call-card-wrapper {
+  background-color: rgba(34, 34, 34, 0.6);
+  border-radius: 3px;
+  padding: 20px;
+
+  .due-date {
+    font-family: "lexend-zetta";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+
+    padding-top: 20px;
+  }
+}

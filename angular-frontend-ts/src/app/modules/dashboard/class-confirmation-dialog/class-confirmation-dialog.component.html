@@ -1,0 +1,63 @@
+<div class="app-dialog">
+
+    <div class="wrapper"></div>
+
+    <div class="row class-confirmation-dialog-wrapper">
+        <div class="col-md-6 col-sm-6 col-12 mx-auto">
+
+            <div class="card appCard">
+                <div class="card-header">
+                    {{title}}
+                    <i class="fa-solid fa-x dialog-close" (click)="closeDialog()"></i>
+                </div>
+                <div class="card-body">
+
+                    <div class="" *ngIf="state === 'joinclass'">
+
+                        <p>
+                            EzToned Live is powered by Zoom. When you click 'Launch Class', you will be prompted to
+                            open Zoom to join your class.
+                        </p>
+
+                        <p>
+                            If you are joining from a mobile device, you will be prompted to install the Zoom app before
+                            joining your class.
+                        </p>
+
+                        <p class="tip">
+                            Tip: Set up your laptop or mobile device in a location that allows the camera
+                            to see your whole body. This makes it easy for your coach to give you workout guidance
+                            during
+                            the session.
+                        </p>
+                    </div>
+
+                    <div *ngIf="state === 'cancelclass'">
+                        <p>
+                            If you are no longer able attend this class or you’ve changed your mind, you can cancel your
+                            booking.
+                        </p>
+
+                        <p>
+                            You can always re-book the same class again or select a different time slot.
+                        </p>
+                    </div>
+                    <div class="class-confirmation-buttons-wrapper">
+                        <button type="button" *ngIf="state === 'joinclass'" (click)="launchClass()"
+                            class="mb-2 btn btn-primary add_btn">
+                            LAUNCH CLASS
+                        </button>
+
+                        <button type="button" *ngIf="state === 'cancelclass'" (click)="cancelClass()"
+                            class="mb-2 btn btn-primary add_btn">
+                            CANCEL BOOKING
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

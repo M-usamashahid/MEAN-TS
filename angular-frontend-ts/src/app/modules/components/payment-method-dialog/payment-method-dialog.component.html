@@ -1,0 +1,41 @@
+<div class="app-dialog payment-method-form">
+<div class="wrapper"></div>
+    <div class="row position-relative">
+
+        <div class="col-md-4 col-sm-12 mx-auto payment-method-align">
+            <div class="dialog-header">
+                <div class="dialog-title">Add Card</div>
+
+                <i class="fal fa-times-circle dialog-close mr-2" (click)="closeDialog()"></i>
+            </div>
+
+            <div class="">
+
+                <div class="loading-wrapper" [hidden]="!isLoading || cardAddInpregress">
+                    <i class="fad fa-spinner-third fa-spin"></i>
+                </div>
+                <div class="loading-wrapper" *ngIf="cardAddInpregress">
+                    <i class="fad fa-spinner-third fa-spin"></i>
+                </div>
+
+                <div class="payment-card-wrapper" [hidden]="isLoading || cardAddInpregress">
+                    <div class="p-3 border" id="card-info" #cardInfo></div>
+
+                    <label class="mx-auto text-danger" style="font-size: small;" *ngIf="cardError">{{cardError}}</label>
+                </div>
+
+                <div class="payment-save-wrapper" [hidden]="isLoading">
+                    <p>Debit cards are accepted at some locations and for some categories.</p>
+
+                    <div class="col mx-auto">
+                        <button class="w-100 btn submit-btn" [disabled]="saveDisabled" (click)="paymentMethodSave()">
+                            Save card
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

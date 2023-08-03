@@ -1,0 +1,13 @@
+@import "../variables";
+
+.p-inputswitch {
+  &.p-inputswitch-checked {
+    .p-inputswitch-slider {
+      background: $primary !important;
+    }
+  }
+
+  .p-inputswitch-slider {
+    box-shadow: none !important;
+  }
+}

@@ -1,0 +1,23 @@
+<div class="card-wrapper" [ngClass]="{'active': active}">
+    <div class="card-icon">
+        <img class="card-img" *ngIf="card.card.brand !== 'visa' && card.card.brand !== 'mastercard'"
+            src="assets/icons/card-logo.png">
+        <img class="card-img" *ngIf="card.card.brand === 'mastercard'" src="assets/icons/master-logo.png">
+        <img class="card-img" *ngIf="card.card.brand === 'visa'" src="assets/icons/visa-logo.png">
+    </div>
+    <div class="card-number-wrapper">
+        <div class="card-number">
+            **** **** **** {{card.card.last4}}
+        </div>
+    </div>
+    <div class="card-exp-wrapper">
+        <div class="card-exp">
+            {{card.card.exp_month}}/{{card.card.exp_year}}
+        </div>
+    </div>
+
+    <div class="card-action text-align-right">
+        <i class="fas fa-times" *ngIf="active === false" (click)="onDeleteCardHandler($event)"></i>
+        <i class="fas fa-check-circle" *ngIf="active"></i>
+    </div>
+</div>

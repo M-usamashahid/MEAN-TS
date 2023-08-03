@@ -1,0 +1,12 @@
+<div class="questionnaire-option-card" [ngClass]="{'active': active}" (click)="select(title)">
+
+    <div class="questionnaire-option-card-title">
+        {{title}}
+    </div>
+
+    <div class="questionnaire-option-card-icons">
+        <i class="far fa-circle" *ngIf="active === false"></i>
+        <i class="fas fa-check-circle" *ngIf="active"></i>
+    </div>
+
+</div>

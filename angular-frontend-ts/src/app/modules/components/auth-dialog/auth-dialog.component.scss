@@ -1,0 +1,283 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.authentication-form {
+  height: 100%;
+  width: 100vw;
+  background-color: #000;
+  display: flex;
+
+  .auth-img-wrapper {
+    width: 50%;
+    position: relative;
+    .auth-img-destop {
+      display: block;
+    }
+
+    .auth-img-mobile {
+      display: none;
+      height: 200px;
+    }
+
+    .dialog-close-mobile {
+      display: none;
+      font-size: 2rem;
+      float: right;
+      color: red;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 100;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .auth-main-wrapper {
+    width: 50%;
+
+    .dialog-close {
+      font-size: 2.5rem;
+      float: right;
+      color: red;
+      position: relative;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    .auth-eztoned-id-inner {
+      max-width: 340px;
+      margin: 13% auto 0 auto;
+
+      .auth-eztoned-id-branding {
+        text-align: center;
+        img {
+          width: 95%;
+        }
+
+        p {
+          padding: 20px 0 20px;
+          font-family: "lexend-deca";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 24px;
+          align-items: center;
+          letter-spacing: -1px;
+          color: #707483;
+        }
+      }
+
+      .auth-eztoned-id-input-wrapper {
+        display: flex;
+        .auth-eztoned-id-inputs {
+          &.width-100-p {
+            width: 100%;
+          }
+
+          &.width-minus-80 {
+            width: calc(100% - 80px);
+          }
+
+          input {
+            font-family: "lexend-deca";
+            color: #707483;
+            background-color: transparent;
+            padding: 10px 10px;
+            font-size: 16px;
+
+            box-shadow: 0 0 0 0rem rgb(211 55 50 / 25%);
+
+            &:focus {
+              color: $white;
+              background-color: #454545;
+              outline: 0;
+              box-shadow: 0 0 0 0rem rgb(211 55 50 / 25%);
+              border-color: $white;
+            }
+          }
+
+          .thankyou-email {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-bottom: 0;
+
+            &.border-all {
+              border-bottom-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+              border-bottom: 1px solid $white;
+            }
+          }
+
+          .thankyou-password {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+          }
+
+          .signup-input {
+            border-radius: 10px;
+            margin-bottom: 15px;
+          }
+
+          .p-dropdown {
+            border-radius: 10px;
+            border-color: $white;
+
+            &:active,
+            &:hover,
+            &:focus {
+              border-color: $white !important;
+            }
+          }
+        }
+
+        .auth-eztoned-id-inputs-btn {
+          width: 80px;
+
+          padding: 0 8px 0 8px;
+
+          .thank-you-login-btn {
+            background: #d33732;
+            border-radius: 10px;
+            height: 45px;
+            cursor: pointer;
+            text-align: center;
+
+            i.fa-angle-right {
+              color: #000;
+              font-size: 2rem;
+              position: relative;
+              top: 7px;
+            }
+          }
+        }
+      }
+
+      .auth-eztoned-id-error {
+        min-height: 40px;
+        font-family: "lexend-deca";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #d33732;
+      }
+
+      .thanks-you-or-divider {
+        padding: 10px 0 25px 0;
+        img {
+          width: 100%;
+        }
+      }
+
+      .thanks-you-social-login-wrapper {
+        .btn-primary {
+          background-color: #f0f4f7;
+          border-color: #f0f4f7;
+          border-radius: 10px;
+
+          font-family: "lexend-deca";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          align-items: center;
+          letter-spacing: -1px;
+          text-transform: none;
+          padding-top: 8px;
+          padding-bottom: 8px;
+
+          color: $black;
+          margin-bottom: 10px;
+        }
+
+        .social-google {
+          float: right;
+        }
+      }
+
+      .dont-have-eztoned-id {
+        font-family: "lexend-deca";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #707483;
+
+        a {
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1380px) and (min-width: 767px) {
+  .authentication-form {
+    .auth-main-wrapper {
+      .auth-eztoned-id-inner {
+        margin: 8% auto 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) and (min-width: 350px) {
+  .authentication-form {
+    flex: 1;
+    flex-direction: column;
+
+    .auth-img-wrapper {
+      width: 100%;
+
+      .dialog-close-mobile {
+        display: inline;
+      }
+
+      .auth-img-destop {
+        display: none;
+      }
+
+      .auth-img-mobile {
+        display: block;
+      }
+    }
+
+    .auth-main-wrapper {
+      width: 100%;
+
+      .dialog-close {
+        display: none;
+      }
+
+      .auth-eztoned-id-inner {
+        margin: 35px auto 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .thanks-you-social-login-wrapper {
+          .btn-primary {
+            width: 45%;
+          }
+        }
+      }
+    }
+  }
+}

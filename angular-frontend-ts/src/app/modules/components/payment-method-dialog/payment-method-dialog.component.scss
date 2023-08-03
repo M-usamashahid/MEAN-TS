@@ -1,0 +1,46 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/shared/index";
+
+.payment-method-form {
+  height: 100%;
+  padding-bottom: 30px;
+
+  .payment-method-align {
+    margin-top: 10%;
+  }
+
+  .dialog-header {
+    padding-bottom: 30px;
+    .dialog-title {
+      font-family: "lexend-zetta";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 40px;
+      letter-spacing: -4px;
+      text-transform: capitalize;
+      color: $white;
+    }
+
+    .dialog-close {
+      color: #707483;
+      font-size: 1.8rem;
+      position: relative;
+      top: -35px;
+      // left: -30px;
+    }
+  }
+
+  .payment-save-wrapper {
+    p {
+      font-family: "lexend-deca";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 28px;
+      padding: 15px 0 10px 0;
+      text-transform: capitalize;
+      color: #bfc3cf;
+    }
+  }
+}

@@ -1,0 +1,229 @@
+<app-screen-wrapper>
+    <section id="tv-live">
+
+        <div class="row">
+            <div class="col-12 tv-live-card">
+                <div class="card tv-live-card">
+                    <div class="row gx-0">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="card-title">
+                                <div class="card-head">MY CLASSES</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="my-class-badges">
+                                <div class="my-coins"
+                                    pTooltip="EzCoins are awareded by coaches for frequent live class attendance and completion of challenges. The EzCoin reward store will let you redeem your coins for prizes and discounts later this year. Allow up to 24 hours for your EzCoins to update."
+                                    tooltipPosition="top">
+                                    <img src="assets/icons/coin-icon.png" alt="">
+                                    <div class="my-classes-badge-text">&nbsp;&nbsp;{{myCoins}}</div>
+
+                                </div>
+                                <div class="my-classes-appointment"
+                                    pTooltip="See how many classes you currently have booked and the total number of classes you can book with your current EzToned Live subscription."
+                                    tooltipPosition="top">
+                                    <img src="assets/icons/appointment-icon.png" alt="">
+                                    <div class="my-classes-badge-text">&nbsp;&nbsp;{{boockedClasses}}/{{weeklyClasses}}
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row gx-0" *ngIf="boockedClasses === 0">
+                        <div class="col-sm-12">
+
+                            <div class="no-classes-wrapper">
+
+                                <div class="no-classes-h1">
+                                    YOU HAVEN'T BOOKED ANY CLASSES YET
+                                </div>
+                                <div class="no-classes-h2">
+                                    Scroll down to book in your first class for this week!
+                                </div>
+                                <div class="no-classes-down-icon">
+                                    <img src="assets/icons/classes-down-arrow-icon.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row gx-0 classes-item-wrapper" *ngIf="boockedClasses !== 0">
+                        <div class="col-sm-4 gx-0" *ngFor="let slot of boockedSlots">
+                            <div class="classes-item">
+                                <div class="classes-item-img row gx-0">
+                                    <div class="col-3 gx-0">
+                                        <img *ngIf="slot.schedule.type === 'ezToned-range'"
+                                            src="assets/icons/range-icon.png" alt="">
+                                        <img *ngIf="slot.schedule.type === 'ezToned-xtreme'"
+                                            src="assets/icons/xtreme-icon.png" alt="">
+                                    </div>
+                                    <div class="col-9 gx-0">
+                                        <div class="classes-item-title">
+                                            <span *ngIf="slot.schedule.type === 'ezToned-range'">
+                                                RAGE
+                                            </span>
+                                            <span *ngIf="slot.schedule.type === 'ezToned-xtreme'">
+                                                XTREME
+                                            </span>
+                                        </div>
+                                        <div class="classes-item-time">
+                                            {{slot.booking.title}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="classes-item-labels">
+                                    <div class="slot-duration">
+                                        <img src="assets/icons/live-class-icon-2.png" alt="">&nbsp;60 Minutes
+                                    </div>
+                                    <div class="classes-item-labels-icons">
+                                        <img class="ezbar" src="assets/icons/live-class-icon-3.png" alt="">
+                                        <span *ngIf="slot.schedule.type === 'ezToned-range'">
+                                            EzBar / Bands / Strap-X
+                                        </span>
+                                        <span *ngIf="slot.schedule.type === 'ezToned-xtreme'">
+                                            Barbell / Dumbbell / EzBar
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="class-item-join-class">
+                                    <button type="button" (click)="JoinClass(slot)"
+                                        class="btn btn-primary add_btn mx-2">
+                                        JOIN CLASS
+                                    </button>
+
+                                    <button type="button" (click)="cancelClass(slot)" class="btn gray-btn">
+                                        <img src="assets/icons/closs-x-icon.png" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 gx-0">
+                            <div class="classes-item">
+                                <app-classes-booking-motivator [weeklyClasses]="weeklyClasses"
+                                    [boockedClasses]="boockedClasses"></app-classes-booking-motivator>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 tv-live-booking">
+                <div class="card-title">
+                    <div class="card-head">BOOK YOUR NEXT LIVE CLASS</div>
+                </div>
+
+                <div class="tv-live-booking-badge-wrapper">
+                    <div class="tv-live-booking-badge-icon">
+                        <img src="assets/icons/appointment-icon.png" alt="">
+                        <div class="my-classes-badge-text">&nbsp;&nbsp;{{boockedClasses}}/{{weeklyClasses}}</div>
+                    </div>
+                    <span class="seprator"></span>
+                    <div class="tv-live-booking-badge-text">
+
+                        <span *ngIf="boockedClasses === weeklyClasses && weeklyClasses === 7">
+                            YOU'RE FULLY BOOKED! ENJOY YOUR WORKOUTS.
+                        </span>
+
+                        <span *ngIf="boockedClasses === weeklyClasses && weeklyClasses !== 7">
+                            YOU'RE FULLY BOOKED!
+                        </span>
+
+                        <span *ngIf="boockedClasses < weeklyClasses">
+                            YOU HAVE {{weeklyClasses - boockedClasses}} BOOKING SLOTS REMAINING!
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-12">
+                <div class="eztoned-class-wrapper">
+                    <div class="eztoned-class-banner">
+                        <img src="assets/live-banner-1.png" alt="">
+                    </div>
+                    <div class="eztoned-class-details">
+                        <div class="eztoned-class-details-title">
+                            EZTONED RAGE
+                        </div>
+
+                        <div class="eztoned-class-details-icons">
+                            <div class="eztoned-class-details-icon">
+                                <img src="assets/icons/live-class-icon-1.png" alt=""> Brad Wade
+                            </div>
+                            <div class="eztoned-class-details-icon">
+                                <img src="assets/icons/live-class-icon-2.png" alt=""> 60 Minutes
+                            </div>
+                            <div class="eztoned-class-details-icon">
+                                <img src="assets/icons/live-class-icon-3.png" alt=""> EzBar / Bands / Bodyweight
+                            </div>
+
+                        </div>
+                        <div class="eztoned-class-details-text">
+                            Grab your EzBar, a set of resistance bands or just use your bodyweight! Rage is a
+                            high-intensity session designed for all fitness levels that will push your body to its
+                            limits!
+                        </div>
+
+                    </div>
+                    <div class="eztoned-class-book">
+                        <button type="button" [disabled]="boockedClasses === weeklyClasses"
+                            (click)="bookAClass('ezToned-range', 'EZTONED RAGE')" class="mb-2 btn btn-primary add_btn">
+                            BOOK CLASS
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+                <div class="eztoned-class-wrapper">
+                    <div class="eztoned-class-banner">
+                        <img src="assets/live-banner-2.png" alt="">
+                    </div>
+                    <div class="eztoned-class-details">
+                        <div class="eztoned-class-details-title">
+                            EZTONED XTREME
+                        </div>
+
+                        <div class="eztoned-class-details-icons">
+                            <div class="eztoned-class-details-icon">
+                                <img src="assets/icons/live-class-icon-1.png" alt=""> Brad Wade
+                            </div>
+                            <div class="eztoned-class-details-icon">
+                                <img src="assets/icons/live-class-icon-2.png" alt=""> 60 Minutes
+                            </div>
+                            <div class="eztoned-class-details-icon">
+                                <img src="assets/icons/live-class-icon-3.png" alt=""> Barbell / Dumbells / EzBar
+                            </div>
+
+                        </div>
+                        <div class="eztoned-class-details-text">
+                            EzToned Xtreme is a high-intensity session that utilizes traditional gym equipment such as
+                            dumbbells and barbells to push your body to its limits. Xtreme is suitable for all fitness
+                            levels.
+                        </div>
+
+                    </div>
+                    <div class="eztoned-class-book">
+                        <button type="button" [disabled]="boockedClasses === weeklyClasses"
+                            (click)="bookAClass('ezToned-xtreme', 'EZTONED XTREME')"
+                            class="mb-2 btn btn-primary add_btn">
+                            BOOK CLASS
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+</app-screen-wrapper>

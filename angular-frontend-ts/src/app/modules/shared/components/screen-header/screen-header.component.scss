@@ -1,0 +1,29 @@
+@import "../../../../../scss/variables";
+
+.screen-header {
+  display: flex;
+
+  .heading-title {
+    font-size: 24px;
+    color: $white;
+    font-weight: 700;
+    width: 30%;
+  }
+
+  .heading-add {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+
+    .input-group {
+      max-width: 450px;
+      margin-right: 10px;
+      .form-control {
+        &:focus {
+          border: 1px solid $primary-700;
+          box-shadow: 0 0 0 0.25rem rgb(222 36 36 / 1%);
+        }
+      }
+    }
+  }
+}

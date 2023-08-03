@@ -1,0 +1,99 @@
+<div class="app-dialog">
+    <div class="wrapper"></div>
+
+    <div class="row cancel-subscription-wrapper">
+        <div class="col-md-6 col-sm-6 col-12 mx-auto" *ngIf="cancelationProcess === false">
+
+            <div class="card appCard">
+                <div class="card-header">
+                    {{client.firstName}} {{client.lastName}} don’t give up on your <br> fitness journey!
+                    <i class="fal fa-times-circle dialog-close" (click)="closeDialog()"></i>
+                </div>
+                <div class="card-body">
+                    <div class="under-90-days" *ngIf="!over90Days && type === 'subscription'">
+
+                        <div class="cancel-subscription-text">
+                            You are just <span class="white">{{90 - daysOfSubscription}}</span> days away from keeping
+                            your EzToned Equipment with
+                            you forever.
+                        </div>
+                        <div class="cancel-subscription-text">
+                            If your plan is canceled today, <span class="red">you will have to return the equipment
+                                immediately.</span>
+                        </div>
+
+                        <div class="progress-wrapper">
+                            <p-progressBar [value]="progress"></p-progressBar>
+                            <span>Keep Equipment</span>
+                        </div>
+
+                    </div>
+
+                    <div class="over-90-days" *ngIf="over90Days">
+
+                    </div>
+
+                    <div class="cancel-subscription-common">
+                        <div class="cancel-subscription-common-h1">By canceling your subscription, you will lose access
+                            to</div>
+
+                        <ul class="cancel-subscription-common-list">
+                            <li>Exclusive usage and member-only discounts to EzToned Equipment</li>
+                            <li>Unlimited streaming of workouts and masterclasses from EzToned TV</li>
+                            <li>Personalized training and nutrition guidance from EzToned Coach</li>
+                        </ul>
+
+                        <button class="btn-primary" (click)="closeDialog()">
+                            stay subscribed
+                        </button>
+
+
+                        <div class="proceed-to-cancellation" (click)="processToCancellation()">
+                            I don’t need EzToned Studio. Proceed to cancellation
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-12 mx-auto" *ngIf="cancelationProcess">
+            <div class="card appCard">
+                <div class="card-header">
+                    We will miss you ! <br>
+                    <i class="fal fa-times-circle dialog-close" (click)="closeDialog()"></i>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="cancel-smily">
+                        <i class="fal fa-frown"></i>
+                    </div>
+                    
+                    <div class="why-cancel-wrapper">
+                        <div class="why-cancel-heading">
+                            Please tell us why you’re leaving.
+                        </div>
+
+                        <div class="input_field">
+                            <textarea class="form-control" rows="4" placeholder="Enter your text here..." [(ngModel)]="reason"
+                                [ngModelOptions]="{standalone:true}">
+                        </textarea>
+                        </div>
+
+                        <button class="btn-primary my-2" (click)="requestCancelation()">
+                            Request Cancelation
+                        </button>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,52 @@
+<div class="classes-booking-motivator-wrapper">
+
+    <div *ngIf="getState() === 'keepItGoing'">
+        <div class="classes-booking-motivator-h1 padding-45">KEEP IT GOING!</div>
+        <div class="classes-booking-motivator-h2">
+            You're booked in for {{boockedClasses}} classes
+        </div>
+        <div class="classes-booking-motivator-h2">
+            so far. {{weeklyClasses - boockedClasses}} more to go!
+        </div>
+    </div>
+
+    <div *ngIf="getState() === 'nearlyThere'">
+        <div class="classes-booking-motivator-h1 padding-45">NEARLY THERE!</div>
+        <div class="classes-booking-motivator-h2">
+            You're booked in for {{boockedClasses}} classes
+        </div>
+        <div class="classes-booking-motivator-h2">
+            so far. {{weeklyClasses - boockedClasses}} more to go!
+        </div>
+    </div>
+
+    <div *ngIf="getState() === 'fullyBookedFinal'">
+        <div class="classes-booking-motivator-h1 padding-45">
+            <img src="assets/icons/fullybooked-icon.png" alt=""> FULLY BOOKED!
+        </div>
+        <div class="classes-booking-motivator-h2">
+            Nicely done! You're booked in for 5
+        </div>
+        <div class="classes-booking-motivator-h2">
+            upcoming classes - Enjoy your workouts!
+        </div>
+    </div>
+
+    <div *ngIf="getState() === 'fullyBooked'">
+        <div class="classes-booking-motivator-h1 padding-45">
+            <img src="assets/icons/fullybooked-icon.png" alt=""> FULLY BOOKED!
+        </div>
+        <div class="classes-booking-motivator-h2">
+            Nicely done! You're booked in for {{boockedClasses}}
+        </div>
+        <div class="classes-booking-motivator-h2">
+            upcoming classes - Enjoy your workouts!
+        </div>
+        <div class="classes-booking-upgrade">
+            <!-- <button type="button" class="btn btn-primary add_btn">
+                UPGRADE PLAN
+            </button> -->
+        </div>
+    </div>
+
+</div>
